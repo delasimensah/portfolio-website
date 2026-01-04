@@ -1,0 +1,145 @@
+name: ✅ PR Validation
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  validate-pr:
+    name: 📝 Validate PR Title and Description
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔍 Validate PR Title
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prTitle = context.payload.pull_request.title;
+            const prNumber = context.payload.pull_request.number;
+
+            console.log(`Validating PR #${prNumber} title: "${prTitle}"`);
+
+            // Check if title follows format: TICKET-123 Brief description OR flexible format
+            const ticketPattern = /^[A-Z]+-\d+\s+.+/i;
+            const typePattern = /^(feature|workflow|bug|hotfix|infrastructure|docs)\s+.+/i;
+            const flexiblePattern = /^[A-Z][a-z].+/; // Starts with capital letter, descriptive
+
+            const hasValidTitle = ticketPattern.test(prTitle) || typePattern.test(prTitle) || flexiblePattern.test(prTitle);
+
+            let titleIssues = [];
+
+            if (!hasValidTitle) {
+              titleIssues.push("❌ Title should start with ticket number (TICKET-123), type (feature/workflow/bug), or be a descriptive sentence");
+            }
+
+            if (prTitle.length < 10) {
+              titleIssues.push("❌ Title should be more descriptive (at least 10 characters)");
+            }
+
+            if (prTitle.length > 100) {
+              titleIssues.push("❌ Title should be concise (under 100 characters)");
+            }
+
+            if (titleIssues.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: `## 📝 PR Title Issues
+                
+                ${titleIssues.join('\n')}
+                
+                **Expected formats:**
+                - \`TICKET-123 Brief description of what the PR accomplishes\` (with ticket)
+                - \`Brief description of what the PR accomplishes\` (flexible, no ticket)
+                
+                ---
+                *Please update your PR title to meet our standards.*`
+              });
+              
+              core.setFailed('PR title validation failed');
+            } else {
+              console.log('✅ PR title validation passed');
+            }
+
+      - name: 📄 Validate PR Description
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prBody = context.payload.pull_request.body || '';
+            const prNumber = context.payload.pull_request.number;
+
+            console.log(`Validating PR #${prNumber} description length: ${prBody.length} characters`);
+
+            let descriptionIssues = [];
+
+            // Check if description has required sections
+            const requiredSections = ['## Why', '## What', '## How', '## Testing'];
+            const missingSections = requiredSections.filter(section => 
+              !prBody.includes(section)
+            );
+
+            if (missingSections.length > 0) {
+              descriptionIssues.push(`❌ Missing required sections: ${missingSections.join(', ')}`);
+            }
+
+            // Check minimum length
+            if (prBody.length < 200) {
+              descriptionIssues.push("❌ Description should be comprehensive (at least 200 characters)");
+            }
+
+            if (descriptionIssues.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: `## 📄 PR Description Issues
+                
+                ${descriptionIssues.join('\n')}
+                
+                **Required sections:**
+                - \`## Why\` - Purpose and motivation
+                - \`## What\` - Summary of changes
+                - \`## How\` - Implementation details
+                - \`## Testing\` - Testing strategy and results
+                
+                ---
+                *Please update your PR description to meet our standards.*`
+              });
+              
+              core.setFailed('PR description validation failed');
+            } else {
+              console.log('✅ PR description validation passed');
+            }
+
+      - name: ✅ PR Validation Success
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.payload.pull_request.number;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: `## ✅ PR Validation Passed
+              
+              Your PR title and description meet our standards!
+              
+              **Next steps:**
+              1. Wait for quality checks to complete
+              2. Wait for automatic testing to complete and pass
+              3. Request review from a team member
+              4. Team member adds the \`approved\` label
+              5. Then you can merge
+              
+              ---
+              *Validation completed by GitHub Actions*`
+            });
+

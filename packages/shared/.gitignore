@@ -1,0 +1,9 @@
+# Build
+dist/
+
+# Coverage
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+

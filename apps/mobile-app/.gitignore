@@ -1,0 +1,14 @@
+# Expo
+.expo/
+.expo-shared/
+dist/
+
+# Environment
+.env.local
+
+# Coverage
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+

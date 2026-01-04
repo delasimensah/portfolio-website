@@ -1,0 +1,109 @@
+name: 🔍 PR Quality Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  lint-and-quality-check:
+    name: 🧹 Code Quality & Linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📱 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "yarn"
+
+      - name: 📦 Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: 🔍 Run ESLint
+        run: yarn lint
+
+      - name: ✨ Check Prettier formatting
+        run: yarn format:check
+
+      - name: 📏 TypeScript type check
+        run: yarn type-check
+
+  notify-quality-success:
+    name: ✅ Notify Quality Check Success
+    runs-on: ubuntu-latest
+    needs: lint-and-quality-check
+    if: success()
+
+    steps:
+      - name: 💬 Comment on PR - Quality checks passed
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number,
+              body: `## ✅ Code Quality Checks Passed
+              
+              Your code meets our quality standards! 
+              
+              **To merge this PR:**
+              - Get code review from a team member
+              - Team member adds the \`approved\` label
+              - Then you can merge (self-approval not allowed)
+              
+              ---
+              *Quality checks completed by: ${context.actor}*`
+            });
+
+  notify-failure:
+    name: 📢 Notify Quality Check Failure
+    runs-on: ubuntu-latest
+    needs: lint-and-quality-check
+    if: failure()
+
+    steps:
+      - name: 💬 Comment on PR failure
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number,
+              body: `## ❌ Quality Check Failed
+              
+              Code quality checks failed. Please fix the following issues:
+              
+              - 🔍 ESLint errors
+              - ✨ Prettier formatting issues  
+              - 📏 TypeScript type errors
+              
+              Run these commands locally to fix:
+              \`\`\`bash
+              yarn lint:fix
+              yarn format
+              yarn type-check
+              \`\`\`
+              
+              ---
+              *Check the [Actions tab](../../actions) for detailed error logs.*`
+            });
+

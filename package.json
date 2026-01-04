@@ -1,0 +1,42 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:mobile": "turbo run dev --filter=@template/mobile-app",
+    "dev:web": "turbo run dev --filter=@template/web-app",
+    "dev:apps": "turbo run dev --filter=@template/mobile-app --filter=@template/web-app",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "type-check": "turbo run type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,json}\"",
+    "test": "turbo run test",
+    "test:mobile": "turbo run test --filter=@template/mobile-app",
+    "test:web": "turbo run test --filter=@template/web-app",
+    "test:shared": "turbo run test --filter=shared",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:reset": "supabase db reset",
+    "supabase:status": "supabase status",
+    "supabase:init": "supabase init"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "supabase": "^2.70.5",
+    "turbo": "^2.6.0",
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "yarn@1.22.0",
+  "engines": {
+    "yarn": ">=1.22.0",
+    "node": ">=18.0.0"
+  }
+}
