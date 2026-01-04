@@ -70,10 +70,11 @@ export const getUsers = async (
 export const updateUser = async (
   client: SupabaseClient<Database>,
   userId: string,
-  updates: Partial<Database["public"]["Tables"]["users"]["Row"]>
+  updates: Database["public"]["Tables"]["users"]["Update"]
 ) => {
   const { data, error } = await client
     .from("users")
+    // @ts-expect-error - Type inference issue with Supabase client when Database types aren't fully generated from Supabase
     .update(updates)
     .eq("id", userId)
     .select()
@@ -101,6 +102,7 @@ export const createUser = async (
 ) => {
   const { data, error } = await client
     .from("users")
+    // @ts-expect-error - Type inference issue with Supabase client when Database types aren't fully generated from Supabase
     .insert(userData)
     .select()
     .single();
