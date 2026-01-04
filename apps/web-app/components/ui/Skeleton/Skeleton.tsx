@@ -1,6 +1,6 @@
-import { cn } from "shared";
 import { Box } from "@mantine/core";
 import React from "react";
+import { cn } from "shared";
 
 interface SkeletonProps {
   width?: number | string;

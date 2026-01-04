@@ -44,8 +44,6 @@ const AuthCallbackPage = () => {
       hasProcessed.current = true;
 
       try {
-        const supabase = createClient();
-
         // Get session from Supabase (session was already exchanged by API route)
         const {
           data: { session },

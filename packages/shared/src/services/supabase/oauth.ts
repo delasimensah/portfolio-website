@@ -147,7 +147,8 @@ export const signInWithOAuth = async (
   }
 ) => {
   const { data, error } = await client.auth.signInWithOAuth({
-    provider: provider as any,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    provider: provider as any, // Supabase Provider type is not exported, using string with type assertion
     options: {
       redirectTo: redirectUrl,
       scopes: options?.scopes,

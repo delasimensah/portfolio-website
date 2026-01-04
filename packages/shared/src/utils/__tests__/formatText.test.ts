@@ -24,7 +24,7 @@ describe("formatText", () => {
   });
 
   it("should handle null/undefined gracefully", () => {
-    expect(formatText(null as any)).toBe(null);
+    expect(formatText(null as unknown as string)).toBe(null);
   });
 });
 

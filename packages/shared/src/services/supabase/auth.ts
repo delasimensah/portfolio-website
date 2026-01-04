@@ -54,7 +54,7 @@ export const signUpWithEmail = async (
   password: string,
   options?: {
     redirectUrl?: string;
-    metadata?: Record<string, any>;
+    metadata?: Record<string, unknown>;
   }
 ) => {
   const { data: authData, error } = await client.auth.signUp({
@@ -202,7 +202,7 @@ export const updateUserPassword = async (
  */
 export const updateUserMetadata = async (
   client: SupabaseClient,
-  metadata: { [key: string]: any }
+  metadata: Record<string, unknown>
 ) => {
   const { data, error } = await client.auth.updateUser({
     data: metadata,
