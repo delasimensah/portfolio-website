@@ -75,14 +75,17 @@ app/(auth)/
 ```tsx
 // app/(auth)/forgot-password.tsx
 import React from "react";
-import { View, Text } from "react-native";
+
+import { ScrollableStack, Text, VStack } from "@/components";
 
 const ForgotPasswordScreen = () => {
   return (
-    <View className="flex-1 items-center justify-center p-5">
-      <Text className="mb-4 text-2xl font-bold">Forgot Password</Text>
-      {/* Your screen content */}
-    </View>
+    <ScrollableStack padding="lg">
+      <VStack spacing="lg" align="center" justify="center" className="flex-1">
+        <Text className="font-app-bold mb-4 text-2xl">Forgot Password</Text>
+        {/* Your screen content */}
+      </VStack>
+    </ScrollableStack>
   );
 };
 
@@ -153,14 +156,17 @@ app/(onboarding)/
 ```tsx
 // app/(onboarding)/welcome.tsx
 import React from "react";
-import { View, Text } from "react-native";
+
+import { ScrollableStack, Text, VStack } from "@/components";
 
 const WelcomeScreen = () => {
   return (
-    <View className="flex-1 items-center justify-center p-5">
-      <Text className="mb-4 text-2xl font-bold">Welcome!</Text>
-      {/* Your onboarding content */}
-    </View>
+    <ScrollableStack padding="lg">
+      <VStack spacing="lg" align="center" justify="center" className="flex-1">
+        <Text className="font-app-bold mb-4 text-2xl">Welcome!</Text>
+        {/* Your onboarding content */}
+      </VStack>
+    </ScrollableStack>
   );
 };
 
@@ -241,14 +247,17 @@ app/(main-app)/(tabs)/tab1/
 ```tsx
 // app/(main-app)/(tabs)/tab1/trending.tsx
 import React from "react";
-import { View, Text } from "react-native";
+
+import { ScrollableStack, Text, VStack } from "@/components";
 
 const TrendingScreen = () => {
   return (
-    <View className="flex-1 items-center justify-center p-5">
-      <Text className="text-2xl font-bold">Trending</Text>
-      {/* Your screen content */}
-    </View>
+    <ScrollableStack padding="lg">
+      <VStack spacing="lg" align="center" justify="center" className="flex-1">
+        <Text className="font-app-bold text-2xl">Trending</Text>
+        {/* Your screen content */}
+      </VStack>
+    </ScrollableStack>
   );
 };
 
@@ -311,14 +320,17 @@ app/(main-app)/(tabs)/tab2/
 ```tsx
 // app/(main-app)/(tabs)/tab2/feature-screen.tsx
 import React from "react";
-import { View, Text } from "react-native";
+
+import { ScrollableStack, Text, VStack } from "@/components";
 
 const FeatureScreen = () => {
   return (
-    <View className="flex-1 items-center justify-center p-5">
-      <Text className="text-2xl font-bold">Feature Screen</Text>
-      {/* Your screen content */}
-    </View>
+    <ScrollableStack padding="lg">
+      <VStack spacing="lg" align="center" justify="center" className="flex-1">
+        <Text className="font-app-bold text-2xl">Feature Screen</Text>
+        {/* Your screen content */}
+      </VStack>
+    </ScrollableStack>
   );
 };
 
@@ -378,16 +390,19 @@ Dynamic routes use parameters in the URL, like viewing a specific item.
 // app/(main-app)/(tabs)/tab1/item/[id].tsx
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
-import { View, Text } from "react-native";
+
+import { ScrollableStack, Text, VStack } from "@/components";
 
 const ItemDetailScreen = () => {
   const { id } = useLocalSearchParams<{ id: string }>();
 
   return (
-    <View className="flex-1 items-center justify-center p-5">
-      <Text className="text-2xl font-bold">Item Detail: {id}</Text>
-      {/* Fetch and display item data using id */}
-    </View>
+    <ScrollableStack padding="lg">
+      <VStack spacing="lg" align="center" justify="center" className="flex-1">
+        <Text className="font-app-bold text-2xl">Item Detail: {id}</Text>
+        {/* Fetch and display item data using id */}
+      </VStack>
+    </ScrollableStack>
   );
 };
 
@@ -436,14 +451,17 @@ Modal screens present content over the current screen, useful for forms, confirm
 ```tsx
 // app/(main-app)/(tabs)/tab1/create-item.tsx
 import React from "react";
-import { View, Text } from "react-native";
+
+import { ScrollableStack, Text, VStack } from "@/components";
 
 const CreateItemScreen = () => {
   return (
-    <View className="flex-1 items-center justify-center p-5">
-      <Text className="text-2xl font-bold">Create Item</Text>
-      {/* Your form content */}
-    </View>
+    <ScrollableStack padding="lg">
+      <VStack spacing="lg" align="center" justify="center" className="flex-1">
+        <Text className="font-app-bold text-2xl">Create Item</Text>
+        {/* Your form content */}
+      </VStack>
+    </ScrollableStack>
   );
 };
 
@@ -559,14 +577,17 @@ export default ProfileStackLayout;
 ```tsx
 // app/(main-app)/(tabs)/profile/index.tsx
 import React from "react";
-import { View, Text } from "react-native";
+
+import { ScrollableStack, Text, VStack } from "@/components";
 
 const ProfileScreen = () => {
   return (
-    <View className="flex-1 items-center justify-center p-5">
-      <Text className="text-2xl font-bold">Profile</Text>
-      {/* Your profile content */}
-    </View>
+    <ScrollableStack padding="lg">
+      <VStack spacing="lg" align="center" justify="center" className="flex-1">
+        <Text className="font-app-bold text-2xl">Profile</Text>
+        {/* Your profile content */}
+      </VStack>
+    </ScrollableStack>
   );
 };
 

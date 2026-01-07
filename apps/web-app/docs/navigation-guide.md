@@ -160,11 +160,13 @@ router.back();
 // app/(main-app)/page2/page.tsx
 "use client";
 
+import { Box, Title } from "@mantine/core";
+
 export default function Page2() {
   return (
-    <div>
-      <h1>Page 2</h1>
-    </div>
+    <Box>
+      <Title order={1}>Page 2</Title>
+    </Box>
   );
 }
 ```

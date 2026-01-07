@@ -19,7 +19,8 @@
 
 ```tsx
 import React from "react";
-import { View, Text } from "react-native";
+
+import { Text, VStack } from "@/components";
 
 interface ComponentNameProps {
   title: string;
@@ -33,10 +34,10 @@ const ComponentName: React.FC<ComponentNameProps> = ({
   variant = "primary",
 }) => {
   return (
-    <View className="flex-1 items-center justify-center p-5">
-      <Text className="text-2xl font-bold">{title}</Text>
+    <VStack spacing="md" align="center" justify="center" className="flex-1 p-5">
+      <Text className="font-app-bold text-2xl">{title}</Text>
       {/* Component content */}
-    </View>
+    </VStack>
   );
 };
 
@@ -48,6 +49,8 @@ export default ComponentName;
 ```tsx
 import React from "react";
 
+import { VStack } from "@/components";
+
 interface ListContainerProps<T> {
   data: T[];
   renderItem: (item: T) => React.ReactElement;
@@ -58,11 +61,11 @@ const ListContainer = <T extends { id: string | number }>({
   renderItem,
 }: ListContainerProps<T>): React.ReactElement => {
   return (
-    <View>
+    <VStack spacing="sm">
       {data.map((item) => (
-        <View key={String(item.id)}>{renderItem(item)}</View>
+        <VStack key={String(item.id)}>{renderItem(item)}</VStack>
       ))}
-    </View>
+    </VStack>
   );
 };
 
@@ -185,7 +188,7 @@ import { ASSETS } from "@/constants";
 
 ```tsx
 // ✅ Use Tailwind classes
-<Text className="font-bold">Bold Text</Text>
+<Text className="font-app-bold">Bold Text</Text>
 <Text className="font-light">Light Text</Text>
 
 // ✅ Layout files (when CSS classes aren't available)

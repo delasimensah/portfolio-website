@@ -21,7 +21,7 @@ This guide explains how to use Mantine UI components in the web project, followi
 ### 3. Typography
 
 - ✅ **Use project fonts**: All text uses font classes from constants
-- ✅ **Mantine Text component**: Use `<Text>` instead of `<p>` tags
+- ✅ **Custom Text component**: Use `<Text>` from `@/components` instead of `<p>` tags
 - ✅ **Mantine Title component**: Use `<Title>` instead of `<h1>`, `<h2>`, etc.
 
 ### 4. HTML Tag Usage
@@ -51,8 +51,11 @@ This guide explains how to use Mantine UI components in the web project, followi
 ### ✅ GOOD (Best practices)
 
 ```tsx
-// Tailwind classes with project colors
-<div className="bg-primary border-border">
+import { Stack, Title, Box } from '@mantine/core';
+import { Text } from '@/components';
+
+// Tailwind classes with project colors (use Box for generic containers)
+<Box className="bg-primary border-border">
 
 // Mantine components with proper styling
 <Stack gap="md">
@@ -69,7 +72,8 @@ This guide explains how to use Mantine UI components in the web project, followi
 ### Stack (Vertical Layout)
 
 ```tsx
-import { Stack } from '@mantine/core';
+import { Stack, Title } from '@mantine/core';
+import { Text } from '@/components';
 
 // Basic vertical stack
 <Stack gap="md">
@@ -96,6 +100,9 @@ import { Group } from '@mantine/core';
 </Group>
 
 // With justify and grow
+import { Group, Button } from "@mantine/core";
+import { Text } from "@/components";
+
 <Group gap="md" justify="space-between" grow>
   <Text className="font-regular">Left content</Text>
   <Button className="bg-primary">Action</Button>
@@ -107,7 +114,7 @@ import { Group } from '@mantine/core';
 ### Text Component
 
 ```tsx
-import { Text } from '@mantine/core';
+import { Text } from '@/components';
 
 // Basic text
 <Text className="font-regular">Regular text</Text>

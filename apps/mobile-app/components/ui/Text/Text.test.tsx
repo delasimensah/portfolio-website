@@ -13,7 +13,7 @@ describe("Text Component", () => {
     const { getByText } = render(<Text>Default Text</Text>);
     const textElement = getByText("Default Text");
     expect(textElement).toBeTruthy();
-    // The component should apply font-regular and text-base classes by default
+    // The component should apply font-app-regular and text-base classes by default
   });
 
   it("accepts custom className", () => {
@@ -43,7 +43,7 @@ describe("Text Component", () => {
 
   it("combines className with default styles", () => {
     const { getByText } = render(
-      <Text className="font-bold text-lg">Styled Text</Text>
+      <Text className="font-app-bold text-lg">Styled Text</Text>
     );
     const textElement = getByText("Styled Text");
     expect(textElement).toBeTruthy();

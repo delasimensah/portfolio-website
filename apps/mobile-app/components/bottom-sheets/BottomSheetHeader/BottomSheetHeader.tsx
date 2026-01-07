@@ -31,10 +31,10 @@ const BottomSheetHeader: React.FC<BottomSheetHeaderProps> = ({
       className={cn("border-b border-b-border", title ? "p-[10px]" : "p-[3px]")}
     >
       {title && (
-        <Text className="font-font-medium text-[20px] text-white">{title}</Text>
+        <Text className="font-app-medium text-[20px] text-white">{title}</Text>
       )}
       {subtitle && (
-        <Text className="font-font-medium mt-4 text-[14px] text-lightGrey">
+        <Text className="font-app-medium mt-4 text-[14px] text-lightGrey">
           {subtitle}
         </Text>
       )}

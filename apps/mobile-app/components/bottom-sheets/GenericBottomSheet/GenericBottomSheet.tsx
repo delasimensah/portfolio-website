@@ -4,11 +4,11 @@ import {
   BottomSheetView,
 } from "@gorhom/bottom-sheet";
 import React, { forwardRef, ReactNode, useCallback, useMemo } from "react";
-import { Text } from "react-native";
 
 import { COLORS } from "@/constants";
 
 import { VStack } from "../../ui/Stack/Stack";
+import Text from "../../ui/Text/Text";
 
 export interface GenericBottomSheetProps {
   /**
@@ -99,7 +99,7 @@ const GenericBottomSheet = forwardRef<
                   spacing="none"
                   className="mb-4 h-[2px] w-[40px] self-center rounded-full bg-lightGrey"
                 />
-                <Text className="font-bold text-xl text-white">{title}</Text>
+                <Text className="font-app-bold text-xl text-white">{title}</Text>
               </VStack>
             )}
             {children}

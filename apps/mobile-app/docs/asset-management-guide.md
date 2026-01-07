@@ -13,7 +13,7 @@
 | **Images** | `assets/images/` | `constants/assets.ts` | `<Image source={ASSETS.images.name} />` |
 | **Icons**  | `assets/icons/`  | `constants/assets.ts` | `<Image source={ASSETS.icons.name} />`  |
 | **Videos** | `assets/videos/` | `constants/assets.ts` | `<Video source={ASSETS.videos.name} />` |
-| **Fonts**  | `assets/fonts/`  | `constants/fonts.ts`  | `className="font-bold"`                 |
+| **Fonts**  | `assets/fonts/`  | `constants/fonts.ts`  | `className="font-app-bold"`                 |
 | **Colors** | N/A              | `constants/colors.ts` | `className="bg-primary"`                |
 
 ## 🚨 **CRITICAL: Image Component Requirements**
@@ -291,7 +291,7 @@ import { FONTS } from "@/constants";
 
 ```typescript
 // Use Tailwind classes for ALL component styling
-<Text className="font-bold">Bold Heading</Text>
+<Text className="font-app-bold">Bold Heading</Text>
 <Text className="font-light">Light Caption</Text>
 <Text className="font-medium">Medium Text</Text>
 ```

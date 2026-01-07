@@ -10,7 +10,7 @@ interface TextProps extends RNTextProps {
 const Text: React.FC<TextProps> = ({ className, children, ...props }) => {
   return (
     <RNText
-      className={cn("font-regular text-base text-white", className)}
+      className={cn("font-app-regular text-base text-white", className)}
       {...props}
     >
       {children}

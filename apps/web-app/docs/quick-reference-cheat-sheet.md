@@ -18,7 +18,10 @@
 **Standard Component:**
 
 ```tsx
+import { Stack, Title } from "@mantine/core";
 import React from "react";
+
+import { Text } from "@/components";
 
 interface ComponentNameProps {
   title: string;
@@ -32,10 +35,12 @@ const ComponentName: React.FC<ComponentNameProps> = ({
   variant = "primary",
 }) => {
   return (
-    <div className="flex flex-col gap-4">
-      <h2 className="text-lg font-bold">{title}</h2>
+    <Stack gap="md">
+      <Title order={2} className="text-lg font-bold">
+        {title}
+      </Title>
       {/* Component content */}
-    </div>
+    </Stack>
   );
 };
 
@@ -45,6 +50,7 @@ export default ComponentName;
 **Generic Component (without React.FC):**
 
 ```tsx
+import { Stack } from "@mantine/core";
 import React from "react";
 
 interface ListContainerProps<T> {
@@ -57,11 +63,11 @@ const ListContainer = <T extends { id: string | number }>({
   renderItem,
 }: ListContainerProps<T>): React.ReactElement => {
   return (
-    <div>
+    <Stack gap="sm">
       {data.map((item) => (
-        <div key={String(item.id)}>{renderItem(item)}</div>
+        <Stack key={String(item.id)}>{renderItem(item)}</Stack>
       ))}
-    </div>
+    </Stack>
   );
 };
 
