@@ -81,7 +81,7 @@ const ScrollableStack: React.FC<ScrollableStackProps> = ({
   return (
     <ScrollView
       className={cn(
-        "flex-1 bg-black",
+        "flex-1",
         paddingMap[padding],
         paddingXMap[paddingX],
         paddingYMap[paddingY],
