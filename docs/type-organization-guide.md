@@ -224,13 +224,11 @@ interface User {
 
 ### **Type Placement Rules:**
 
-| Type Category      | Location              | Example              |
-| ------------------ | --------------------- | -------------------- |
-| Component props    | Inline with component | `ButtonProps`        |
-| Component variants | Inline with component | `ButtonVariant`      |
-| Business domain    | `types/` folder       | `User`, `Product`    |
-| API responses      | `types/` folder       | `ApiResponse<T>`     |
-| Navigation params  | `types/` folder       | `RootStackParamList` |
+- **Component props** — Inline with component. Example: `ButtonProps`
+- **Component variants** — Inline with component. Example: `ButtonVariant`
+- **Business domain** — `types/` folder. Example: `User`, `Product`
+- **API responses** — `types/` folder. Example: `ApiResponse<T>`
+- **Navigation params** — `types/` folder. Example: `RootStackParamList`
 
 ### **Import Patterns:**
 

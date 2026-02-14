@@ -1,0 +1,45 @@
+---
+description: Mandatory code organization and style for this monorepo. Follow to the letter.
+alwaysApply: true
+---
+
+You MUST follow this repository's code organization and writing conventions to the letter. Do not deviate unless the user explicitly asks otherwise.
+
+## Where conventions live
+
+- **apps/web-app:** Read `apps/web-app/docs/project-structure.md` and `apps/web-app/docs/developer-decision-guide.md` when adding or changing pages, components, hooks, services.
+- **apps/mobile-app:** Read `apps/mobile-app/docs/project-structure.md`, `apps/mobile-app/docs/developer-decision-guide.md`, and `apps/mobile-app/docs/adding-screens-guide.md` when adding or changing screens, components, hooks, services.
+- **packages/shared:** Read `packages/shared/docs/contributing-guide.md` and `packages/shared/docs/supabase-types-guide.md` when relevant.
+- **Cross-cutting (all apps):** Read `docs/import-patterns-guide.md`, `docs/export-patterns-guide.md`, `docs/component-organization-guide.md` for imports, exports, and where components belong.
+
+When in doubt, open the doc for the app or package you are editing and follow it.
+
+## Non-negotiable rules
+
+### Components (web and mobile)
+
+- Every component lives in a **folder**: `ComponentName/ComponentName.tsx` (not a loose `ComponentName.tsx`).
+- Every component has a test file: `ComponentName/ComponentName.test.tsx`. Tests are REQUIRED.
+- **No** `index.ts` inside individual component folders. Only category-level or top-level barrel files.
+- Types stay **inline** in the component file. No separate `.types.ts` files for component props.
+- Export components from the **barrel**: `components/index.ts` with `export { default as ComponentName } from "./[category]/ComponentName/ComponentName";`
+- Use **Tailwind** for styling (NativeWind on mobile). Check existing components first; compose them when possible.
+
+### Services and hooks
+
+- **No** `index.ts` inside subdirectories (e.g. no `services/auth/index.ts`, no `hooks/auth/index.ts`). Only the **top-level** `services/index.ts` and `hooks/index.ts` export from subdirectories.
+- Use **named exports** for service functions and hooks. Barrel re-exports: `export { signIn, signOut } from "./auth/authService";`
+- Group related logic in single files (e.g. all auth functions in `authService.ts`).
+
+### Imports
+
+- **Cross-folder:** Use `@/` aliases: `import { Button } from "@/components";` `import { User } from "@/types";`
+- **Same folder / nearby:** Use relative paths: `import { X } from "./X";` or `../Other/Other`.
+- **Shared package:** `import { ... } from "shared";`
+
+### App structure
+
+- **Web (Next.js):** App Router. Route groups `(auth)`, `(onboarding)`, `(main-app)`. One `page.tsx` per route under `app/`.
+- **Mobile (Expo):** Expo Router. Same group names under `app/`. Screens in `app/(auth)/`, `app/(main-app)/(tabs)/[tab]/`, etc. Register new screens in the corresponding `_layout.tsx` when adding to a stack.
+
+Before adding a new screen, page, component, hook, or service, read the relevant **developer-decision-guide** and **project-structure** for that app so you follow the exact patterns (paths, exports, layout registration).

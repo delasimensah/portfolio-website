@@ -1,0 +1,108 @@
+---
+description: Developer preferences and base instructions. Follow user examples first; prefer official docs; code style and project organization.
+alwaysApply: true
+---
+
+# Base Developer Rules
+
+## CRITICAL: Follow Explicit User Instructions FIRST
+
+**ALWAYS implement exactly what the user asks for using their provided examples.**
+
+When the user:
+- Provides a clear example or format → Use it EXACTLY as shown
+- Says "update X using Y as a guide" → Copy the structure of Y precisely
+- Shows simple code and says "like this" → Match the structure, exports, and complexity level exactly
+- Gives you sample code → Don't reorganize, categorize, or add complexity unless requested
+
+**REQUIRED BEHAVIOR:**
+1. **Match the Example**: Copy export patterns, naming conventions, and level of detail shown
+2. **Ask Before Expanding**: Get permission before adding features, types, or complexity not requested
+3. **Simple When Simple**: Flat structures and basic exports are fine if that's what was shown
+4. **User Instructions Override Best Practices**: Explicit user requirements trump theoretical best practices
+
+**COMMON MISTAKES TO AVOID:**
+- Adding TypeScript complexity when user showed simple JavaScript
+- Creating comprehensive systems when user wanted basic functionality
+- Assuming user wants "better" or "more professional" solutions
+- Defaulting to complex patterns when simple examples were provided
+
+---
+
+## Documentation
+
+**Prefer official documentation** before implementing. See **`.cursor/rules/official-documentation.mdc`** and **AGENTS.md** for stack and doc URLs. Use @Docs when available.
+
+---
+
+## Developer Profile
+
+**TypeScript/React developer** specializing in:
+- **Frontend**: React, React Native, Expo, Refine
+- **Styling**: Tailwind CSS, NativeWind
+- **Backend**: Supabase
+- **UI**: Mantine
+- **Testing**: Jest, Testing Library
+
+## Personal Coding Preferences
+
+- **Code Spacing**: Blank lines between logical sections; blank lines between sibling JSX components
+- **Arrow Functions**: Use arrow functions for React components
+- **TypeScript**: Use `interface` for component props, `type` for general types. Strict mode. Avoid `any`.
+- **Event Handlers**: Prefix with "handle" (e.g. `handleSubmit`, `handleClick`)
+- **Tailwind**: Use Tailwind for all styling; avoid custom CSS. No hardcoded colors—use constants when needed as props.
+- **Modular Code**: Small, focused, reusable components. One component per file; default export for components. Props interface at top of file. Max ~300 lines per file when practical.
+- **Naming**: PascalCase (components, interfaces), camelCase (variables, functions), UPPER_SNAKE_CASE (constants), kebab-case (directories, non-component files)
+
+## Project Organization
+
+- **Feature-based**: Organize by features/domains, not file types
+- **This template**: Follow **`.cursor/rules/code-organization-and-style.mdc`** and each app's `docs/project-structure.md` and `docs/developer-decision-guide.md` for where files go, barrel exports, and conventions
+- **Mobile (Expo Router)**: Components in `components/` (or per-app structure); never put components in `app/` for routing
+- **Web**: Components in `components/` or feature directories
+- **Imports**: React/core first, then third-party, then internal (`@/` aliases). Use destructuring.
+
+## Code Quality
+
+- **Error Handling:**
+  - Try-catch for async operations
+  - user feedback for errors
+  - error boundaries for major components
+  - validate inputs and API (application programming interface) responses
+- **Performance:**
+  - React.memo for expensive components
+  - useMemo for expensive calculations
+  - useCallback for function refs passed to children
+  - lazy loading for large components
+- **Security:**
+  - Validate inputs
+  - use env vars for secrets
+  - proper auth
+  - HTTPS in production
+- **Accessibility:** ARIA labels, keyboard navigation, color contrast, screen reader support, semantic HTML
+- **Testing:**
+  - Focus on critical user flows
+  - Jest + Testing Library
+  - user-centric tests
+  - 70–80% coverage goal on critical features. Don't test implementation details or third-party libs.
+
+## Cursor Rules File Organization
+
+When updating or adding Cursor rules:
+- **Location**: `.cursor/rules/` (all rule files must be `.mdc`)
+- **General rules**: `.cursor/rules/` at top level. Use subfolders or a prefix (e.g. `topic-*.mdc`) for multi-concept rules.
+- Technology-specific guidance comes from official docs and AGENTS.md; add new rule files only when you need a reusable pattern not covered there.
+- Follow existing naming (kebab-case, descriptive)
+
+## Content Preservation
+
+**NEVER delete existing content without explicit user instruction.** Preserve by default. Ask before removing. Only remove on explicit instruction, true duplicates, or after user approval. When adding new content, keep existing examples and add alongside.
+
+## Git & Workflow
+
+- Follow **docs/git-and-pr-guidelines.md** for branch naming, commit message format, and pull request (PR) workflow.
+- Use the project's package manager (this repo: yarn).
+
+---
+
+*These rules reflect coding preferences and base behavior for this template and your projects.*

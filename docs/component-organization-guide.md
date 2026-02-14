@@ -260,17 +260,15 @@ export { default as ProfileCard } from "./shared/ProfileCard/ProfileCard";
 
 ## 📊 Component Category Quick Reference
 
-| Category          | Path                                               | Use Case                    | Example                                           |
-| ----------------- | -------------------------------------------------- | --------------------------- | ------------------------------------------------- |
-| **Screens/Pages** | Mobile: `screens/[stack]/`<br>Web: `pages/` (flat) | Full screen/page components | Mobile: `DashboardScreen`<br>Web: `DashboardPage` |
-| **UI**            | `ui/`                                              | Basic building blocks       | `Button`, `Input`, `Text`                         |
-| **Navigation**    | `navigation/`                                      | Navigation components       | `AppHeader`, `TabBar`                             |
-| **Bottom Sheets** | `bottom-sheets/`                                   | Bottom sheet modals         | `MenuBottomSheet`                                 |
-| **Feedback**      | `feedback/`                                        | User notifications          | `Toast`, `Alert`                                  |
-| **Auth**          | `auth/`                                            | Auth-specific components    | `SocialButton`                                    |
-| **Domain**        | `[domain]/`                                        | Domain-specific (3+ comps)  | `profile/`                                        |
-| **Shared**        | `shared/`                                          | Cross-feature business      | `ProfileCard`, `ProductCard`                      |
-| **Feature**       | `[feature]/`                                       | Feature-specific components | `dashboard/HeroSection`                           |
+- **Screens/Pages** — Path: Mobile `screens/[stack]/`, Web `pages/` (flat). Use case: full screen/page components. Example: Mobile `DashboardScreen`, Web `DashboardPage`
+- **UI** — Path: `ui/`. Use case: basic building blocks. Example: `Button`, `Input`, `Text`
+- **Navigation** — Path: `navigation/`. Use case: navigation components. Example: `AppHeader`, `TabBar`
+- **Bottom Sheets** — Path: `bottom-sheets/`. Use case: bottom sheet modals. Example: `MenuBottomSheet`
+- **Feedback** — Path: `feedback/`. Use case: user notifications. Example: `Toast`, `Alert`
+- **Auth** — Path: `auth/`. Use case: auth-specific components. Example: `SocialButton`
+- **Domain** — Path: `[domain]/`. Use case: domain-specific (3+ components). Example: `profile/`
+- **Shared** — Path: `shared/`. Use case: cross-feature business. Example: `ProfileCard`, `ProductCard`
+- **Feature** — Path: `[feature]/`. Use case: feature-specific components. Example: `dashboard/HeroSection`
 
 ---
 

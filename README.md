@@ -156,6 +156,10 @@ See the `docs/` directory for comprehensive documentation:
 - [Git and PR Guidelines](./docs/git-and-pr-guidelines.md) - Development workflow
 - [Testing Strategy](./docs/testing-strategy.md) - Testing approach
 
+### **Template maintenance**
+
+- [Untrack template docs and Cursor rules](./docs/untrack-template-assets.md) - When handing a project repo to a client (or when you do not want to ship `docs/` and `.cursor/`), run `./scripts/untrack-template-assets.sh` in the project repo. See the doc for when and how.
+
 ### **Code Organization**
 
 - [Component Building Guide](./docs/component-building-guide.md) - Component patterns

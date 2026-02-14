@@ -1,0 +1,14 @@
+---
+description: When planning a project or major feature, apply system design principles and the planning checklist.
+alwaysApply: true
+---
+
+When the user asks to **plan a project**, **plan a feature**, or **design** a new product area or major capability:
+
+1. Read `docs/system-design/README.md` for scope, stack mapping, and when system design applies.
+2. Ensure a **project requirements doc** exists (from `docs/system-design/project-requirements-questionnaire.md` and `project-requirements-template.md`); if the user hasn’t created one, suggest they run through the questionnaire first or capture goal, users, core flows, entities, and out-of-scope in a short doc.
+3. Read `docs/system-design/principles.md` for principles (and how they map to this repo).
+4. Work through `docs/system-design/planning-checklist.md` (scope, boundaries, data/state, stack alignment, risks).
+5. Produce a short, actionable plan the user can follow or hand to the agent for implementation.
+
+Keep the plan aligned with this monorepo: Next.js (web), Expo (mobile), Supabase, `packages/shared`, and the existing docs (`project-structure.md`, `developer-decision-guide.md`, `data-fetching-patterns-guide.md`, `supabase-integration-patterns.md`). For small, localized changes (e.g. one new screen or component), follow the usual code-organization and app docs; system design docs are optional.

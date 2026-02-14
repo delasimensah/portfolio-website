@@ -1,0 +1,14 @@
+---
+description: Prefer official documentation for frameworks and libraries in this monorepo. Use @Docs when available. Scope by path (web / mobile / shared).
+alwaysApply: false
+globs: ["apps/**/*", "packages/**/*"]
+---
+
+When implementing features, fixing bugs, or answering questions:
+
+1. **Prefer official documentation** for the relevant framework or library. Do not rely only on generic or outdated patterns.
+2. **Use @Docs** when the user has added doc sites (Cursor Settings → Indexing & Docs). Choose the doc that matches the task (e.g. Next.js for web, Expo for mobile).
+3. **Stack and canonical doc URLs** are in project root **AGENTS.md**. Use that list for the correct docs to reference.
+4. **Scope by path:** `apps/web-app` → Next.js, Mantine, Refine, TanStack, Supabase SSR (server-side rendering). `apps/mobile-app` → Expo, Expo Router, React Native, React Navigation, NativeWind. `packages/shared` → Supabase, TanStack Query, Zod, Zustand.
+
+If the user has not added official docs to @Docs yet, suggest adding the URLs from AGENTS.md.
