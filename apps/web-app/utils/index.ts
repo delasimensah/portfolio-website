@@ -1,7 +1,7 @@
 // Utils Barrel Export
 // Export all utilities from this file
 
-export { default as cn } from "shared/utils/cn";
+export { cn } from "shared";
 
 // Notification utilities
 export {

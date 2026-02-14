@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { createServerClient } from "@/services";
+import { createClient } from "@/services/supabase/server";
 
 /**
  * OAuth Callback Route Handler
@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.redirect(`${origin}/auth?error=no_code`);
     }
 
-    const supabase = await createServerClient();
+    const supabase = await createClient();
 
     // Exchange code for session (server-side has access to PKCE code verifier in cookies)
     const { data, error: exchangeError } =

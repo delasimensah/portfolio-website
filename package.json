@@ -29,10 +29,10 @@
     "supabase:init": "supabase init"
   },
   "devDependencies": {
-    "prettier": "^3.6.2",
-    "supabase": "^2.70.5",
+    "prettier": "^3.4.0",
+    "supabase": "^2.76.0",
     "turbo": "^2.6.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.0"
   },
   "packageManager": "yarn@1.22.0",
   "engines": {
