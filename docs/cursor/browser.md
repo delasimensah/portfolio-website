@@ -23,15 +23,13 @@ Browser actions (screenshots, clicks, etc.) show up in chat and in a browser win
 
 ## Browser tools
 
-| Tool | What it does |
-|------|----------------|
-| **Navigate** | Go to URLs |
-| **Click** | Click elements on the page |
-| **Type** | Enter text into inputs |
-| **Scroll** | Scroll the page |
-| **Screenshot** | Capture the current view (Agent sees it as an image) |
-| **Console output** | Read console logs (e.g. errors, warnings) |
-| **Network traffic** | Monitor HTTP requests/responses, API calls, payloads, status codes. *(Agent panel only for now; layout support coming.)* |
+- **Navigate** — Go to URLs
+- **Click** — Click elements on the page
+- **Type** — Enter text into inputs
+- **Scroll** — Scroll the page
+- **Screenshot** — Capture the current view (Agent sees it as an image)
+- **Console output** — Read console logs (e.g. errors, warnings)
+- **Network traffic** — Monitor HTTP requests/responses, API calls, payloads, status codes. *(Agent panel only for now; layout support coming.)*
 
 ---
 
@@ -91,11 +89,9 @@ The browser runs as a secure web view controlled by an MCP server (extension). C
 
 In **Agent Settings** you can set:
 
-| Mode | Behavior |
-|------|----------|
-| **Manual approval** | Review each browser action (recommended) |
-| **Allow-listed actions** | Actions on your allowlist run automatically; others need approval |
-| **Auto-run** | All browser actions run without approval *(use with caution)* |
+- **Manual approval** — Review each browser action (recommended)
+- **Allow-listed actions** — Actions on your allowlist run automatically; others need approval
+- **Auto-run** — All browser actions run without approval *(use with caution)*
 
 Never use auto-run with untrusted code or unknown sites. The Agent could run malicious scripts or submit sensitive data.
 
@@ -110,10 +106,8 @@ This is best-effort protection; AI can be unpredictable (e.g. prompt injection).
 
 ### Browser context: Chrome vs Browser Tab
 
-| Context | Behavior |
-|---------|----------|
-| **Chrome** | Isolated Chrome process, full-screen browsing |
-| **Browser Tab** | Browser opens as a pane inside Cursor |
+- **Chrome** — Isolated Chrome process, full-screen browsing
+- **Browser Tab** — Browser opens as a pane inside Cursor
 
 Both let the Agent use the same MCP browser tools.
 

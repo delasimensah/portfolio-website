@@ -171,20 +171,16 @@ Examples:
 
 ### **Component Placement**
 
-| Component Type   | Location                  | Examples                     |
-| ---------------- | ------------------------- | ---------------------------- |
-| Basic UI         | `/components/ui/`         | Button, Input, Modal, Card   |
-| Navigation       | `/components/navigation/` | Header, Sidebar, Breadcrumbs |
-| Shared Business  | `/components/shared/`     | Profile, ProductCard         |
-| Feature-specific | `/components/[feature]/`  | DashboardHeader, FilterBar   |
+- **Basic UI** — `/components/ui/` (e.g. Button, Input, Modal, Card)
+- **Navigation** — `/components/navigation/` (e.g. Header, Sidebar, Breadcrumbs)
+- **Shared Business** — `/components/shared/` (e.g. Profile, ProductCard)
+- **Feature-specific** — `/components/[feature]/` (e.g. DashboardHeader, FilterBar)
 
 ### **Hook Placement**
 
-| Hook Type      | Location           | Examples           |
-| -------------- | ------------------ | ------------------ |
-| Authentication | `/hooks/auth/`     | useAuth, useLogin  |
-| API            | `/hooks/supabase/` | useUser, useData   |
-| UI State       | `/hooks/ui/`       | useModal, useToast |
+- **Authentication** — `/hooks/auth/` (e.g. useAuth, useLogin)
+- **API** — `/hooks/supabase/` (e.g. useUser, useData)
+- **UI State** — `/hooks/ui/` (e.g. useModal, useToast)
 
 ---
 

@@ -29,13 +29,11 @@ Run **@Cursor help** in Slack for the current command list.
 
 ### Commands (summary)
 
-| Command | Purpose |
-|--------|---------|
-| `@Cursor [prompt]` | Start a Cloud Agent; in threads with existing agents, adds follow-up (if you own the agent). |
-| `@Cursor settings` | Configure defaults and the channel’s default repository. |
-| `@Cursor [options] [prompt]` | Use options such as `branch`, `autopr`. |
-| `@Cursor agent [prompt]` | Force a **new** agent in the thread (use when you want a separate run). |
-| `@Cursor list my agents` | List your running agents. |
+- **`@Cursor [prompt]`** — Start a Cloud Agent; in threads with existing agents, adds follow-up (if you own the agent).
+- **`@Cursor settings`** — Configure defaults and the channel’s default repository.
+- **`@Cursor [options] [prompt]`** — Use options such as `branch`, `autopr`.
+- **`@Cursor agent [prompt]`** — Force a **new** agent in the thread (use when you want a separate run).
+- **`@Cursor list my agents`** — List your running agents.
 
 ### Options
 

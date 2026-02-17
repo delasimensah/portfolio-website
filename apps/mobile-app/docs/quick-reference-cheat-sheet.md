@@ -126,13 +126,11 @@ router.push("/(main-app)/(tabs)/tab3"); // Third tab
 
 ### **Route Group Rules**
 
-| From Group   | To Group   | Path Format       | Example                   |
-| ------------ | ---------- | ----------------- | ------------------------- |
-| (auth)       | (auth)     | `/screen`         | `/forgot-password`        |
-| (auth)       | (main-app) | `/(main-app)/...` | `/(main-app)/(tabs)/tab1` |
-| (onboarding) | (main-app) | `/(main-app)/...` | `/(main-app)/(tabs)/tab1` |
-| (main-app)   | (main-app) | `/screen`         | `/tab2`, `/tab3`          |
-| (main-app)   | (auth)     | `/(auth)/...`     | `/(auth)/sign-in`         |
+- (auth) → (auth): `/screen` (e.g. `/forgot-password`)
+- (auth) → (main-app): `/(main-app)/...` (e.g. `/(main-app)/(tabs)/tab1`)
+- (onboarding) → (main-app): `/(main-app)/...` (e.g. `/(main-app)/(tabs)/tab1`)
+- (main-app) → (main-app): `/screen` (e.g. `/tab2`, `/tab3`)
+- (main-app) → (auth): `/(auth)/...` (e.g. `/(auth)/sign-in`)
 
 **Note:** Replace `tab1`, `tab2`, `tab3` with your actual tab names.
 
@@ -189,7 +187,7 @@ import { ASSETS } from "@/constants";
 ```tsx
 // ✅ Use Tailwind classes
 <Text className="font-app-bold">Bold Text</Text>
-<Text className="font-light">Light Text</Text>
+<Text className="font-app-light">Light Text</Text>
 
 // ✅ Layout files (when CSS classes aren't available)
 import { FONTS } from "@/constants";
@@ -200,7 +198,9 @@ import { FONTS } from "@/constants";
 
 ```tsx
 // ✅ Use Tailwind classes
-<View className="bg-primary" />
+import { Text, VStack } from "@/components";
+
+<VStack className="bg-primary" />
 <Text className="text-white" />
 
 // ✅ Layout files (when CSS classes aren't available)

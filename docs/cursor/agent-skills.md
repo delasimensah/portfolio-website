@@ -31,14 +31,12 @@ You can also **invoke a skill manually**: type **`/`** in Agent chat and search 
 
 Skills are loaded from these locations (project-level vs user-level):
 
-| Location | Scope |
-|----------|--------|
-| `.cursor/skills/` | Project |
-| `.claude/skills/` | Project (Claude compatibility) |
-| `.codex/skills/` | Project (Codex compatibility) |
-| `~/.cursor/skills/` | User (global) |
-| `~/.claude/skills/` | User (global, Claude) |
-| `~/.codex/skills/` | User (global, Codex) |
+- **`.cursor/skills/`** — Project
+- **`.claude/skills/`** — Project (Claude compatibility)
+- **`.codex/skills/`** — Project (Codex compatibility)
+- **`~/.cursor/skills/`** — User (global)
+- **`~/.claude/skills/`** — User (global, Claude)
+- **`~/.codex/skills/`** — User (global, Codex)
 
 Each skill is a **folder** with a **`SKILL.md`** file:
 
@@ -73,14 +71,12 @@ Each skill is defined in **`SKILL.md`** with **YAML frontmatter** and Markdown c
 
 ### Frontmatter fields
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `name` | Yes | Skill identifier. Lowercase letters, numbers, hyphens only. Must match the **folder name**. |
-| `description` | Yes | What the skill does and when to use it. Used by the Agent to decide relevance. |
-| `license` | No | License name or path to a license file. |
-| `compatibility` | No | Requirements (system packages, network, etc.). |
-| `metadata` | No | Extra key-value metadata. |
-| `disable-model-invocation` | No | When `true`, the skill is **only** applied when you explicitly type `/skill-name`. The Agent won’t auto-apply it. |
+- **`name`** — Yes; Skill identifier. Lowercase letters, numbers, hyphens only. Must match the **folder name**.
+- **`description`** — Yes; What the skill does and when to use it. Used by the Agent to decide relevance.
+- **`license`** — No; License name or path to a license file.
+- **`compatibility`** — No; Requirements (system packages, network, etc.).
+- **`metadata`** — No; Extra key-value metadata.
+- **`disable-model-invocation`** — No; When `true`, the skill is **only** applied when you explicitly type `/skill-name`. The Agent won’t auto-apply it.
 
 ### Example
 
@@ -148,11 +144,9 @@ Scripts can be any language (Bash, Python, JavaScript, etc.). Keep them self-con
 
 ## Optional directories
 
-| Directory | Purpose |
-|-----------|---------|
-| `scripts/` | Executable code the Agent can run |
-| `references/` | Extra docs loaded on demand |
-| `assets/` | Static files (templates, images, data) |
+- **`scripts/`** — Executable code the Agent can run
+- **`references/`** — Extra docs loaded on demand
+- **`assets/`** — Static files (templates, images, data)
 
 Keep **SKILL.md** focused; put long reference material in **references/** or other files so the Agent loads it only when needed.
 

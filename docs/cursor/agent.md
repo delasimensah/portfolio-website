@@ -34,19 +34,17 @@ Agent can run in different **modes** for different tasks: **Agent** (default, fu
 
 Tools are what Agent uses to get work done. There is **no limit** on how many tool calls it can make in a single task.
 
-| Tool | What it does |
-|------|----------------|
-| **Semantic search** | Find code by meaning (natural language), not just text. |
-| **Search files and folders** | Find files and folders by name or path. |
-| **Web** | Search or fetch information from the internet. |
-| **Fetch Rules** | Load and use your project and Cursor rules. |
-| **Read files** | Open and read file contents. |
-| **Edit files** | Create, change, or delete code in files. |
-| **Run shell commands** | Execute commands in the terminal. See [Terminal](./terminal.md) for sandbox, allowlist, and Auto-Run. |
-| **Browser** | Interact with or inspect web pages (navigate, click, type, screenshot, console, network). See [Browser](./browser.md). |
-| **Image generation** | Generate images from descriptions. |
-| **Ask questions** | Ask you clarifying questions. While waiting for your reply, the agent can keep reading files, editing, or running commands; your answer is used as soon as it’s sent. |
-| **Task (subagents)** | Delegate work to specialized subagents (own context, parallel, or sequential). See [Subagents](./subagents.md). |
+- **Semantic search** — Find code by meaning (natural language), not just text.
+- **Search files and folders** — Find files and folders by name or path.
+- **Web** — Search or fetch information from the internet.
+- **Fetch Rules** — Load and use your project and Cursor rules.
+- **Read files** — Open and read file contents.
+- **Edit files** — Create, change, or delete code in files.
+- **Run shell commands** — Execute commands in the terminal. See [Terminal](./terminal.md) for sandbox, allowlist, and Auto-Run.
+- **Browser** — Interact with or inspect web pages (navigate, click, type, screenshot, console, network). See [Browser](./browser.md).
+- **Image generation** — Generate images from descriptions.
+- **Ask questions** — Ask you clarifying questions. While waiting for your reply, the agent can keep reading files, editing, or running commands; your answer is used as soon as it’s sent.
+- **Task (subagents)** — Delegate work to specialized subagents (own context, parallel, or sequential). See [Subagents](./subagents.md).
 
 Under the hood: [Tool calling fundamentals](https://learn.cursor.com/tool-calling).
 
@@ -97,10 +95,8 @@ You can **queue** follow-up messages while Agent is still working. Your next ins
 
 ### Shortcuts
 
-| Action | Shortcut |
-|--------|----------|
-| **Queue** (wait until Agent finishes) | **Enter** |
-| **Send immediately** (skip queue, run now) | **Cmd+Enter** (Mac) / **Ctrl+Enter** (Windows/Linux) |
+- **Queue** (wait until Agent finishes) — **Enter**
+- **Send immediately** (skip queue, run now) — **Cmd+Enter** (Mac) / **Ctrl+Enter** (Windows/Linux)
 
 ### Sending immediately (Cmd+Enter / Ctrl+Enter)
 

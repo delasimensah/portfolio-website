@@ -22,10 +22,8 @@ Cursor can also load hooks from **third-party tools** like Claude Code so you ca
 
 ## Agent vs Tab hook events
 
-| Context | Events |
-|--------|--------|
-| **Agent** (Cmd+I / Agent Chat) | `sessionStart`, `sessionEnd`, `preToolUse`, `postToolUse`, `postToolUseFailure`, `subagentStart`, `subagentStop`, `beforeShellExecution`, `afterShellExecution`, `beforeMCPExecution`, `afterMCPExecution`, `beforeReadFile`, `afterFileEdit`, `beforeSubmitPrompt`, `preCompact`, `stop`, `afterAgentResponse`, `afterAgentThought` |
-| **Tab** (inline completions) | `beforeTabFileRead`, `afterTabFileEdit` |
+- **Agent** (Cmd+I / Agent Chat) — `sessionStart`, `sessionEnd`, `preToolUse`, `postToolUse`, `postToolUseFailure`, `subagentStart`, `subagentStop`, `beforeShellExecution`, `afterShellExecution`, `beforeMCPExecution`, `afterMCPExecution`, `beforeReadFile`, `afterFileEdit`, `beforeSubmitPrompt`, `preCompact`, `stop`, `afterAgentResponse`, `afterAgentThought`
+- **Tab** (inline completions) — `beforeTabFileRead`, `afterTabFileEdit`
 
 Tab hooks let you apply different policies to autonomous Tab operations than to user-directed Agent operations.
 
@@ -108,12 +106,10 @@ An LLM evaluates a natural-language condition. Good for policy without custom sc
 
 ### Where hooks load (priority: highest → lowest)
 
-| Level | Location |
-|-------|----------|
-| **Enterprise** | macOS: `/Library/Application Support/Cursor/hooks.json`; Linux/WSL: `/etc/cursor/hooks.json`; Windows: `C:\ProgramData\Cursor\hooks.json` |
-| **Team** | Cloud-distributed (Enterprise only) |
-| **Project** | `<project-root>/.cursor/hooks.json` (runs from project root) |
-| **User** | `~/.cursor/hooks.json` (runs from `~/.cursor/`) |
+- **Enterprise** — macOS: `/Library/Application Support/Cursor/hooks.json`; Linux/WSL: `/etc/cursor/hooks.json`; Windows: `C:\ProgramData\Cursor\hooks.json`
+- **Team** — Cloud-distributed (Enterprise only)
+- **Project** — `<project-root>/.cursor/hooks.json` (runs from project root)
+- **User** — `~/.cursor/hooks.json` (runs from `~/.cursor/`)
 
 Higher priority overrides lower. Project hooks are usually committed to the repo; user/enterprise are local or MDM-managed.
 
@@ -149,13 +145,11 @@ Blocking hooks (e.g. `beforeShellExecution`, `beforeMCPExecution`, `beforeReadFi
 
 ## Environment variables
 
-| Variable | Description |
-|----------|-------------|
-| `CURSOR_PROJECT_DIR` | Workspace root |
-| `CURSOR_VERSION` | Cursor version |
-| `CURSOR_USER_EMAIL` | User email (if logged in) |
-| `CURSOR_CODE_REMOTE` | Remote-aware project path (remote workspaces) |
-| `CLAUDE_PROJECT_DIR` | Alias for project dir (Claude compatibility) |
+- **`CURSOR_PROJECT_DIR`** — Workspace root
+- **`CURSOR_VERSION`** — Cursor version
+- **`CURSOR_USER_EMAIL`** — User email (if logged in)
+- **`CURSOR_CODE_REMOTE`** — Remote-aware project path (remote workspaces)
+- **`CLAUDE_PROJECT_DIR`** — Alias for project dir (Claude compatibility)
 
 Session-scoped `env` from **sessionStart** is passed to all later hooks in that session.
 
@@ -194,11 +188,9 @@ Cursor can load and run hooks configured for **Claude Code**, so you can use the
 
 ### Where Claude Code hooks load
 
-| Location | Path | Description |
-|----------|------|-------------|
-| **Project local** | `.claude/settings.local.json` | Project overrides, usually gitignored |
-| **Project** | `.claude/settings.json` | Project-level, checked in |
-| **User** | `~/.claude/settings.json` | User-level, global |
+- **Project local** — `.claude/settings.local.json`; Project overrides, usually gitignored
+- **Project** — `.claude/settings.json`; Project-level, checked in
+- **User** — `~/.claude/settings.json`; User-level, global
 
 ### Priority order (merged, highest → lowest)
 
@@ -241,29 +233,25 @@ Claude uses a similar format; Cursor maps Claude hook names to Cursor names auto
 
 ### Hook name mapping (Claude → Cursor)
 
-| Claude Code | Cursor |
-|-------------|--------|
-| `PreToolUse` | `preToolUse` |
-| `PostToolUse` | `postToolUse` |
-| `UserPromptSubmit` | `beforeSubmitPrompt` |
-| `Stop` | `stop` |
-| `SubagentStop` | `subagentStop` |
-| `SessionStart` | `sessionStart` |
-| `SessionEnd` | `sessionEnd` |
-| `PreCompact` | `preCompact` |
+- **`PreToolUse`** — `preToolUse`
+- **`PostToolUse`** — `postToolUse`
+- **`UserPromptSubmit`** — `beforeSubmitPrompt`
+- **`Stop`** — `stop`
+- **`SubagentStop`** — `subagentStop`
+- **`SessionStart`** — `sessionStart`
+- **`SessionEnd`** — `sessionEnd`
+- **`PreCompact`** — `preCompact`
 
 `Notification` and `PermissionRequest` have no Cursor equivalent and are not supported.
 
 ### Tool name mapping (Claude → Cursor)
 
-| Claude Code | Cursor | Supported |
-|-------------|--------|-----------|
-| `Bash` | `Shell` | Yes |
-| `Read` | `Read` | Yes |
-| `Write` / `Edit` | `Write` | Yes |
-| `Grep` | `Grep` | Yes |
-| `Task` | `Task` | Yes |
-| `Glob`, `WebFetch`, `WebSearch` | — | No |
+- **`Bash`** — `Shell`; Yes
+- **`Read`** — `Read`; Yes
+- **`Write` / `Edit`** — `Write`; Yes
+- **`Grep`** — `Grep`; Yes
+- **`Task`** — `Task`; Yes
+- **`Glob`, `WebFetch`, `WebSearch`** — —; No
 
 ### Exit code behavior
 

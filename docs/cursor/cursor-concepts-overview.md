@@ -98,14 +98,12 @@ Quick reference for the main Cursor concepts. Use this when you need to understa
 
 ## Quick reference
 
-| Concept         | One-line summary                                      |
-|-----------------|--------------------------------------------------------|
-| Tab             | Multi-line completion; press Tab to accept.            |
-| Agent           | AI that edits across files from a natural-language goal. |
-| Inline Edit     | Cmd+K / Ctrl+K: describe a change for selected code.   |
-| Chat            | Multi-tab AI conversation with history.               |
-| Rules           | Custom instructions for consistent AI behavior.       |
-| Semantic Search | Find code by meaning, not exact text.                  |
-| MCP             | Connect external tools (DBs, APIs, docs) to Cursor.   |
-| Context         | Everything the AI sees when it generates or edits.     |
-| Models          | Different AIs with different speed/capability tradeoffs. |
+- **Tab** — Multi-line completion; press Tab to accept.
+- **Agent** — AI that edits across files from a natural-language goal.
+- **Inline Edit** — Cmd+K / Ctrl+K: describe a change for selected code.
+- **Chat** — Multi-tab AI conversation with history.
+- **Rules** — Custom instructions for consistent AI behavior.
+- **Semantic Search** — Find code by meaning, not exact text.
+- **MCP** — Connect external tools (DBs, APIs, docs) to Cursor.
+- **Context** — Everything the AI sees when it generates or edits.
+- **Models** — Different AIs with different speed/capability tradeoffs.

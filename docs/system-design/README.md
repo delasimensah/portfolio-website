@@ -1,6 +1,6 @@
 # System design for this monorepo
 
-System design principles applied when **planning** new projects or major features. The goal is to align architecture with the stack (Next.js, Expo, Supabase, shared package) and to think through boundaries, data flow, and tradeoffs before coding.
+System design principles applied when **planning** new projects or major features. For the full build sequence (requirements → PRD → system design → screen flows → build), see [Project build process](../project-build-process.md). The goal is to align architecture with the stack (Next.js, Expo, Supabase, shared package) and to think through boundaries, data flow, and tradeoffs before coding.
 
 The Cursor rule `.cursor/rules/system-design-planning.mdc` tells the agent to use these docs when you ask to plan a project or feature.
 

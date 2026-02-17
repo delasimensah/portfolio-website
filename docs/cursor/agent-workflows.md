@@ -79,11 +79,9 @@ Usage: **`/fix-issue 123`**
 
 ### Other useful commands
 
-| Command | Purpose |
-|--------|---------|
-| `/review` | Run linters, check for common issues, summarize what needs attention |
-| `/update-deps` | Check outdated deps, update one by one, run tests after each |
-| `/docs` | Generate or update docs for recent changes |
+- **`/review`** — Run linters, check for common issues, summarize what needs attention
+- **`/update-deps`** — Check outdated deps, update one by one, run tests after each
+- **`/docs`** — Generate or update docs for recent changes
 
 Commit commands to git so the team can reuse them. When the Agent gets a workflow wrong, update the command.
 

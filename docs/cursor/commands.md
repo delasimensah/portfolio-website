@@ -14,11 +14,9 @@
 
 Commands are **plain Markdown files** stored in one of three places:
 
-| Location | Path | Who sees it |
-|----------|------|-------------|
-| **Project** | `.cursor/commands/` in the project root | Anyone with the project |
-| **Global** | `~/.cursor/commands/` in your home directory | Only you, all projects |
-| **Team** | [Cursor Dashboard](https://cursor.com/dashboard?tab=team-content&section=commands) | All team members (Team/Enterprise) |
+- **Project** — `.cursor/commands/` in the project root; Anyone with the project
+- **Global** — `~/.cursor/commands/` in your home directory; Only you, all projects
+- **Team** — [Cursor Dashboard](https://cursor.com/dashboard?tab=team-content&section=commands); All team members (Team/Enterprise)
 
 When you type **`/`** in the chat input, Cursor shows available commands from all locations. Pick one to run that workflow.
 

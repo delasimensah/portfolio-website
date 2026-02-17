@@ -205,43 +205,35 @@ What type of constant is this?
 
 ---
 
-## 📋 Quick Reference Tables
+## 📋 Quick Reference
 
 ### **Component Placement**
 
-| Component Type   | Location                                   | Examples                                  |
-| ---------------- | ------------------------------------------ | ----------------------------------------- |
-| Basic UI         | `/components/ui/ComponentName/`            | Button, Input, Modal, Card                |
-| Navigation       | `/components/navigation/ComponentName/`    | TabBar, Header, BackButton                |
-| Feedback         | `/components/feedback/ComponentName/`      | Toast, Alert, ErrorBoundary               |
-| Shared Business  | `/components/shared/ComponentName/`        | Profile, ItemList, ProductCard            |
-| Feature-specific | `/components/[feature]/ComponentName/`     | DashboardHeader, FilterBar, ActionButtons |
-| Bottom Sheets    | `/components/bottom-sheets/ComponentName/` | YesOrNoBottomSheet, MenuBottomSheet       |
+- **Basic UI** — `/components/ui/ComponentName/` (e.g. Button, Input, Modal, Card)
+- **Navigation** — `/components/navigation/ComponentName/` (e.g. TabBar, Header, BackButton)
+- **Feedback** — `/components/feedback/ComponentName/` (e.g. Toast, Alert, ErrorBoundary)
+- **Shared Business** — `/components/shared/ComponentName/` (e.g. Profile, ItemList, ProductCard)
+- **Feature-specific** — `/components/[feature]/ComponentName/` (e.g. DashboardHeader, FilterBar, ActionButtons)
+- **Bottom Sheets** — `/components/bottom-sheets/ComponentName/` (e.g. YesOrNoBottomSheet, MenuBottomSheet)
 
 ### **Hook Placement**
 
-| Hook Type      | Location             | Examples                     |
-| -------------- | -------------------- | ---------------------------- |
-| Authentication | `/hooks/auth/`       | useAuth, useLogin, useSignup |
-| API            | `/hooks/supabase/`   | useUserData, useItemData     |
-| Navigation     | `/hooks/navigation/` | useScreenContext             |
-| Shared         | `/hooks/shared/`     | useDebounce, useLocalStorage |
+- **Authentication** — `/hooks/auth/` (e.g. useAuth, useLogin, useSignup)
+- **API** — `/hooks/supabase/` (e.g. useUserData, useItemData)
+- **Navigation** — `/hooks/navigation/` (e.g. useScreenContext)
+- **Shared** — `/hooks/shared/` (e.g. useDebounce, useLocalStorage)
 
 ### **Service Placement**
 
-| Service Type | Location                   | Examples                         |
-| ------------ | -------------------------- | -------------------------------- |
-| API          | `/services/api/`           | authService, userService         |
-| Supabase     | `/services/supabase/`      | client                           |
-| External     | `/services/[serviceName]/` | analyticsService, paymentService |
+- **API** — `/services/api/` (e.g. authService, userService)
+- **Supabase** — `/services/supabase/` (e.g. client)
+- **External** — `/services/[serviceName]/` (e.g. analyticsService, paymentService)
 
 ### **Constant Placement**
 
-| Constant Type | Location               | Examples                |
-| ------------- | ---------------------- | ----------------------- |
-| Colors        | `/constants/colors.ts` | COLORS                  |
-| Fonts         | `/constants/fonts.ts`  | FONTS, FONT_LOADING_MAP |
-| Assets        | `/constants/assets.ts` | ASSETS                  |
+- **Colors** — `/constants/colors.ts` (COLORS)
+- **Fonts** — `/constants/fonts.ts` (FONTS, FONT_LOADING_MAP)
+- **Assets** — `/constants/assets.ts` (ASSETS)
 
 ---
 

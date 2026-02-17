@@ -23,11 +23,9 @@ All individual plans include:
 
 Included usage is applied at the same [model API rates](./models.md#model-pricing) as on-demand usage:
 
-| Plan | Included API agent usage | Also includes |
-|------|---------------------------|----------------|
-| **Pro** | $20/mo | Generous Auto and Composer usage |
-| **Pro Plus** | $70/mo | Generous Auto and Composer usage |
-| **Ultra** | $400/mo | Generous Auto and Composer usage |
+- **Pro** — $20/mo; Generous Auto and Composer usage
+- **Pro Plus** — $70/mo; Generous Auto and Composer usage
+- **Ultra** — $400/mo; Generous Auto and Composer usage
 
 Cursor often grants extra bonus capacity beyond the guaranteed amount. Because each model has different API costs, **which model you use** affects how fast your included usage is used up. Check [your dashboard](https://cursor.com/dashboard?tab=usage) for usage and token breakdowns; the editor also shows limit notifications.
 
@@ -39,12 +37,10 @@ For how usage is calculated, see Cursor’s guide on [tokens and pricing](https:
 
 Rough expectations from Cursor’s usage data:
 
-| Usage pattern | Typical monthly usage |
-|---------------|------------------------|
-| **Daily Tab only** | Stays within $20 |
-| **Light Agent use** | Often within included $20 |
-| **Daily Agent use** | ~$60–$100 total |
-| **Power users** (many agents/automation) | Often $200+/mo |
+- **Daily Tab only** — Stays within $20
+- **Light Agent use** — Often within included $20
+- **Daily Agent use** — ~$60–$100 total
+- **Power users** (many agents/automation) — Often $200+/mo
 
 ---
 

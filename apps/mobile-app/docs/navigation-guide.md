@@ -235,13 +235,11 @@ When adding new navigation:
 
 ## 📚 Quick Reference
 
-| From Group   | To Group   | Path Format       | Example                   |
-| ------------ | ---------- | ----------------- | ------------------------- |
-| (auth)       | (auth)     | `/screen`         | `/forgot-password`        |
-| (auth)       | (main-app) | `/(main-app)/...` | `/(main-app)/(tabs)/tab1` |
-| (onboarding) | (main-app) | `/(main-app)/...` | `/(main-app)/(tabs)/tab1` |
-| (main-app)   | (main-app) | `/screen`         | `/tab2`, `/tab3`          |
-| (main-app)   | (auth)     | `/(auth)/...`     | `/(auth)/sign-in`         |
+- (auth) → (auth): `/screen` (e.g. `/forgot-password`)
+- (auth) → (main-app): `/(main-app)/...` (e.g. `/(main-app)/(tabs)/tab1`)
+- (onboarding) → (main-app): `/(main-app)/...` (e.g. `/(main-app)/(tabs)/tab1`)
+- (main-app) → (main-app): `/screen` (e.g. `/tab2`, `/tab3`)
+- (main-app) → (auth): `/(auth)/...` (e.g. `/(auth)/sign-in`)
 
 **Note:** Replace `tab1`, `tab2`, `tab3` with your actual tab names.
 

@@ -8,13 +8,11 @@
 
 ### **📋 Quick Reference**
 
-| Asset Type | File Location    | Constants File        | Usage                                   |
-| ---------- | ---------------- | --------------------- | --------------------------------------- |
-| **Images** | `assets/images/` | `constants/assets.ts` | `<Image source={ASSETS.images.name} />` |
-| **Icons**  | `assets/icons/`  | `constants/assets.ts` | `<Image source={ASSETS.icons.name} />`  |
-| **Videos** | `assets/videos/` | `constants/assets.ts` | `<Video source={ASSETS.videos.name} />` |
-| **Fonts**  | `assets/fonts/`  | `constants/fonts.ts`  | `className="font-app-bold"`                 |
-| **Colors** | N/A              | `constants/colors.ts` | `className="bg-primary"`                |
+- **Images** — `assets/images/`; constants in `constants/assets.ts`; usage: `<Image source={ASSETS.images.name} />`
+- **Icons** — `assets/icons/`; constants in `constants/assets.ts`; usage: `<Image source={ASSETS.icons.name} />`
+- **Videos** — `assets/videos/`; constants in `constants/assets.ts`; usage: `<Video source={ASSETS.videos.name} />`
+- **Fonts** — `assets/fonts/`; constants in `constants/fonts.ts`; usage: `className="font-app-bold"`
+- **Colors** — N/A (no folder); constants in `constants/colors.ts`; usage: `className="bg-primary"`
 
 ## 🚨 **CRITICAL: Image Component Requirements**
 
@@ -59,9 +57,10 @@ export const ASSETS = {
 **Step 3: Use in Components**
 
 ```typescript
-// Option A: React Native Image component
+// Option A: Using expo-image Image component
 import { Image } from "expo-image";
 import { ASSETS } from "@/constants";
+
 <Image source={ASSETS.images.newImage} />
 
 // Option B: With styling
@@ -238,8 +237,10 @@ module.exports = {
 
 ```typescript
 // Primary approach: Tailwind classes (after adding to config)
-<View className="bg-accent" />
-<View className="bg-special-blue" />
+import { Text, VStack } from "@/components";
+
+<VStack className="bg-accent" />
+<VStack className="bg-special-blue" />
 <Text className="text-primary">Text</Text>
 
 // Layout files only (when CSS classes aren't available)
@@ -292,8 +293,8 @@ import { FONTS } from "@/constants";
 ```typescript
 // Use Tailwind classes for ALL component styling
 <Text className="font-app-bold">Bold Heading</Text>
-<Text className="font-light">Light Caption</Text>
-<Text className="font-medium">Medium Text</Text>
+<Text className="font-app-light">Light Caption</Text>
+<Text className="font-app-medium">Medium Text</Text>
 ```
 
 **Best Practice:** **Tailwind classes are the PRIMARY approach for all component styling.**

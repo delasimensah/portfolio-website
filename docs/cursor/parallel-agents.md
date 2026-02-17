@@ -50,11 +50,9 @@ Customize worktree setup via **`.cursor/worktrees.json`**. Cursor looks for it: 
 
 ### Config keys
 
-| Key | Purpose |
-|-----|---------|
-| **`setup-worktree-unix`** | Commands or script path for macOS/Linux (overrides `setup-worktree` on Unix). |
-| **`setup-worktree-windows`** | Commands or script path for Windows (overrides `setup-worktree` on Windows). |
-| **`setup-worktree`** | Fallback for all OSes. |
+- **`setup-worktree-unix`** — Commands or script path for macOS/Linux (overrides `setup-worktree` on Unix).
+- **`setup-worktree-windows`** — Commands or script path for Windows (overrides `setup-worktree` on Windows).
+- **`setup-worktree`** — Fallback for all OSes.
 
 Each key: **array of shell commands** (run in order) or **string** path to a script file relative to the directory containing `worktrees.json`.
 

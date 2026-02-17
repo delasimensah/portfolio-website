@@ -65,14 +65,12 @@ Accept **one word at a time** with **Cmd+Right** / **Ctrl+Right**. The keybindin
 
 ## Settings
 
-| Setting | Description |
-|---------|-------------|
-| **Cursor Tab** | Turn on context-aware, multi-line suggestions around the cursor (based on recent edits). |
-| **Partial Accepts** | Accept the next word of a suggestion (Cmd+Right / Ctrl+Right). |
-| **Suggestions While Commenting** | Allow Tab suggestions inside comment blocks. |
-| **Whitespace-Only Suggestions** | Allow suggestions that only change formatting. |
-| **Imports** | Auto-import for TypeScript. |
-| **Auto Import for Python (beta)** | Auto-import for Python. |
+- **Cursor Tab** — Turn on context-aware, multi-line suggestions around the cursor (based on recent edits).
+- **Partial Accepts** — Accept the next word of a suggestion (Cmd+Right / Ctrl+Right).
+- **Suggestions While Commenting** — Allow Tab suggestions inside comment blocks.
+- **Whitespace-Only Suggestions** — Allow suggestions that only change formatting.
+- **Imports** — Auto-import for TypeScript.
+- **Auto Import for Python (beta)** — Auto-import for Python.
 
 ---
 

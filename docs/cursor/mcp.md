@@ -26,11 +26,9 @@ MCP is an open protocol. **MCP servers** expose functions and data that Cursor (
 
 MCP servers expose **Tools**, **Prompts**, **Resources**, **Roots**, and **Elicitation** over the protocol. Cursor supports three **transports**:
 
-| Transport | Where it runs | Deployment | Users | Input | Auth |
-|-----------|----------------|------------|--------|--------|------|
-| **stdio** | Local | Cursor runs the command | Single user | Shell command | Env vars |
-| **SSE** | Local or remote | You run the server | Multiple users | URL (SSE endpoint) | OAuth |
-| **Streamable HTTP** | Local or remote | You run the server | Multiple users | URL (HTTP endpoint) | OAuth |
+- **stdio** — Local; Cursor runs the command; Single user; Shell command; Env vars
+- **SSE** — Local or remote; You run the server; Multiple users; URL (SSE endpoint); OAuth
+- **Streamable HTTP** — Local or remote; You run the server; Multiple users; URL (HTTP endpoint); OAuth
 
 **Protocol support:** Tools ✅, Prompts ✅, Resources ✅, Roots ✅, Elicitation ✅.
 
@@ -53,13 +51,11 @@ MCP servers can be installed via **Cursor deeplinks**. The link uses the same sh
 cursor://anysphere.cursor-deeplink/mcp/install?name=$NAME&config=$BASE64_ENCODED_CONFIG
 ```
 
-| Component | Description |
-|-----------|-------------|
-| `cursor://` | Protocol scheme |
-| `anysphere.cursor-deeplink` | Deeplink handler |
-| `/mcp/install` | Path |
-| `name` | Query param: display name for the server |
-| `config` | Query param: **base64-encoded** JSON for the server (same structure as one entry in `mcpServers`) |
+- **`cursor://`** — Protocol scheme
+- **`anysphere.cursor-deeplink`** — Deeplink handler
+- **`/mcp/install`** — Path
+- **`name`** — Query param: display name for the server
+- **`config`** — Query param: **base64-encoded** JSON for the server (same structure as one entry in `mcpServers`)
 
 **How to generate a link:**
 
@@ -144,13 +140,11 @@ Put MCP servers in a JSON config:
 
 ### STDIO server fields
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `type` | Yes | `"stdio"` |
-| `command` | Yes | Executable (on PATH or full path) |
-| `args` | No | Array of arguments |
-| `env` | No | Environment variables |
-| `envFile` | No | Path to `.env`-style file (STDIO only; not for remote) |
+- **`type`** — Yes; `"stdio"`
+- **`command`** — Yes; Executable (on PATH or full path)
+- **`args`** — No; Array of arguments
+- **`env`** — No; Environment variables
+- **`envFile`** — No; Path to `.env`-style file (STDIO only; not for remote)
 
 ### Static OAuth for remote servers
 

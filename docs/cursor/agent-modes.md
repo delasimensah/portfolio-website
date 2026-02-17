@@ -10,12 +10,10 @@ Agent can run in different **modes**, each tuned for a kind of task. Each mode e
 
 ## Modes at a glance
 
-| Mode | Best for | What it does | Tools |
-|------|----------|----------------|-------|
-| **Agent** | Complex features, refactors | Explores on its own, edits many files, runs commands, fixes errors | All tools |
-| **Ask** | Learning, planning, questions | Read-only: searches and answers, no edits | Search tools only |
-| **Plan** | Complex work that needs a plan first | Researches, asks questions, writes a plan you can edit, then you trigger “build” | All tools |
-| **Debug** | Tricky bugs, regressions | Forms hypotheses, adds logs, uses a debug server and runtime data, then makes a targeted fix | All tools + debug server |
+- **Agent** — Complex features, refactors; Explores on its own, edits many files, runs commands, fixes errors; All tools
+- **Ask** — Learning, planning, questions; Read-only: searches and answers, no edits; Search tools only
+- **Plan** — Complex work that needs a plan first; Researches, asks questions, writes a plan you can edit, then you trigger “build”; All tools
+- **Debug** — Tricky bugs, regressions; Forms hypotheses, adds logs, uses a debug server and runtime data, then makes a targeted fix; All tools + debug server
 
 Understanding [how agents work](https://learn.cursor.com/agents) and [tool calling](https://learn.cursor.com/tool-calling) helps you pick the right mode.
 
@@ -133,18 +131,14 @@ Full details: [Commands](./commands.md), [Cursor docs – Commands](https://docs
 
 All modes share some options:
 
-| Setting | Description |
-|---------|-------------|
-| **Model** | Which AI model the agent uses. |
-| **Keyboard shortcuts** | Shortcuts to switch between modes. |
+- **Model** — Which AI model the agent uses.
+- **Keyboard shortcuts** — Shortcuts to switch between modes.
 
 Mode-specific options:
 
-| Mode | Setting | Description |
-|------|---------|-------------|
-| **Agent** | Auto-run | Automatically run commands. |
-| **Agent** | Auto-fix errors | Automatically try to fix errors. |
-| **Ask** | Search codebase | Automatically find relevant files. |
+- **Agent** — Auto-run; Automatically run commands.
+- **Agent** — Auto-fix errors; Automatically try to fix errors.
+- **Ask** — Search codebase; Automatically find relevant files.
 
 ---
 

@@ -51,13 +51,15 @@ This guide explains how to use Mantine UI components in the web project, followi
 ### ✅ GOOD (Best practices)
 
 ```tsx
-import { Stack, Title, Box } from '@mantine/core';
-import { Text } from '@/components';
+import { Box } from '@mantine/core';
 
 // Tailwind classes with project colors (use Box for generic containers)
 <Box className="bg-primary border-border">
 
 // Mantine components with proper styling
+import { Stack, Title } from '@mantine/core';
+import { Text } from '@/components';
+
 <Stack gap="md">
   <Title order={1} className="text-white font-bold">Title</Title>
   <Text className="text-gray-400 font-regular">Description</Text>
@@ -91,13 +93,13 @@ import { Text } from '@/components';
 ### Group (Horizontal Layout)
 
 ```tsx
-import { Group } from '@mantine/core';
+import { Group } from "@mantine/core";
 
 // Basic horizontal group
 <Group gap="md">
   <Button>Cancel</Button>
   <Button>Save</Button>
-</Group>
+</Group>;
 
 // With justify and grow
 import { Group, Button } from "@mantine/core";
@@ -106,7 +108,7 @@ import { Text } from "@/components";
 <Group gap="md" justify="space-between" grow>
   <Text className="font-regular">Left content</Text>
   <Button className="bg-primary">Action</Button>
-</Group>
+</Group>;
 ```
 
 ## Typography Components

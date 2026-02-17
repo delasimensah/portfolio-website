@@ -183,15 +183,13 @@ That's it! Next.js automatically creates the route.
 
 ## 📚 Quick Reference
 
-| From Page | To Page    | Navigation Code              |
-| --------- | ---------- | ---------------------------- |
-| Any       | Sign In    | `router.push("/sign-in")`    |
-| Any       | Sign Up    | `router.push("/sign-up")`    |
-| Any       | Onboarding | `router.push("/onboarding")` |
-| Any       | Page 1     | `router.push("/page1")`      |
-| Any       | Page 2     | `router.push("/page2")`      |
-| Any       | Page 3     | `router.push("/page3")`      |
-| Any       | Profile    | `router.push("/profile")`    |
+- Any → Sign In: `router.push("/sign-in")`
+- Any → Sign Up: `router.push("/sign-up")`
+- Any → Onboarding: `router.push("/onboarding")`
+- Any → Page 1: `router.push("/page1")`
+- Any → Page 2: `router.push("/page2")`
+- Any → Page 3: `router.push("/page3")`
+- Any → Profile: `router.push("/profile")`
 
 **Note:** Replace `page1`, `page2`, `page3` with your actual page names.
 

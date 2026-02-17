@@ -192,11 +192,9 @@ Settings apply immediately to new agents.
 
 Team members can send follow-up messages to Cloud Agents created by **other** users. Admins control this in Cloud Agents security settings:
 
-| Setting | Behavior |
-|---------|----------|
-| **Disabled** | Only the creator can send follow-ups. |
-| **Service accounts only** | Follow-ups allowed only to agents created by a [service account](https://docs.cursor.com/account/enterprise/service-accounts), not other humans. |
-| **All** | Any team member can follow up on any team agent. |
+- **Disabled** — Only the creator can send follow-ups.
+- **Service accounts only** — Follow-ups allowed only to agents created by a [service account](https://docs.cursor.com/account/enterprise/service-accounts), not other humans.
+- **All** — Any team member can follow up on any team agent.
 
 **Risk:** Follow-ups run with the **creator’s** secrets and credentials. A user could direct the agent to read env vars, log secrets, or push credentials elsewhere. Someone with limited access could effectively use a more privileged user’s agent. Treat this like shared SSH or service credentials.
 
@@ -266,18 +264,16 @@ You can **launch and manage Cloud Agents programmatically** via the Cloud Agents
 
 ### Endpoints (summary)
 
-| Method | Path | Purpose |
-|--------|------|---------|
-| GET | `/v0/agents` | List agents (pagination, filter by PR) |
-| GET | `/v0/agents/{id}` | Get agent status and result |
-| GET | `/v0/agents/{id}/conversation` | Get conversation history |
-| POST | `/v0/agents` | Launch an agent (`prompt`, `source`, optional `target`, `model`, `webhook`) |
-| POST | `/v0/agents/{id}/followup` | Add follow-up instruction |
-| POST | `/v0/agents/{id}/stop` | Stop a running agent |
-| DELETE | `/v0/agents/{id}` | Delete an agent |
-| GET | `/v0/me` | API key info |
-| GET | `/v0/models` | Recommended models for Cloud Agents |
-| GET | `/v0/repositories` | List GitHub repos (strict rate limits: 1/min, 30/hr per user) |
+- **GET** — `/v0/agents`; List agents (pagination, filter by PR)
+- **GET** — `/v0/agents/{id}`; Get agent status and result
+- **GET** — `/v0/agents/{id}/conversation`; Get conversation history
+- **POST** — `/v0/agents`; Launch an agent (`prompt`, `source`, optional `target`, `model`, `webhook`)
+- **POST** — `/v0/agents/{id}/followup`; Add follow-up instruction
+- **POST** — `/v0/agents/{id}/stop`; Stop a running agent
+- **DELETE** — `/v0/agents/{id}`; Delete an agent
+- **GET** — `/v0/me`; API key info
+- **GET** — `/v0/models`; Recommended models for Cloud Agents
+- **GET** — `/v0/repositories`; List GitHub repos (strict rate limits: 1/min, 30/hr per user)
 
 **For request/response schemas, all parameters, webhooks, and examples, use:** [Cursor docs – Cloud Agents API](https://docs.cursor.com/cloud-agent/api) and the [OpenAPI spec](https://docs.cursor.com/docs-static/cloud-agents-openapi.yaml).
 

@@ -10,12 +10,10 @@
 
 ## Rule types
 
-| Type | Where | Scope |
-|------|--------|------|
-| **Project Rules** | `.cursor/rules/` | Version-controlled, scoped to the codebase (path patterns, relevance, or manual) |
-| **User Rules** | Cursor Settings → Rules | Global to your Cursor; used by Agent (Chat) only |
-| **Team Rules** | Dashboard (Team/Enterprise) | Team-wide; can be enforced so users can’t disable them |
-| **AGENTS.md** | Project root or subdirectories | Plain markdown, no metadata; simple alternative to `.cursor/rules` |
+- **Project Rules** — `.cursor/rules/`; Version-controlled, scoped to the codebase (path patterns, relevance, or manual)
+- **User Rules** — Cursor Settings → Rules; Global to your Cursor; used by Agent (Chat) only
+- **Team Rules** — Dashboard (Team/Enterprise); Team-wide; can be enforced so users can’t disable them
+- **AGENTS.md** — Project root or subdirectories; Plain markdown, no metadata; simple alternative to `.cursor/rules`
 
 ---
 
@@ -52,12 +50,10 @@ Example layout:
 
 ### Rule types (how they’re applied)
 
-| Type | Behavior |
-|------|----------|
-| **Always Apply** | Applied to every chat session |
-| **Apply Intelligently** | Agent applies when it decides the rule is relevant (uses `description`) |
-| **Apply to Specific Files** | Applied when the current file matches a `globs` pattern |
-| **Apply Manually** | Only when you @-mention in chat (e.g. `@my-rule`) |
+- **Always Apply** — Applied to every chat session
+- **Apply Intelligently** — Agent applies when it decides the rule is relevant (uses `description`)
+- **Apply to Specific Files** — Applied when the current file matches a `globs` pattern
+- **Apply Manually** — Only when you @-mention in chat (e.g. `@my-rule`)
 
 ### Frontmatter and content
 

@@ -144,12 +144,10 @@ router.back();
 
 ### **Route URLs**
 
-| Page       | File Path                              | URL           |
-| ---------- | -------------------------------------- | ------------- |
-| Sign In    | `app/(auth)/sign-in/page.tsx`          | `/sign-in`    |
-| Sign Up    | `app/(auth)/sign-up/page.tsx`          | `/sign-up`    |
-| Onboarding | `app/(onboarding)/onboarding/page.tsx` | `/onboarding` |
-| Page 1     | `app/(main-app)/page1/page.tsx`        | `/page1`      |
+- **Sign In** — `app/(auth)/sign-in/page.tsx` → `/sign-in`
+- **Sign Up** — `app/(auth)/sign-up/page.tsx` → `/sign-up`
+- **Onboarding** — `app/(onboarding)/onboarding/page.tsx` → `/onboarding`
+- **Page 1** — `app/(main-app)/page1/page.tsx` → `/page1`
 
 **Note:** Replace `page1` with your actual page name.
 

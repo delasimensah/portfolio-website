@@ -80,6 +80,7 @@ import {
 import React, { forwardRef, useCallback, useMemo } from "react";
 
 import { COLORS } from "@/constants";
+import { VStack } from "@/components";
 
 interface MyNewBottomSheetProps {
   title: string;
@@ -119,7 +120,9 @@ const MyNewBottomSheet = forwardRef<BottomSheetModal, MyNewBottomSheetProps>(
         handleIndicatorStyle={{ backgroundColor: COLORS.lightGrey }}
       >
         <BottomSheetView>
-          <View className="p-5">{/* Your content here */}</View>
+          <VStack spacing="md" className="p-5">
+            {/* Your content here */}
+          </VStack>
         </BottomSheetView>
       </BottomSheetModal>
     );
@@ -303,11 +306,9 @@ return (
 
 ### **Common Snap Point Heights**
 
-| Type   | Height | Use Case                |
-| ------ | ------ | ----------------------- |
-| Small  | 280px  | Yes/No confirmations    |
-| Medium | 490px  | Options menus           |
-| Large  | 80%    | Scrollable lists, forms |
+- **Small** — 280px (Yes/No confirmations)
+- **Medium** — 490px (Options menus)
+- **Large** — 80% (Scrollable lists, forms)
 
 ---
 

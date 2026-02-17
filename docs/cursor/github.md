@@ -30,13 +30,11 @@ With [Bugbot](https://docs.cursor.com/bugbot) enabled, **`@cursor fix`** uses Bu
 
 The GitHub app needs:
 
-| Permission | Purpose |
-|------------|---------|
-| Repository access | Clone code and create working branches |
-| Pull requests | Create PRs with agent changes |
-| Issues | Track bugs/tasks agents find or fix |
-| Checks and statuses | Report code quality and test results |
-| Actions and workflows | Monitor CI/CD and deployment |
+- **Repository access** — Clone code and create working branches
+- **Pull requests** — Create PRs with agent changes
+- **Issues** — Track bugs/tasks agents find or fix
+- **Checks and statuses** — Report code quality and test results
+- **Actions and workflows** — Monitor CI/CD and deployment
 
 Permissions follow least privilege for Cloud Agent use. See [Cursor docs – GitHub](https://docs.cursor.com/integrations/github) for current details.
 

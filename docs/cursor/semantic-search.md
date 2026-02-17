@@ -55,12 +55,10 @@ Cursor keeps the index in sync with your workspace by checking periodically (abo
 
 ### What gets indexed
 
-| File type | Action |
-|-----------|--------|
-| **New files** | Added to the index automatically |
-| **Modified files** | Old embeddings removed, new ones created |
-| **Deleted files** | Removed from the index promptly |
-| **Large/complex files** | May be skipped for performance |
+- **New files** — Added to the index automatically
+- **Modified files** — Old embeddings removed, new ones created
+- **Deleted files** — Removed from the index promptly
+- **Large/complex files** — May be skipped for performance
 
 ### Performance and troubleshooting
 

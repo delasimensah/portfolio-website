@@ -12,12 +12,10 @@ Subagents work in the editor, CLI, and [Cloud Agents](https://docs.cursor.com/cl
 
 ## Benefits
 
-| Benefit | What it means |
-|---------|----------------|
-| **Context isolation** | Each subagent has its own context. Long research or exploration doesn’t fill the main chat. |
-| **Parallel execution** | Run multiple subagents at once for different parts of the codebase. |
-| **Specialized expertise** | Custom prompts, tool access, and models per subagent for domain-specific work. |
-| **Reusability** | Define subagents once and use them across projects. |
+- **Context isolation** — Each subagent has its own context. Long research or exploration doesn’t fill the main chat.
+- **Parallel execution** — Run multiple subagents at once for different parts of the codebase.
+- **Specialized expertise** — Custom prompts, tool access, and models per subagent for domain-specific work.
+- **Reusability** — Define subagents once and use them across projects.
 
 **Plan note:** On legacy **request-based** plans you must enable [Max Mode](./models.md#max-mode) to use subagents. **Usage-based** plans have subagents on by default.
 
@@ -29,10 +27,8 @@ When the Agent hits a complex task, it can **launch a subagent**. The subagent g
 
 ### Foreground vs background
 
-| Mode | Behavior | Best for |
-|------|----------|----------|
-| **Foreground** | Waits until the subagent finishes, then returns the result. | Sequential work where you need the output. |
-| **Background** | Returns immediately; the subagent keeps running. | Long-running or parallel work. |
+- **Foreground** — Waits until the subagent finishes, then returns the result.; Sequential work where you need the output.
+- **Background** — Returns immediately; the subagent keeps running.; Long-running or parallel work.
 
 ---
 
@@ -40,11 +36,9 @@ When the Agent hits a complex task, it can **launch a subagent**. The subagent g
 
 Cursor ships three built-in subagents for context-heavy work:
 
-| Subagent | Purpose | Why a subagent |
-|----------|---------|----------------|
-| **Explore** | Search and analyze the codebase | Exploration produces lots of intermediate output; isolating it keeps the main context small. Uses a faster model for many parallel searches. |
-| **Bash** | Run sequences of shell commands | Command output is verbose; keeping it in a subagent keeps the parent focused on decisions. |
-| **Browser** | Control the browser via MCP | DOM snapshots and screenshots are noisy; the subagent filters them down to what matters. |
+- **Explore** — Search and analyze the codebase; Exploration produces lots of intermediate output; isolating it keeps the main context small. Uses a faster model for many parallel searches.
+- **Bash** — Run sequences of shell commands; Command output is verbose; keeping it in a subagent keeps the parent focused on decisions.
+- **Browser** — Control the browser via MCP; DOM snapshots and screenshots are noisy; the subagent filters them down to what matters.
 
 **Why these exist:** They generate noisy intermediate output, benefit from tailored prompts and tools, and can use a lot of context. As subagents they get context isolation, model flexibility (e.g. faster model for Explore), and cost efficiency. You don’t configure them—the Agent uses them when appropriate.
 
@@ -52,12 +46,10 @@ Cursor ships three built-in subagents for context-heavy work:
 
 ## When to use subagents vs skills
 
-| Use subagents when… | Use skills when… |
-|---------------------|-------------------|
-| You need **context isolation** for long research | The task is **single-purpose** (e.g. generate changelog, format) |
-| You’re running **multiple workstreams in parallel** | You want a **quick, repeatable** action |
-| The task needs **specialized expertise over many steps** | The task **finishes in one shot** |
-| You want **independent verification** of work | You don’t need a **separate context window** |
+- **You need **context isolation** for long research** — The task is **single-purpose** (e.g. generate changelog, format)
+- **You’re running multiple workstreams in parallel** — You want a **quick, repeatable** action
+- **The task needs specialized expertise over many steps** — The task **finishes in one shot**
+- **You want **independent verification** of work** — You don’t need a **separate context window**
 
 For simple, single-purpose tasks (e.g. “generate a changelog”, “format imports”), prefer a [skill](./agent-skills.md) or [slash command](./commands.md).
 
@@ -75,11 +67,9 @@ The Agent **automatically** uses subagents when it makes sense. To add **custom*
 
 ### File locations
 
-| Type | Location | Scope |
-|------|----------|--------|
-| **Project** | `.cursor/agents/` | Current project |
-| **Project** | `.claude/agents/`, `.codex/agents/` | Current project (Claude/Codex compatibility) |
-| **User** | `~/.cursor/agents/`, `~/.claude/agents/`, `~/.codex/agents/` | All projects |
+- **Project** — `.cursor/agents/`; Current project
+- **Project** — `.claude/agents/`, `.codex/agents/`; Current project (Claude/Codex compatibility)
+- **User** — `~/.cursor/agents/`, `~/.claude/agents/`, `~/.codex/agents/`; All projects
 
 On name conflicts, **`.cursor/`** wins over `.claude/` or `.codex/`.
 
@@ -107,13 +97,11 @@ Report findings by severity: Critical, High, Medium.
 
 ### Configuration fields
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `name` | No | Unique id. Lowercase and hyphens. Defaults to filename without extension. |
-| `description` | No | When to use this subagent. The Agent uses this to decide delegation. |
-| `model` | No | `fast`, `inherit`, or a model ID. Default: `inherit`. |
-| `readonly` | No | If `true`, subagent has restricted write permissions. |
-| `is_background` | No | If `true`, runs in background (don’t wait for completion). |
+- **`name`** — No; Unique id. Lowercase and hyphens. Defaults to filename without extension.
+- **`description`** — No; When to use this subagent. The Agent uses this to decide delegation.
+- **`model`** — No; `fast`, `inherit`, or a model ID. Default: `inherit`.
+- **`readonly`** — No; If `true`, subagent has restricted write permissions.
+- **`is_background`** — No; If `true`, runs in background (don’t wait for completion).
 
 ---
 
@@ -202,11 +190,9 @@ Create files at `.cursor/agents/debugger.md` and `.cursor/agents/test-runner.md`
 
 ## Performance and cost
 
-| Benefit | Trade-off |
-|---------|------------|
-| Context isolation | Startup overhead (each subagent builds its own context) |
-| Parallel execution | Higher token use (multiple contexts at once) |
-| Specialized focus | Can be slower than main agent for simple tasks |
+- **Context isolation** — Startup overhead (each subagent builds its own context)
+- **Parallel execution** — Higher token use (multiple contexts at once)
+- **Specialized focus** — Can be slower than main agent for simple tasks
 
 - **Subagents use tokens separately** – Each has its own context. Five subagents in parallel ≈ five times the tokens of one agent.
 - **Overhead** – For quick, simple tasks the main agent is often faster. Subagents pay off for complex, long, or parallel work.

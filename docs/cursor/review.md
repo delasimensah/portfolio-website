@@ -12,11 +12,9 @@ When the Agent generates code changes, they appear in a **review interface** tha
 
 The review interface shows changes in a standard diff format:
 
-| Type | Meaning | Example |
-|------|---------|--------|
-| **Added lines** | New code | `+ const newVariable = 'hello';` |
-| **Deleted lines** | Removed code | `- const oldVariable = 'goodbye';` |
-| **Context lines** | Unchanged code (for context) | `  function example() {` |
+- **Added lines** — New code; `+ const newVariable = 'hello';`
+- **Deleted lines** — Removed code; `- const oldVariable = 'goodbye';`
+- **Context lines** — Unchanged code (for context); `  function example() {`
 
 You can accept or reject at the file level or line by line (see [Review UI](#review-ui)).
 
@@ -63,11 +61,9 @@ Agent Review starts an agent run and is **billed as a usage-based request** (sam
 
 In Cursor settings you can configure:
 
-| Setting | Description |
-|---------|-------------|
-| **Auto-run on commit** | Run a bug scan automatically after each commit |
-| **Include submodules** | Include changes from Git submodules in the review |
-| **Include untracked files** | Include files that aren’t in Git yet |
+- **Auto-run on commit** — Run a bug scan automatically after each commit
+- **Include submodules** — Include changes from Git submodules in the review
+- **Include untracked files** — Include files that aren’t in Git yet
 
 ---
 
