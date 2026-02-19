@@ -1,12 +1,11 @@
 // https://docs.expo.dev/guides/using-eslint/
 const { defineConfig } = require("eslint/config");
 const expoConfig = require("eslint-config-expo/flat");
-const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
+const eslintConfigPrettier = require("eslint-config-prettier/flat");
 const simpleImportSort = require("eslint-plugin-simple-import-sort");
 
 module.exports = defineConfig([
   expoConfig,
-  eslintPluginPrettierRecommended,
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
@@ -66,6 +65,25 @@ module.exports = defineConfig([
           },
         },
       ],
+      // Enforce React.FC usage for components
+      "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        {
+          allowExpressions: true,
+          allowTypedFunctionExpressions: true,
+          allowHigherOrderFunctions: true,
+          allowDirectConstAssertionInArrowFunctions: true,
+          allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+        },
+      ],
+      // Enforce consistent component definitions
+      "react/function-component-definition": [
+        "error",
+        {
+          namedComponents: "arrow-function",
+          unnamedComponents: "arrow-function",
+        },
+      ],
     },
   },
   {
@@ -85,5 +103,5 @@ module.exports = defineConfig([
   {
     ignores: ["dist/*", "**/__tests__/**", "/.expo", "node_modules"],
   },
+  eslintConfigPrettier,
 ]);
-
