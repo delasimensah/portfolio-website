@@ -17,6 +17,7 @@ This doc outlines the order of work for building a product in this repo.
 - **System design** — `docs/system-design/README.md`, `docs/system-design/principles.md`, `docs/system-design/planning-checklist.md`; output e.g. `docs/crown_lusso_system_design.md`
 - **Screen flows** — `docs/ux-pilot-flow-prompts-template.md` (template); then project-specific e.g. `docs/ux-pilot-flow-prompts.md` (paste prompts into UX Pilot per screen)
 - **Implementation** — App docs: `apps/web-app/docs/`, `apps/mobile-app/docs/`, `docs/data-fetching-patterns-guide.md`, `docs/supabase-integration-patterns.md`
+- **Cursor model and plan by stage** — `docs/cursor/model-and-plan-by-stage.md` (which model to use at each step and which Cursor plan to pick as a solo developer)
 
 ## UX Pilot
 

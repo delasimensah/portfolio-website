@@ -31,6 +31,7 @@ Documentation for doing things the Cursor way in this project. Use these guides 
 - [Agent security](./agent-security.md) — Guardrails, approval defaults, .cursorignore, MCP, network, workspace trust, disclosure. Use when: what needs approval, locking down files, or reporting vulnerabilities.
 - [Hooks](./hooks.md) — Agent/Tab hooks, command vs prompt, config, events, team distribution, partners. Use when: formatters, gating risky ops, secrets scan, or policy distribution.
 - [Models](./models.md) — Model list, per-model pricing, Auto, context windows, Max Mode, FAQ. Use when: choosing a model, understanding cost or context limits.
+- [Model and plan by stage (solo)](./model-and-plan-by-stage.md) — Which model to use at each project stage (requirements, system design, screen flows, build) and which Cursor plan to pick as a solo developer. Use when: planning a new project or optimizing for best results per stage.
 - [Pricing](./pricing.md) — Plans, included usage, on-demand, Teams, Bugbot, Cloud Agents. Use when: choosing a plan or explaining what happens at limits.
 - [Billing](./billing.md) — Billing portal, cycles, seats, monthly/annual, invoices, payment, cancel. Use when: managing subscription, invoices, or payment method.
 - [Cloud Agents](./cloud-agents.md) — Setup, web & mobile, environment.json, secrets, Slack, testing, security. Use when: running agents in the cloud, from web/phone, or team follow-ups.

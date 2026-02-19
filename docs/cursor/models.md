@@ -60,6 +60,7 @@ With **Privacy Mode** on, Cursor and the providers do not store your data; it’
 
 ## See also
 
+- [Model and plan by stage (solo)](./model-and-plan-by-stage.md) – Which model to use at each project stage (requirements, system design, screen flows, build) and which plan to pick as a solo developer
 - [Pricing](./pricing.md) – Plans, included usage, Teams, Bugbot, Cloud Agents
 - [Cursor concepts overview](./cursor-concepts-overview.md) – Context, Rules, MCP, etc.
 - [Cursor docs – Models](https://docs.cursor.com/models)
