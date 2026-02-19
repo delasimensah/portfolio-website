@@ -241,7 +241,7 @@ MCP servers can call external services and run code on your behalf; understand w
 ## See also
 
 - [Building an MCP Server](./building-mcp-server.md) – How to build an MCP server (stdio/HTTP), test with Inspector, scaffold with Cursor
-- [Setup Supabase MCP](./setup-supabase-mcp.md) *(when available)* – Supabase-specific MCP setup
+- [Setup Supabase MCP](./setup-supabase-mcp.md) – Supabase-specific MCP setup (local and remote)
 - [Agent security](./agent-security.md) – MCP approval and guardrails
 - [Terminal](./terminal.md) – MCP allowlist and Auto-Run
 - [Hooks](./hooks.md) – `beforeMCPExecution` / `afterMCPExecution`

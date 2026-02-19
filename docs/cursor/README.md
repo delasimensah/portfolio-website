@@ -46,7 +46,7 @@ Documentation for doing things the Cursor way in this project. Use these guides 
 - [MCP](./mcp.md) — What MCP is, transports, mcp.json, OAuth, using in chat, security. Use when: installing or configuring MCP servers (Supabase, APIs, docs).
 - [Building an MCP Server](./building-mcp-server.md) — Build MCP server (stdio/HTTP), MCP Inspector, scaffold with Cursor. Use when: building your own MCP server.
 - [Large Codebases](./large-codebases.md) — Chat to explore, rules for domain knowledge, Ask to plan / Agent to implement, Tab vs Inline Edit vs Chat. Use when: working in large or unfamiliar repos.
-- [Setup Supabase MCP](./setup-supabase-mcp.md) — *(Coming soon)* Setting up the Supabase MCP server. Use when: you want to connect Cursor to Supabase via MCP.
+- [Setup Supabase MCP](./setup-supabase-mcp.md) — Local and remote Supabase MCP setup, mcp.json, tools, security. Use when: you want to connect Cursor to Supabase via MCP.
 
 ## See also
 

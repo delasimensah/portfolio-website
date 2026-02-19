@@ -72,7 +72,7 @@ Quick reference for the main Cursor concepts. Use this when you need to understa
 
 **Use when:** You want the agent to use Supabase, internal APIs, or other services directly from Cursor. Setup is per “MCP server” in `.cursor/mcp.json` or via the MCP directory.
 
-**See also:** [MCP (full guide)](./mcp.md), [Setup Supabase MCP](./setup-supabase-mcp.md) *(when available)*, [Cursor docs – MCP](https://docs.cursor.com/context/mcp).
+**See also:** [MCP (full guide)](./mcp.md), [Setup Supabase MCP](./setup-supabase-mcp.md), [Cursor docs – MCP](https://docs.cursor.com/context/mcp).
 
 ---
 
