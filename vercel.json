@@ -1,6 +1,6 @@
 {
-  "buildCommand": "turbo run build --filter=@template/web-app",
+  "buildCommand": "yarn turbo run build --filter=@template/web-app",
   "outputDirectory": "apps/web-app/.next",
-  "installCommand": "yarn install --frozen-lockfile",
+  "installCommand": "yarn install",
   "framework": "nextjs"
 }
