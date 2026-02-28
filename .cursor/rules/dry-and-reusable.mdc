@@ -1,0 +1,58 @@
+---
+description: DRY code—extract repeated patterns into reusable components or constants.
+alwaysApply: true
+---
+
+# DRY and Reusable Code
+
+Do not repeat yourself. When the same pattern (className, structure, logic) appears in 2+ places, extract it once and reuse it. This keeps the codebase maintainable so changes (e.g. font weight, padding) are made in one place.
+
+## Before adding new code
+
+1. **Search** — Look for existing constants, components, or utilities that already express what you need.
+2. **Reuse** — If you find a match, use it instead of copy-pasting.
+3. **Extract** — If you find yourself repeating the same pattern in a file, extract it to a const at the top of that file first.
+
+## When to extract
+
+- **className strings** — Same or very similar class combinations in 2+ places within a file → define a const at the top of that file (see "Where to put extracted styles" below).
+- **Component structure** — Same JSX pattern in multiple files → create a reusable component.
+- **Logic** — Same function or logic in multiple places → extract to a shared util or hook.
+
+## Where to put extracted styles (IMPORTANT)
+
+- **Default: within the file** — When styles repeat in one file only, define a const at the top of that file and use it. Do NOT create a new constants file or add to `constants/`. Styles used in one file stay in that file.
+- **Shared constants only when truly cross-file** — Add to `constants/` only when the same pattern is genuinely used across multiple files and there is a clear reason to centralize (e.g. brand colors, global spacing). Do not assume "similar pattern in multiple files" means "create shared constants"—per-file consts are acceptable.
+
+## How to extract
+
+- **Repeated class strings (same file)** — Define a const at the top of the file, e.g. `const TH_LEFT = "px-6 py-4 text-left text-sm font-semibold text-darkGrey";`, and use it in the component.
+- **Repeated class strings (cross-file)** — Only then consider `constants/` or a shared component.
+- **Repeated JSX** — Create a component in the appropriate folder (ui/, admin/, etc.) and use it.
+- **Repeated logic** — Add to `utils/` or a custom hook in `hooks/`.
+
+## Examples
+
+**Avoid:**
+```tsx
+<Table.Th className="px-6 py-4 text-left text-sm font-semibold text-darkGrey">Name</Table.Th>
+<Table.Th className="px-6 py-4 text-left text-sm font-semibold text-darkGrey">Slug</Table.Th>
+```
+
+**Prefer (const at top of same file):**
+```tsx
+// At top of ComponentName.tsx
+const TH_LEFT = "px-6 py-4 text-left text-sm font-semibold text-darkGrey";
+
+// In JSX
+<Table.Th className={TH_LEFT}>Name</Table.Th>
+<Table.Th className={TH_LEFT}>Slug</Table.Th>
+```
+
+**Or a wrapper component** if the structure is repeated:
+```tsx
+<AdminTableTh>Name</AdminTableTh>
+<AdminTableTh>Slug</AdminTableTh>
+```
+
+Follow this rule even when building new features. Check for existing abstractions before adding new ones. If you are about to paste the same className or structure you used elsewhere, extract it first.

@@ -1,0 +1,32 @@
+---
+description: MUST use VStack/HStack for layout in mobile app. View only for explicit exceptions.
+alwaysApply: true
+---
+
+# Mobile View Usage — VStack/HStack Only
+
+**In `apps/mobile-app`:** Use **VStack** and **HStack** for ALL layout and grouping. Do NOT use raw **View** for layout.
+
+## Non-negotiable
+
+- **Layout:** VStack or HStack only. Never View for layout.
+- **Dynamic styles:** VStack/HStack accept `style` prop — use them with `style={{ backgroundColor: x }}` when colors are dynamic. Do not fall back to View.
+- **Before finishing:** Scan for `View` usage. Replace with VStack/HStack unless it matches an allowed exception below.
+
+## Allowed View exceptions (add comment when used)
+
+- **Divider line:** `View className="h-px flex-1 bg-border"` inside HStack — add `{/* View used: divider line; do not change. */}`
+- **Third-party API:** When a native component (e.g. MapView, createAnimatedComponent(ScrollView)) requires View
+- **Platform-specific workaround:** When View is required for a platform quirk
+
+## Wrong vs right
+
+- **Wrong:** `<View style={{ backgroundColor: bg }}><Ionicons /></View>` for icon container
+- **Right:** `<VStack spacing="none" align="center" justify="center" className="h-10 w-10 rounded-lg" style={{ backgroundColor: bg }}><Ionicons /></VStack>`
+
+- **Wrong:** `<View style={{ paddingHorizontal: 12, ... }}><Text>Status</Text></View>` for badge
+- **Right:** `<VStack spacing="none" align="center" justify="center" className="rounded-full px-3 py-1" style={{ backgroundColor: statusStyle.bg }}><Text style={{ color: statusStyle.text }}>Status</Text></VStack>`
+
+## Verification
+
+Before submitting any mobile component: confirm no View used for layout. If View remains, it must have a comment explaining the exception.

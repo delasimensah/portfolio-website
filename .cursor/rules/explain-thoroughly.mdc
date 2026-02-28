@@ -1,0 +1,17 @@
+---
+description: When the user asks questions, explain thoroughly and assume no prior knowledge. Do not skip steps or leave out definitions.
+alwaysApply: true
+---
+
+# Explain thoroughly — assume the user knows nothing
+
+When the user asks questions (about Supabase, this codebase, or anything else):
+
+- **Assume zero prior knowledge.** Do not assume the user has used Supabase, the CLI, or similar tools before.
+- **Be step-by-step.** Include every step: what to open, what to run, what to click. Do not say "then set the secret" without saying where (which file, which Dashboard tab, which command) and what the value is or where to get it.
+- **Define terms the first time.** When you use a term like "Edge Function," "RLS," "migration," "service role," "anon key," or "JWT," define it in one clear sentence before using it again.
+- **Say where things live.** Always give the exact place: file path, Dashboard section (e.g. "Authentication → Users"), or full command. The user should not have to guess.
+- **Explain cause and effect.** Say what depends on what (e.g. "You must do X first because Y will not work until X is done").
+- **Do not skip or condense.** If the user is learning, prefer one extra sentence over leaving something implied. If something might be ambiguous, clarify it.
+
+Apply this in every response to the user's questions, unless the user explicitly asks for a short or high-level answer only.

@@ -1,0 +1,32 @@
+---
+description: When building screens from HTML/design files, break into small components. No single-file screens. Max 300 lines per component file.
+alwaysApply: true
+---
+
+# Screen and component decomposition
+
+When you are given a screen HTML file (or design) to build out, you MUST follow these rules. Do not put everything in one screen file.
+
+## Non-negotiable
+
+- **Never put an entire screen's UI in one file.** Break the screen into smaller components. The screen component should compose those components, not contain large blocks of inline JSX.
+- **No component file may exceed 300 lines.** If a file would go over ~300 lines, extract parts into separate components (or constants) before you finish. This is a hard limit; follow it.
+- **Follow React composition.** Extract list items (e.g. area card, property card, recent search item, search result item), sections, headers, forms, and repeated UI into their own components. Each in its own folder: `[category]/ComponentName/ComponentName.tsx` with a test file. See `.cursor/rules/code-organization-and-style.mdc` (no nesting; category folder; tests required).
+
+## When building from HTML / design
+
+1. **Plan first.** Identify from the HTML: list items, cards, sections, headers, forms, repeated patterns. Each of these is a candidate for its own component.
+2. **Create components before or alongside the screen.** For each distinct UI piece (e.g. a card row, a list item, a section with title + content), create a component in the right category folder (e.g. `components/home/AreaCard/`, `components/home/RecentSearchItem/`). Do not inline that JSX in the screen.
+3. **Screen file = composition only.** The screen file (e.g. `HomeScreen.tsx`) should import and compose these components. It should not contain long blocks of layout and markup; if it does, extract more components.
+4. **Reuse existing components.** Before creating a new component, check for existing ones (e.g. AreaCard, PropertyCard, SectionTitle, Button). Use or extend them; do not duplicate.
+
+## Reference patterns in this repo
+
+- **Home:** AreaCard, PropertyCard, SearchOverlayContent, RecentSearchItem, SearchResultItem, SectionTitle — each is its own component under `components/home/` or `components/ui/`. The screen composes them.
+- **One component per folder**, with test file; no nesting under another component's folder. Follow `code-organization-and-style.mdc` and `mandatory-checks-before-coding.mdc`.
+
+## Summary
+
+- Break screens into small components. No monolithic screen files.
+- Max 300 lines per component file. Extract if you exceed it.
+- Follow the existing codebase patterns for placement, naming, and tests.

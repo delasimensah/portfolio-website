@@ -1,0 +1,13 @@
+---
+description: Do not use markdown table syntax in documentation or generated content.
+alwaysApply: true
+---
+
+# Markdown — No Tables
+
+When creating or editing Markdown files (`.md` or `.mdc`):
+
+- **Do NOT** use markdown table syntax (lines that start with `|` or use `|-|` or `|---|`).
+- **Use instead:** bullet lists, numbered lists, short paragraphs, or inline text.
+
+This applies to all Markdown content you generate, including documentation, README files, and comments.

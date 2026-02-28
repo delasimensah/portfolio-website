@@ -1,0 +1,18 @@
+---
+description: Import from barrel only (no @/constants/colors); one import line per module.
+alwaysApply: true
+---
+
+# Imports: Barrel Only, One Line Per Module
+
+**Barrel paths only.** When importing from constants, types, utils, hooks, or services, use the **top-level barrel** only. Do not use subpaths.
+
+- **✅** `import { COLORS, FONTS } from "@/constants";`
+- **❌** `import { COLORS } from "@/constants/colors";` or `import { formatPrice } from "@/utils/formatPrice";`
+
+**One import line per module.** Never use two or more import statements from the same module. Combine into one.
+
+- **✅** `import { COLORS, FONTS, ASSETS } from "@/constants";`
+- **❌** Two lines: `import { COLORS } from "@/constants";` and `import { FONTS } from "@/constants";`
+
+Source: `docs/import-patterns-guide.md` (Use Barrel Paths Only, One Import Line Per Module).

@@ -1,0 +1,66 @@
+---
+description: Mandatory placement of hooks and services. Follow exactly. Source: project-structure.md and developer-decision-guide.md.
+alwaysApply: true
+---
+
+# Hooks and Services Organization — MANDATORY
+
+Follow the documented structure exactly. Do not place hooks or services in the wrong location.
+
+## Hooks
+
+### Rule: Every hook lives in a category subfolder
+
+- **Path pattern:** `hooks/[category]/useHookName.ts`
+- **Never** place a hook file directly under `hooks/` (e.g. `hooks/useDebouncedValue.ts` is **wrong**).
+- **Always** place the hook in one of the category subfolders below.
+
+### Hook categories (choose exactly one)
+
+- **Authentication** → `hooks/auth/` (e.g. `useAuthStore.ts`, `useAuthInitialize.ts`)
+- **API / data (Supabase, React Query)** → `hooks/supabase/` (e.g. `users.ts` with useUser, useUsersList)
+- **Navigation** → `hooks/navigation/` (e.g. `useScreenContext.ts`)
+- **Shared utility** → `hooks/shared/` (e.g. `useDebouncedValue.ts`, `useDebounce.ts`, `useLocalStorage.ts`)
+
+Shared utility = generic, reusable hooks (debounce, local storage, form state, etc.) that are not auth, API, or navigation.
+
+### Barrel export
+
+- Only `hooks/index.ts` (top-level) exports hooks.
+- Export from the category path: `export { useHookName } from "./[category]/useHookName";`
+- **No** `index.ts` inside `hooks/auth/`, `hooks/shared/`, etc.
+
+### Examples
+
+- New debounce hook → `hooks/shared/useDebouncedValue.ts`, then in `hooks/index.ts`: `export { useDebouncedValue } from "./shared/useDebouncedValue";`
+- New auth hook → `hooks/auth/useSomething.ts`, then export from `hooks/index.ts` from `"./auth/useSomething"`.
+
+---
+
+## Services
+
+### Rule: Every service file lives in a category subfolder
+
+- **Path pattern:** `services/[category]/serviceName.ts` (e.g. `services/auth/authService.ts`)
+- **Never** place a service file directly under `services/` (e.g. `services/authService.ts` is **wrong** unless the app docs explicitly show a flat structure).
+
+### Service categories
+
+- **Auth** → `services/auth/` (e.g. `authService.ts`)
+- **Supabase** → `services/supabase/` (e.g. `client.ts`)
+- **API** → `services/api/` (e.g. `client.ts`, API clients)
+
+### Barrel export
+
+- Only `services/index.ts` (top-level) exports. Re-export from subdirectories: `export { signIn, signOut } from "./auth/authService";`
+- **No** `index.ts` inside `services/auth/`, `services/supabase/`, etc.
+
+---
+
+## Before adding a hook or service
+
+1. Decide the **category** using the lists above (for hooks: auth, supabase, navigation, or shared).
+2. Create the file at `hooks/[category]/useName.ts` or `services/[category]/name.ts`.
+3. Add the export to `hooks/index.ts` or `services/index.ts` from the correct `"./[category]/..."` path.
+
+Source of truth: `apps/mobile-app/docs/project-structure.md` and `apps/mobile-app/docs/developer-decision-guide.md` (or the equivalent docs for `apps/web-app` when editing the web app).

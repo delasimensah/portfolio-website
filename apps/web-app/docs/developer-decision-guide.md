@@ -42,6 +42,7 @@
 **IMPORTANT:**
 
 - ALWAYS check existing components first
+- Read `docs/component-building-guide.md` — use built-in components (e.g. `Heading` for page/section/subsection/card titles) instead of raw Mantine primitives
 - Build by composing existing components
 - Use Tailwind classes for styling
 - Export from `components/index.ts`
@@ -171,7 +172,7 @@ Examples:
 
 ### **Component Placement**
 
-- **Basic UI** — `/components/ui/` (e.g. Button, Input, Modal, Card)
+- **Basic UI** — `/components/ui/` (e.g. Button, Heading, Input, Modal, Card)
 - **Navigation** — `/components/navigation/` (e.g. Header, Sidebar, Breadcrumbs)
 - **Shared Business** — `/components/shared/` (e.g. Profile, ProductCard)
 - **Feature-specific** — `/components/[feature]/` (e.g. DashboardHeader, FilterBar)

@@ -1,0 +1,12 @@
+---
+description: Always fix linting (and type) errors you introduce. Run lint after edits.
+alwaysApply: true
+---
+
+# Fix linting errors you add
+
+**You MUST fix any linting or type-check errors that your changes introduce.**
+
+- After creating or editing files, run the app's **lint** command (e.g. `yarn lint` or `expo lint` in mobile-app) for the area you changed. If the linter reports errors or warnings in files you added or modified, fix them before finishing (e.g. import order, no-require-imports, unused variables).
+- If the project has a **type-check** command (e.g. `yarn type-check` or `tsc --noEmit`), run it after edits and fix any type errors in the files you changed.
+- Do not leave lint or type errors in your edits for the user to fix. Fix them yourself as part of the same task.

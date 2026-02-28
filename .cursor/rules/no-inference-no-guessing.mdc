@@ -1,0 +1,20 @@
+---
+description: NEVER infer or guess. Use project docs as source of truth. Be explicit when something is not documented.
+alwaysApply: true
+---
+
+# No Inference, No Guessing
+
+## CRITICAL: Do Not Infer or Guess
+
+**When providing information, commands, or guidance:**
+
+1. **Read project docs first** — Before answering Supabase, setup, seed, Edge Functions, migrations, or any project-specific question, read the relevant docs in `docs/` (e.g. `docs/supabase-seed-super-admin.md`, `docs/supabase-local-setup.md`, `docs/supabase-integration-patterns.md`). Use what is written there. Do not substitute or contradict it.
+
+2. **State your source** — When you give information, cite where it comes from (e.g. "According to docs/supabase-seed-super-admin.md..."). If something is not documented in the project, say so explicitly. Do not fill gaps with inference.
+
+3. **Do not guess** — If you are unsure, do not guess. Say "I don't have this documented in the project" or "This isn't in the project docs; you may need to check the official Supabase docs." Wrong information wastes time. Silence or honesty is preferable to confident guessing.
+
+4. **Project docs override general knowledge** — The user has provided documentation. When it conflicts with generic or external guidance, the project docs are the source of truth. Do not override project docs with assumptions.
+
+5. **Do not assert unverified steps** — Do not confidently provide step-by-step instructions for external UIs, dashboards, or CLIs (e.g. Expo dashboard, Google Cloud, third-party tools) unless you have verified them against current documentation or the live product. If you cannot verify, say so and point to the official/current source (e.g. "See [official doc link]; I have not verified the current UI."). This applies to all tasks, not only project-specific ones.

@@ -1,0 +1,19 @@
+---
+description: Mobile app screen layout and spacing — use Stack props only, no margin/padding classes for rhythm.
+alwaysApply: true
+---
+
+# Mobile screen spacing (apps/mobile-app)
+
+When building or editing screens in `apps/mobile-app`, control **spacing and layout** with **VStack and HStack props only**. Do not use Tailwind margin or padding classes for vertical rhythm between sections.
+
+## Rules
+
+- **Use Stack props for spacing:** `spacing` (e.g. `spacing="lg"`, `spacing="md"`, `spacing="sm"`, `spacing="none"`), `padding`, `paddingX`, `paddingY`, `align`, `justify`. See `components/ui/Stack/Stack.tsx` for the full API.
+- **Do not use** `mb-*`, `mt-*`, `pb-*`, `pt-*`, `gap-*`, or similar classes to create space between sections, form groups, or blocks. Nest VStacks/HStacks with the right `spacing` instead.
+- **Reference:** Match the structure of `SignUpScreen` (and the updated `SignInScreen`, `ForgotPasswordScreen`): outer `VStack spacing="lg"` for major sections (back/close, logo, form); form content in `VStack spacing="md"`; title + fields in `VStack spacing="sm"`; use `align` and `justify` where needed.
+- **Dividers:** Use `View` for simple divider lines (e.g. `View className="h-px flex-1 bg-border"`) inside HStack — add comment: `{/* View used: divider line; do not change. */}`. See `.cursor/rules/mobile-view-usage.mdc`.
+
+## Summary
+
+Spacing = Stack `spacing` and `padding` props. No ad-hoc margin/padding classes for layout rhythm.

@@ -1,0 +1,28 @@
+---
+description: Never use hardcoded colors in components; use COLORS or Tailwind/semantic classes.
+alwaysApply: true
+---
+
+# No Hardcoded Colors
+
+**Do not use hardcoded color values** (hex, rgb, rgba) in components. Always use the project’s color system.
+
+## Rules
+
+- **Inline styles and icon/API colors:** Use `COLORS` from `@/constants` (or from `shared` in packages). Example: `color={COLORS.grey}`, `backgroundColor: COLORS.primary`.
+- **Tailwind/NativeWind:** Prefer semantic classes that map to the theme (e.g. `text-primary`, `text-grey`, `bg-white`, `text-darkGrey`). Do not use arbitrary hex in classNames (e.g. avoid `text-[#ef4444]`).
+- **Missing color:** If you need a color that isn’t in `COLORS`, add it to the shared color system first (`packages/shared/src/constants/colors.ts`), then use the constant. Do not introduce a one-off hex in the component.
+
+## Examples
+
+**Bad**
+- `color="#ef4444"` or `color="#eab308"`
+- `style={{ shadowColor: "#000" }}`
+- `className="text-[#808080]"`
+
+**Good**
+- `color={COLORS.primary}` or `color={COLORS.grey}` (and add `red`/`yellow` to COLORS if needed for wishlist/rating)
+- `style={{ shadowColor: COLORS.black }}`
+- `className="text-grey"` or `className="text-darkGrey"`
+
+Apply this in every new or edited component.

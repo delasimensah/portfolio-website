@@ -1,0 +1,56 @@
+---
+description: Where and how to add test files. Follow exactly. Source: docs/testing-strategy.md, project-structure, component-organization-guide.
+alwaysApply: true
+---
+
+# Test Files — Placement and Naming
+
+Follow the documented test structure. Do not put test files in the wrong location or use the wrong naming.
+
+## Where test files go
+
+### Components (web and mobile)
+
+- **Colocated with the component:** `ComponentName/ComponentName.test.tsx` (same folder as `ComponentName.tsx`).
+- **Do not** put component tests in a separate `__tests__/` folder at the app root; keep them next to the component.
+- **Naming:** `ComponentName.test.tsx` — same base name as the component file, with `.test.tsx` (or `.test.ts` if the component is `.ts`).
+- **Required:** Every component MUST have a test file. When adding a new component, add `ComponentName.test.tsx` in the same folder.
+
+### Utils (mobile: apps/mobile-app/utils)
+
+- **Dedicated test folder:** `utils/__tests__/utilityName.test.ts`.
+- **Naming:** `utilityName.test.ts` — matches the util file name.
+- **Required:** All utils must have tests in `utils/__tests__/`. See `apps/mobile-app/docs/project-structure.md`.
+
+### Utils (shared: packages/shared)
+
+- **Colocated under the module:** e.g. `packages/shared/src/utils/__tests__/newUtility.test.ts`. See `packages/shared/docs/contributing-guide.md`.
+
+### Hooks and services
+
+- **Mobile/web:** No single mandated folder; follow the app’s existing pattern. If the app uses colocated tests (e.g. next to the hook or in a `__tests__` folder under the same area), match that. When in doubt, use a colocated `useHookName.test.ts` next to the hook file, or an `__tests__` folder in the same directory as the code under test.
+
+## File naming
+
+- **Extension:** `.test.tsx` for React/JSX tests, `.test.ts` for non-JSX (utils, pure logic).
+- **Pattern:** `[sameBaseNameAsSource].test.(ts|tsx)`.
+- **Do not** use `.spec.` in this project; use `.test.` only.
+
+## Imports in test files
+
+- **Component tests:** Import the component under test with a **relative path** (e.g. `import ComponentName from "./ComponentName";`). Do not use `@/components` for the component under test when the test lives inside `components/`. See `docs/import-patterns-guide.md`.
+- **Utils tests:** Import from the relative path to the util (e.g. `import { fn } from "../utilityName";`).
+
+## What to test (summary)
+
+- **Do:** Rendering, user interactions, business logic, error handling, edge cases.
+- **Do not:** Implementation details, third-party library behavior, framework internals.
+- **Placeholders:** Skip tests for placeholder components/pages until they are built out. Add tests when the component is implemented. See `docs/testing-strategy.md`.
+
+## Running tests
+
+- **Mobile:** `yarn test` (from repo root or `apps/mobile-app`), `yarn test:ci`, `yarn test:coverage`, `yarn test:watch`.
+- **Web:** Same commands from `apps/web-app`.
+- **Shared:** `yarn test:shared` or the shared package test script.
+
+Source of truth: `docs/testing-strategy.md`, `docs/component-organization-guide.md`, and each app’s `docs/project-structure.md`.

@@ -43,23 +43,33 @@ app/
 │   ├── layout.tsx              # Onboarding layout
 │   └── [onboarding-pages]/
 │       └── page.tsx            # Onboarding pages
-└── (main-app)/                  # Main app route group
-    ├── layout.tsx              # Main app layout
-    ├── page1/
-    │   └── page.tsx            # Page 1
-    ├── page2/
-    │   └── page.tsx            # Page 2
-    └── page3/
-        └── page.tsx            # Page 3
+└── (admin)/                     # Admin dashboard route group
+    └── admin/
+        ├── layout.tsx          # Admin layout (sidebar, header)
+        ├── page.tsx            # Dashboard (or redirect)
+        ├── dashboard/
+        │   └── page.tsx        # /admin/dashboard
+        ├── properties/
+        │   ├── page.tsx        # /admin/properties
+        │   ├── create/
+        │   │   └── page.tsx    # /admin/properties/create
+        │   └── [id]/
+        │       └── page.tsx    # /admin/properties/[id]
+        ├── areas/
+        ├── bookings/
+        ├── users/
+        ├── service-requests/
+        ├── reviews/
+        ├── analytics/
+        ├── settings/
+        └── ...
 ```
-
-**Note:** Replace `page1`, `page2`, `page3` with your app's actual page names.
 
 **Route Groups:**
 
 - `(auth)` - Public authentication pages
 - `(onboarding)` - User onboarding flow
-- `(main-app)` - Protected main application
+- `(admin)` - Admin dashboard with sidebar layout; nested `admin/` for routes like `/admin/properties`, `/admin/dashboard`
 
 **Key Notes:**
 

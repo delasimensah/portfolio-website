@@ -1,0 +1,26 @@
+---
+description: Add only comments that help understand how the code works; no phase, provenance, or filler.
+alwaysApply: true
+---
+
+# Comments: Purpose Only
+
+Add comments **only when they help the reader understand how the code works** (behavior, non-obvious logic, or why something is done). Do not add comments that state where something came from, what phase the feature is in, or that restate the obvious.
+
+## Do add
+
+- **Why** a non-obvious approach was chosen (e.g. "Defer to next tick so present() works after ref is registered").
+- **What** a block is responsible for when it's not clear from names.
+- **Constraints or invariants** the code relies on.
+- Short **context** that makes behavior easier to follow (e.g. platform-specific behavior: "iOS shadow styles; Android uses Tailwind shadow class").
+
+## Do not add
+
+- **Provenance**: Where something was copied or referenced from (e.g. "from design X", "image URLs from file Y", "Sources: …", "COLORS from @/constants").
+- **Phase/scope**: That a feature is "UI only", "no backend", "backend integration later", or "for now we're not working with the backend". The code shows that; such comments go stale.
+- **Restating the obvious**: Comments that only repeat what the code or a clear name already say.
+- **Usage/template instructions**: "Customize: …", "Add other … as needed", "To mock login in dev: …", "Place this in root layout", "Called by useX hook". Prefer docs or code that is self-explanatory.
+- **Barrel/section labels** in index files (e.g. "// Auth hooks", "// Main Export"). The exports are the structure.
+- **Long @example JSDoc blocks** that only show usage. Prefer clear props and one-line purpose if needed.
+
+Prefer clear names and structure over comments. When in doubt, **do not add a comment**.

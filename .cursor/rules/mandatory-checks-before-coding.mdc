@@ -1,0 +1,26 @@
+---
+description: Before writing code, read the rules and run this checklist. Do not skip.
+alwaysApply: true
+---
+
+# Mandatory checks before coding
+
+**Before creating, moving, or editing any file (components, hooks, services, styles, or layout), you MUST:**
+
+1. **Open and read** the rules that apply to your change:
+   - **Any component or folder under `components/`:** `.cursor/rules/code-organization-and-style.mdc` and `docs/component-organization-guide.md` (placement, no nesting).
+   - **Any color or style:** `.cursor/rules/no-hardcoded-colors.mdc` — use `COLORS` or theme only; no hex, rgb, or rgba in components.
+   - **Mobile app layout (`apps/mobile-app`):** `.cursor/rules/mobile-view-usage.mdc` — MUST use **VStack** and **HStack** for layout; never View for layout. View only for divider line, third-party API, or platform workaround (with comment).
+   - **Hooks:** `.cursor/rules/hooks-and-services-organization.mdc` and code-organization — hooks live in `hooks/[category]/useHookName.ts` (e.g. `hooks/shared/`, `hooks/auth/`); never at `hooks/useName.ts`.
+   - **Imports from inside `components/`:** `.cursor/rules/import-paths-mandatory.mdc` — use relative paths for component-to-component imports; never `@/components` from inside `components/`.
+   - **Building a screen from HTML/design:** `.cursor/rules/screen-and-component-decomposition.mdc` — break the screen into smaller components; do not put everything in one file; no component file over 300 lines.
+
+2. **Confirm against this checklist** before implementing:
+   - **Component location:** New component goes in `[category]/ComponentName/` (e.g. `home/RecentSearchItem/`). NEVER inside another component's folder (e.g. NOT `home/SearchOverlayContent/RecentSearchItem/`).
+   - **Colors:** No hardcoded hex, rgb, or rgba in components. Use `COLORS` from `@/constants` or semantic Tailwind classes. If you need a new color, add it to `packages/shared/src/constants/colors.ts` first.
+   - **Mobile layout:** Use **VStack** or **HStack** only. No View for layout. See `.cursor/rules/mobile-view-usage.mdc`.
+   - **Hooks:** New hook file goes in `hooks/[category]/useHookName.ts` (e.g. `hooks/shared/useDebouncedValue.ts`). Export from `hooks/index.ts` from the category path.
+   - **Screens folder:** Only full-screen components (e.g. `*Screen`) belong in `components/screens/`. Overlays, forms, feature content go in feature folders (e.g. `components/home/`).
+   - **Screen decomposition:** When implementing a screen from HTML/design, extract list items, cards, sections, and repeated UI into separate components. Screen file composes them; no file over 300 lines.
+
+Do not implement until you have confirmed placement, colors, and layout against the rules above. If in doubt, read the referenced doc or rule file.

@@ -44,7 +44,9 @@ For detailed instructions, see the Adding Screens Guide:
    import { ComponentName } from "@/components";
 
 IMPORTANT:
-- ALWAYS check existing components first
+- **Do not use Mantine or `@mantine/*`** — Mantine is web-only and incompatible with React Native. Use React Native primitives and `components/ui/` instead.
+- ALWAYS check existing components first — especially `components/ui/`
+- **Use VStack / HStack for layout** — Use `VStack` and `HStack` (from `components/ui/Stack`) for layout and grouping instead of raw `View`. Use raw `View` only when required (e.g. `createAnimatedComponent`, third-party API, or ScrollView). Prefer components from `components/ui/` over base React Native primitives; use View, Text, TextInput, ScrollView only when no suitable UI component exists
 - Build by composing existing components when possible
 - ALL components MUST work on Android (check platform-specific issues)
 - Use Tailwind classes for styling (ALWAYS, unless impossible)

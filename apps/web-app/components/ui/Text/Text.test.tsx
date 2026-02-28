@@ -1,5 +1,6 @@
-import { render } from "@testing-library/react";
 import React from "react";
+
+import { render } from "@/test-utils";
 
 import Text from "./Text";
 
@@ -13,7 +14,7 @@ describe("Text Component", () => {
     const { getByText } = render(<Text>Default Text</Text>);
     const textElement = getByText("Default Text");
     expect(textElement).toBeTruthy();
-    // The component should apply font-regular and text-base classes by default
+    // The component should apply font-appFont and text-base classes by default
   });
 
   it("accepts custom className", () => {
@@ -38,14 +39,14 @@ describe("Text Component", () => {
   });
 
   it("handles empty children", () => {
-    const { getByText } = render(<Text>{""}</Text>);
-    const textElement = getByText("");
+    const { container } = render(<Text>{""}</Text>);
+    const textElement = container.querySelector("p");
     expect(textElement).toBeTruthy();
   });
 
   it("combines className with default styles", () => {
     const { getByText } = render(
-      <Text className="text-lg font-bold">Styled Text</Text>
+      <Text className="text-lg font-extrabold">Styled Text</Text>
     );
     const textElement = getByText("Styled Text");
     expect(textElement).toBeTruthy();

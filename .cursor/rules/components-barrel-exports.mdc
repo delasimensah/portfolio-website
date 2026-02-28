@@ -1,0 +1,16 @@
+---
+description: components/index.ts exports only components used outside the components folder.
+globs: apps/mobile-app/components/index.ts
+alwaysApply: false
+---
+
+# Components Barrel: Export Only What's Used Outside
+
+**`components/index.ts`** (mobile-app and web-app) must export **only** components that are imported from **outside** the `components/` folder (e.g. `app/`, route files, layouts).
+
+- **Do export:** Screens, layout components, and any UI used by `app/` or other top-level folders. These are imported as `import { X } from "@/components"`.
+- **Do not export:** Components that are only used inside `components/` (e.g. PropertyCard used by HomeScreen, SectionTitle used by HomeScreen). Those must be imported with **relative paths** (e.g. `import PropertyCard from "../../shared/PropertyCard/PropertyCard"`).
+
+Before adding a new export to `components/index.ts`, confirm the component is actually imported from `app/` or elsewhere outside `components/`. If it is only used by another screen or component inside `components/`, do **not** add it to the barrel; use relative imports there instead.
+
+Source: `docs/export-patterns-guide.md` and `docs/import-patterns-guide.md` (component internal imports).

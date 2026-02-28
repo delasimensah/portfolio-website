@@ -1,0 +1,68 @@
+---
+description: Mandatory import path rules - NEVER use @/components from inside components folder
+alwaysApply: true
+---
+
+# Import Paths — MANDATORY
+
+You MUST follow these rules. Do NOT use @/ for imports when the target lives inside the same top-level folder as the importing file.
+
+## CRITICAL: Inside components/ — Use Relative Paths ONLY
+
+**When the importing file is under `components/`** (web: `apps/web-app/components/`, mobile: `apps/mobile-app/components/`):
+
+- **NEVER** use `@/components` to import another component from `components/`
+- **ALWAYS** use relative paths (`./`, `../`, `../../`)
+
+This applies to:
+- `components/auth/` importing from `components/auth/`, `components/ui/`, etc.
+- `components/pages/` importing from `components/auth/`, `components/ui/`, etc.
+- `components/ui/` importing from `components/ui/`
+- `components/shared/` importing from `components/`
+- `components/navigation/` importing from `components/`
+- Test files (`.test.tsx`) importing the component under test — use relative
+
+### Examples
+
+```tsx
+// components/auth/AcceptInviteForm/AcceptInviteForm.tsx
+// ✅ CORRECT
+import AuthFormDivider from "../AuthFormDivider/AuthFormDivider";
+import GoogleSignInButton from "../GoogleSignInButton/GoogleSignInButton";
+
+// ❌ WRONG — NEVER do this inside components/
+import { AuthFormDivider, GoogleSignInButton } from "@/components";
+```
+
+```tsx
+// components/auth/InviteNotice/InviteNotice.tsx
+// ✅ CORRECT
+import Text from "../../ui/Text/Text";
+
+// ❌ WRONG
+import { Text } from "@/components";
+```
+
+```tsx
+// components/pages/auth/InviteAcceptScreen/InviteAcceptScreen.tsx
+// ✅ CORRECT — same top-level folder (components/)
+import AcceptInviteForm from "../../auth/AcceptInviteForm/AcceptInviteForm";
+import AcceptInviteInfo from "../../auth/AcceptInviteInfo/AcceptInviteInfo";
+import AuthCardLayout from "../../auth/AuthCardLayout/AuthCardLayout";
+import CrownLussoLogo from "../../auth/CrownLussoLogo/CrownLussoLogo";
+import Text from "../../ui/Text/Text";
+
+// ❌ WRONG
+import { AcceptInviteForm, AcceptInviteInfo, AuthCardLayout, CrownLussoLogo, Text } from "@/components";
+```
+
+## When @/ IS Allowed
+
+Use `@/` only when the import crosses top-level folders:
+- `app/` importing from `components/`, `types/`, `constants/`, `services/`, `hooks/`, `utils/`
+- `components/` importing from `types/`, `constants/`, `services/`, `hooks/`, `utils/`
+- Test files importing `@/test-utils` (test-utils is outside components)
+
+## Source of Truth
+
+See `docs/import-patterns-guide.md` for the full guide. This rule enforces the "Component Internal Imports" section strictly.

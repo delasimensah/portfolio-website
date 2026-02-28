@@ -1,20 +1,19 @@
-import {
-  Text as MantineText,
-  TextProps as MantineTextProps,
-} from "@mantine/core";
+import { Text as MantineText, type TextProps } from "@mantine/core";
 import React from "react";
 import { cn } from "shared";
 
-interface TextProps extends MantineTextProps {
+interface TextComponentProps extends TextProps {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  component?: React.ElementType;
+  htmlFor?: string;
 }
 
-const Text: React.FC<TextProps> = ({ className, children, ...props }) => {
+const Text = ({ className, children, ...props }: TextComponentProps) => {
   return (
     <MantineText
-      className={cn("font-appFont text-base text-white", className)}
-      {...props}
+      className={cn("font-appFont text-base text-darkGrey", className)}
+      {...(props as TextProps)}
     >
       {children}
     </MantineText>

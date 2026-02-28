@@ -1,0 +1,19 @@
+---
+description: Follow project coding conventions (UI components, NativeWind, etc.); when a convention cannot be followed, add a comment explaining why.
+alwaysApply: true
+---
+
+# Document Convention Exceptions
+
+**Default:** Follow this repo's coding conventions. Use UI components (e.g. VStack, HStack, Text, Button from `components/ui`) instead of raw native primitives where applicable. Use NativeWind (Tailwind) for styling in the mobile app. Use Stack props for spacing. Follow the rules in `code-organization-and-style.mdc`, `mobile-screen-spacing.mdc`, and each app's docs.
+
+**When a convention cannot be followed:** Add a **short comment** at that spot explaining why (e.g. native component that requires View or style prop, third-party API that needs a specific primitive, platform-specific workaround). That way the next person (or you later) knows the exception is intentional and won't "fix" it and break behavior.
+
+## Rules
+
+- Prefer project conventions: UI components over raw View/Text/Pressable, NativeWind over StyleSheet, VStack/HStack for layout, etc.
+- If you must use a raw primitive, StyleSheet, or any approach that breaks a stated convention, add a comment at the usage (or above the block) stating why. Examples:
+  - `{/* View used (not VStack): fixed-height container for overlay; do not change. */}`
+  - `{/* StyleSheet used because MapView is native and needs platform-specific borderWidth on Android. */}`
+
+Apply this whenever you deviate from a project convention in new or edited code.
