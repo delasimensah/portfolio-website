@@ -1,0 +1,16 @@
+import { render, screen } from "@testing-library/react";
+
+import AppTypesSection from "./AppTypesSection";
+
+describe("AppTypesSection", () => {
+  it("renders the heading", () => {
+    render(<AppTypesSection />);
+    expect(screen.getByRole("heading", { name: /types of applications/i })).toBeInTheDocument();
+  });
+
+  it("renders app type cards", () => {
+    render(<AppTypesSection />);
+    expect(screen.getByText("Booking Systems")).toBeInTheDocument();
+    expect(screen.getByText("CRM Systems")).toBeInTheDocument();
+  });
+});

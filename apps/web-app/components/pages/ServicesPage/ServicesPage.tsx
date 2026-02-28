@@ -1,11 +1,20 @@
 import React from "react";
 
+import AppTypesSection from "../../services/AppTypesSection/AppTypesSection";
+import LaunchReadyProductSection from "../../services/LaunchReadyProductSection/LaunchReadyProductSection";
+import ServicesCTASection from "../../services/ServicesCTASection/ServicesCTASection";
+import ServicesHeroSection from "../../services/ServicesHeroSection/ServicesHeroSection";
+import WhereAIFitsInSection from "../../services/WhereAIFitsInSection/WhereAIFitsInSection";
+
 const ServicesPage: React.FC = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <h1 className="mb-4 text-3xl font-bold text-text-primary">Services</h1>
-      <p className="text-text-secondary">Services page coming soon.</p>
-    </div>
+    <>
+      <ServicesHeroSection />
+      <LaunchReadyProductSection />
+      <WhereAIFitsInSection />
+      <AppTypesSection />
+      <ServicesCTASection />
+    </>
   );
 };
 

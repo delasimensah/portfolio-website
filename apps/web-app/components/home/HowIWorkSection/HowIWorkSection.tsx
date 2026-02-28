@@ -4,10 +4,10 @@ import { Box } from "@mantine/core";
 import React from "react";
 
 import FadeInSection from "../../shared/FadeInSection/FadeInSection";
+import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import StaggerContainer from "../../shared/StaggerContainer/StaggerContainer";
 import StaggerItem from "../../shared/StaggerContainer/StaggerItem";
 import HowIWorkStep from "../HowIWorkStep/HowIWorkStep";
-import SectionTitle from "../SectionTitle/SectionTitle";
 
 const STEPS = [
   { step: 1, title: "Define", description: "Define what actually needs to be built." },

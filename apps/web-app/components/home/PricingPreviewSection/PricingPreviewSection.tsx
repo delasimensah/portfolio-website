@@ -24,7 +24,7 @@ const PricingPreviewSection: React.FC = () => {
                   $3,000 – $6,000+
                 </p>
               </Box>
-              <p className="text-text-secondary">Delivered in 4–8 weeks.</p>
+              <p className="text-text-secondary">Delivered in 6–8 weeks.</p>
               <Button href="/pricing" size="md">
                 View Pricing
               </Button>

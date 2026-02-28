@@ -12,9 +12,9 @@ import {
 import React from "react";
 
 import FadeInSection from "../../shared/FadeInSection/FadeInSection";
+import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import StaggerContainer from "../../shared/StaggerContainer/StaggerContainer";
 import StaggerItem from "../../shared/StaggerContainer/StaggerItem";
-import SectionTitle from "../SectionTitle/SectionTitle";
 import WhatYouGetCard from "../WhatYouGetCard/WhatYouGetCard";
 
 const CARDS = [

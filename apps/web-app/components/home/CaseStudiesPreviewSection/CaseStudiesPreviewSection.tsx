@@ -7,8 +7,8 @@ import { Button } from "@/components";
 import { CASE_STUDIES } from "@/utils";
 
 import FadeInSection from "../../shared/FadeInSection/FadeInSection";
+import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import CaseStudyCard from "../CaseStudyCard/CaseStudyCard";
-import SectionTitle from "../SectionTitle/SectionTitle";
 
 const CaseStudiesPreviewSection: React.FC = () => {
   return (
@@ -23,8 +23,8 @@ const CaseStudiesPreviewSection: React.FC = () => {
               key={study.id}
               title={study.title}
               description={study.description}
-              imageSrc={study.imageSrc}
-              imageAlt={study.imageAlt}
+              imageSrc={study.webImageSrc}
+              imageAlt={study.webImageAlt}
               href={`/case-studies/${study.id}`}
             />
           ))}

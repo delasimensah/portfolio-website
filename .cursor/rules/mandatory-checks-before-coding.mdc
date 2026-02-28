@@ -13,6 +13,7 @@ alwaysApply: true
    - **Hooks:** `.cursor/rules/hooks-and-services-organization.mdc` and code-organization — hooks live in `hooks/[category]/useHookName.ts` (e.g. `hooks/shared/`); never at `hooks/useName.ts`.
    - **Imports from inside `components/`:** `.cursor/rules/import-paths-mandatory.mdc` — use relative paths for component-to-component imports; never `@/components` from inside `components/`.
    - **Building a page from HTML/design:** `.cursor/rules/screen-and-component-decomposition.mdc` — break the page into smaller components; do not put everything in one file; no component file over 300 lines.
+   - **Any web app component (`apps/web-app`):** `.cursor/rules/web-mantine-over-html.mdc` — use Mantine components (`Box`, `Stack`, `Group`, `Title`, `Text`) instead of raw `<div>`, `<p>`, `<h*>` tags. Read `apps/web-app/docs/mantine-component-guide.md` before writing any component.
 
 2. **Confirm against this checklist** before implementing:
    - **Component location:** New component goes in `[category]/ComponentName/` (e.g. `home/RecentSearchItem/`). NEVER inside another component's folder (e.g. NOT `home/SearchOverlayContent/RecentSearchItem/`).

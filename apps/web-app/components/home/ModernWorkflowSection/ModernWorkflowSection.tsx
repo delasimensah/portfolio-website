@@ -24,7 +24,7 @@ const ModernWorkflowSection: React.FC = () => {
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mx-auto max-w-4xl text-center">
           <h2 className="mb-8 text-3xl font-bold text-text-primary lg:text-4xl">
-            Built With Modern Tools — Delivered With Accountability
+            Modern tools. Real accountability.
           </h2>
           <Box className="space-y-8 text-lg">
             <p className="text-text-secondary">

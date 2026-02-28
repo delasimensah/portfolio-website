@@ -1,0 +1,49 @@
+---
+description: Enforce Mantine components over raw HTML tags in the web app
+globs: apps/web-app/**/*.tsx
+alwaysApply: false
+---
+
+# Web App — Mantine Over HTML
+
+**Source of truth:** `apps/web-app/docs/mantine-component-guide.md`
+
+## Non-negotiable rules
+
+- **Prefer Mantine over plain HTML.** Use Mantine components instead of raw HTML tags wherever a Mantine equivalent exists.
+- **NO unnecessary HTML tags.** Do not use `<div>`, `<p>`, `<h1>`–`<h6>` when a Mantine component covers the use case.
+- **Only use HTML when necessary:** `<section>`, `<form>`, `<a>`, `<ul>`, `<li>`, semantic landmarks, or when Mantine has no equivalent.
+
+## Mapping
+
+- Container/generic wrapper → `Box` (`@mantine/core`)
+- Vertical layout → `Stack` (`@mantine/core`)
+- Horizontal layout → `Group` (`@mantine/core`)
+- Headings (`h1`–`h6`) → `Title order={n}` (`@mantine/core`)
+- Paragraph / body text → `Text` from `@/components` (project wrapper)
+- Button → project `Button` from `@/components`
+
+## Examples
+
+```tsx
+// ❌ WRONG
+<div className="flex flex-col gap-4">
+  <h2 className="text-2xl font-bold text-text-primary">Title</h2>
+  <p className="text-text-secondary">Description</p>
+</div>
+
+// ✅ CORRECT
+import { Stack, Title } from "@mantine/core";
+import { Text } from "@/components";
+
+<Stack gap="md">
+  <Title order={2} className="text-2xl font-bold text-text-primary">Title</Title>
+  <Text className="text-text-secondary">Description</Text>
+</Stack>
+```
+
+## Before writing any web component
+
+1. Read `apps/web-app/docs/mantine-component-guide.md` for the full guide and examples.
+2. Replace every `<div>`, `<p>`, `<h*>` with the correct Mantine component before finishing.
+3. `<section>` is acceptable for semantic page sections — wrap its inner content with Mantine layout components.

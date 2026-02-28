@@ -10,9 +10,8 @@ import { appfont } from "@/constants";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Delasi Mensah",
-  description:
-    "I build web and mobile products for startups and businesses.",
+  title: "Delasi Mensah | Web and mobile products delivered in 6–8 weeks.",
+  description: "I build web and mobile products for startups and businesses.",
 };
 
 interface RootLayoutProps {
@@ -22,7 +21,9 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" className={appfont.variable} suppressHydrationWarning>
-      <body className={`${appfont.variable} bg-bg-primary font-sans text-text-primary`}>
+      <body
+        className={`${appfont.variable} bg-bg-primary text-text-primary font-sans`}
+      >
         <Providers>
           <Header />
           <main>{children}</main>

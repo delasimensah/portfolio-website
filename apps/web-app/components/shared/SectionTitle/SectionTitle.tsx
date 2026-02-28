@@ -1,6 +1,9 @@
 "use client";
 
+import { Title } from "@mantine/core";
 import React from "react";
+
+import { cn } from "@/utils";
 
 interface SectionTitleProps {
   children: React.ReactNode;
@@ -9,11 +12,12 @@ interface SectionTitleProps {
 
 const SectionTitle: React.FC<SectionTitleProps> = ({ children, className }) => {
   return (
-    <h2
-      className={`text-center text-3xl font-bold text-text-primary lg:text-4xl ${className ?? ""}`}
+    <Title
+      order={2}
+      className={cn("text-center text-3xl font-bold text-text-primary lg:text-4xl", className)}
     >
       {children}
-    </h2>
+    </Title>
   );
 };
 

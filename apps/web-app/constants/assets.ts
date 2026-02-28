@@ -3,6 +3,8 @@ export const ASSETS = {
   images: {
     heroAriaIos: "/images/aria-mobile-ios.png",
     ariaWeb: "/images/aria-web.png",
+    ariaMobileIos: "/images/aria-mobile-ios.png",
     crownLussoWeb: "/images/crown-lusso-web.png",
+    crownLussoMobileIos: "/images/crown-lusso-mobile-ios.png",
   },
 } as const;
