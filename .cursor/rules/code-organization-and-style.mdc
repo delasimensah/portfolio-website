@@ -1,5 +1,5 @@
 ---
-description: Mandatory code organization and style for this monorepo. Follow to the letter.
+description: Mandatory code organization and style for this portfolio. Follow to the letter.
 alwaysApply: true
 ---
 
@@ -8,41 +8,38 @@ You MUST follow this repository's code organization and writing conventions to t
 ## Where conventions live
 
 - **apps/web-app:** Read `apps/web-app/docs/project-structure.md` and `apps/web-app/docs/developer-decision-guide.md` when adding or changing pages, components, hooks, services.
-- **apps/mobile-app:** Read `apps/mobile-app/docs/project-structure.md`, `apps/mobile-app/docs/developer-decision-guide.md`, and `apps/mobile-app/docs/adding-screens-guide.md` when adding or changing screens, components, hooks, services.
-- **packages/shared:** Read `packages/shared/docs/contributing-guide.md` and `packages/shared/docs/supabase-types-guide.md` when relevant.
-- **Cross-cutting (all apps):** Read `docs/import-patterns-guide.md`, `docs/export-patterns-guide.md`, `docs/component-organization-guide.md` for imports, exports, and where components belong. **Mantine is web-only:** Do not use Mantine or `@mantine/*` in `apps/mobile-app` — mobile uses React Native + NativeWind. For web components: read `docs/component-building-guide.md` and use built-in components (e.g. `Heading`) instead of raw Mantine primitives for headings.
+- **Cross-cutting:** Read `docs/import-patterns-guide.md`, `docs/export-patterns-guide.md`, `docs/component-organization-guide.md` for imports, exports, and where components belong. For web components: read `docs/component-building-guide.md` and use built-in components (e.g. `Heading`) instead of raw Mantine primitives for headings.
 
-When in doubt, open the doc for the app or package you are editing and follow it.
+When in doubt, open the doc for the app you are editing and follow it.
 
 ## Non-negotiable rules
 
-### Components (web and mobile)
+### Components
 
-- **Screens/pages folders are for full-screen components only.** Only components that represent a full navigable screen (Mobile: `*Screen` in `components/screens/[stack]/`; Web: `*Page` in `components/pages/`) belong there. Non-screen UI (overlays, forms, feature content, modals) goes in feature or shared folders (e.g. `components/home/`, `components/shared/`), not in `screens/` or `pages/`. See `docs/component-organization-guide.md`.
+- **Pages folders are for full-screen components only.** Only components that represent a full navigable page belong in `components/pages/`. Non-page UI (overlays, forms, feature content, modals) goes in feature or shared folders (e.g. `components/home/`, `components/shared/`). See `docs/component-organization-guide.md`.
 - Every component lives in a **folder**: `ComponentName/ComponentName.tsx` (not a loose `ComponentName.tsx`).
 - **Do not nest component folders inside another component's folder.** Each component is a direct child of a **category** folder (e.g. `components/home/RecentSearchItem/`, `components/home/SearchOverlayContent/`). Wrong: `components/home/SearchOverlayContent/RecentSearchItem/`. Right: `components/home/RecentSearchItem/` and `components/home/SearchOverlayContent/` as siblings.
 - Every component has a test file: `ComponentName/ComponentName.test.tsx` (colocated in the same folder as the component). Tests are REQUIRED. See `.cursor/rules/test-files-placement.mdc` for where and how to add all test files.
 - **No** `index.ts` inside individual component folders. Only category-level or top-level barrel files.
 - Types stay **inline** in the component file. No separate `.types.ts` files for component props.
 - Export components from the **barrel**: `components/index.ts` with `export { default as ComponentName } from "./[category]/ComponentName/ComponentName";`
-- Use **Tailwind** for styling (NativeWind on mobile). Check existing components first; compose them when possible.
+- Use **Tailwind** for styling. Check existing components first; compose them when possible.
 
 ### Services and hooks
 
 - **No** `index.ts` inside subdirectories (e.g. no `services/auth/index.ts`, no `hooks/auth/index.ts`). Only the **top-level** `services/index.ts` and `hooks/index.ts` export from subdirectories.
-- Use **named exports** for service functions and hooks. Barrel re-exports: `export { signIn, signOut } from "./auth/authService";`
-- Group related logic in single files (e.g. all auth functions in `authService.ts`).
+- Use **named exports** for service functions and hooks.
+- Group related logic in single files.
 
-**Hooks — category subfolders only:**
+**Hooks — category subfolders only (when adding hooks):**
 
-- Every hook file MUST live in a **category subfolder**: `hooks/auth/`, `hooks/supabase/`, `hooks/navigation/`, or `hooks/shared/`. Path form: `hooks/[category]/useHookName.ts`.
+- Every hook file MUST live in a **category subfolder**: `hooks/shared/`, `hooks/navigation/`, etc. Path form: `hooks/[category]/useHookName.ts`.
 - **Never** put a hook file directly in `hooks/` (e.g. `hooks/useDebouncedValue.ts` is wrong). Put it in the correct category (e.g. `hooks/shared/useDebouncedValue.ts`).
-- Authentication hooks → `hooks/auth/`. API/Supabase hooks → `hooks/supabase/`. Navigation hooks → `hooks/navigation/`. Generic utility hooks (debounce, local storage, etc.) → `hooks/shared/`.
 - In `hooks/index.ts`, export from the category path: `export { useHookName } from "./[category]/useHookName";`
 
-**Services — category subfolders only:**
+**Services — category subfolders only (when adding services):**
 
-- Every service file MUST live in a category subfolder (e.g. `services/auth/authService.ts`). Do not place service files at the root of `services/`.
+- Every service file MUST live in a category subfolder (e.g. `services/api/client.ts`).
 - Export from `services/index.ts` only, from the correct `"./[category]/..."` path.
 
 See `.cursor/rules/hooks-and-services-organization.mdc` for the full mandatory rules.
@@ -51,15 +48,9 @@ See `.cursor/rules/hooks-and-services-organization.mdc` for the full mandatory r
 
 - **Cross-folder:** Use `@/` aliases: `import { Button } from "@/components";` `import { User } from "@/types";`
 - **Same folder / nearby:** Use relative paths: `import { X } from "./X";` or `../Other/Other`.
-- **Shared package:** `import { ... } from "shared";`
-
-### Mobile layout (VStack / HStack)
-
-- **In `apps/mobile-app`:** Use **VStack** and **HStack** (from `components/ui/Stack`) for layout and grouping. Do not use raw **View** for layout unless required (e.g. `createAnimatedComponent(ScrollView)`, a wrapper that must be a View for a third-party API, or similar). Prefer Stack so layout and spacing stay consistent.
 
 ### App structure
 
-- **Web (Next.js):** App Router. Route groups `(auth)`, `(onboarding)`, `(main-app)`. One `page.tsx` per route under `app/`.
-- **Mobile (Expo):** Expo Router. Same group names under `app/`. Screens in `app/(auth)/`, `app/(main-app)/(tabs)/[tab]/`, etc. Register new screens in the corresponding `_layout.tsx` when adding to a stack.
+- **Web (Next.js):** App Router. One `page.tsx` per route under `app/`. Add pages as `app/[route]/page.tsx`.
 
-Before adding a new screen, page, component, hook, or service, read the relevant **developer-decision-guide** and **project-structure** for that app so you follow the exact patterns (paths, exports, layout registration).
+Before adding a new page, component, hook, or service, read the relevant **developer-decision-guide** and **project-structure** for the web app so you follow the exact patterns (paths, exports, layout).

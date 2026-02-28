@@ -1,6 +1,7 @@
 import { Text as MantineText, type TextProps } from "@mantine/core";
 import React from "react";
-import { cn } from "shared";
+
+import { cn } from "@/utils";
 
 interface TextComponentProps extends TextProps {
   className?: string;

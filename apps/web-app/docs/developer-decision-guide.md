@@ -6,10 +6,7 @@
 
 ### **Adding a New Page**
 
-1. Create page file in appropriate route group:
-   - `app/(auth)/page-name/page.tsx` - Auth pages
-   - `app/(onboarding)/page-name/page.tsx` - Onboarding pages
-   - `app/(main-app)/page-name/page.tsx` - Main app pages
+1. Create page file: `app/[route]/page.tsx` (e.g. `app/about/page.tsx` → `/about`)
 
 2. Navigate to it:
    ```tsx
@@ -70,25 +67,10 @@
 
 ### **Adding a New Service**
 
-1. Create service file in appropriate category:
-
-   ```
-   services/auth/authService.ts
-   services/api/userService.ts
-   ```
-
+1. Create service file in appropriate category (e.g. `services/api/client.ts`)
 2. Group related functions in a single file
-3. Use named exports for each function:
-
-   ```typescript
-   export const signIn = async (data) => { ... };
-   export const signOut = async () => { ... };
-   ```
-
-4. Export from services/index.ts:
-   ```typescript
-   export { signIn, signOut } from "./auth/authService";
-   ```
+3. Use named exports for each function
+4. Export from services/index.ts
 
 ---
 
@@ -137,8 +119,7 @@ THEN create: components/[feature]/ComponentName/
 
 ```
 What type of hook is this?
-├── Authentication-related → /hooks/auth/
-├── API-related → /hooks/supabase/
+├── API-related → /hooks/api/
 ├── UI state-related → /hooks/ui/
 └── Shared utility → /hooks/shared/
 ```
@@ -179,9 +160,9 @@ Examples:
 
 ### **Hook Placement**
 
-- **Authentication** — `/hooks/auth/` (e.g. useAuth, useLogin)
-- **API** — `/hooks/supabase/` (e.g. useUser, useData)
+- **API** — `/hooks/api/` (e.g. useProjects, useData)
 - **UI State** — `/hooks/ui/` (e.g. useModal, useToast)
+- **Shared** — `/hooks/shared/` (e.g. useDebounce)
 
 ---
 
@@ -192,10 +173,7 @@ Examples:
 ```tsx
 // ✅ ALWAYS use @ notation for pages
 import { Button, Text } from "@/components";
-import { User } from "@/types";
 import { COLORS } from "@/constants";
-import { supabase } from "@/services";
-import { useAuthStore } from "@/hooks";
 import { cn } from "@/utils";
 ```
 
@@ -232,7 +210,6 @@ import { COLORS } from "@/constants";
 ## 📚 Related Documentation
 
 - [Component Building Guide](../../../docs/component-building-guide.md)
-- [Navigation Guide](./navigation-guide.md)
 - [Import Patterns Guide](../../../docs/import-patterns-guide.md)
 - [Type Organization Guide](../../../docs/type-organization-guide.md)
 

@@ -9,11 +9,7 @@ try {
       target: "es2020",
       skipLibCheck: true,
       baseUrl: ".",
-      paths: {
-        "@/*": ["./*"],
-        shared: ["../../packages/shared/src/index.ts"],
-        "shared/*": ["../../packages/shared/src/*"],
-      },
+      paths: { "@/*": ["./*"] },
     },
     skipProject: true,
   });
@@ -21,11 +17,7 @@ try {
   try {
     require("tsconfig-paths").register({
       baseUrl: ".",
-      paths: {
-        "@/*": ["./*"],
-        shared: ["../../packages/shared/src/index.ts"],
-        "shared/*": ["../../packages/shared/src/*"],
-      },
+      paths: { "@/*": ["./*"] },
     });
   } catch (error) {
     // tsconfig-paths not available, continue without it
@@ -56,8 +48,15 @@ module.exports = {
         darkGrey: COLORS.darkGrey,
         border: COLORS.border,
         shimmerLight: COLORS.shimmerLight,
+        "bg-primary": COLORS.bgPrimary,
+        "bg-surface": COLORS.bgSurface,
+        "text-primary": COLORS.textPrimary,
+        "text-secondary": COLORS.textSecondary,
+        "accent-primary": COLORS.accentPrimary,
+        "accent-hover": COLORS.accentHover,
       },
       fontFamily: {
+        sans: ["var(--app-font)", "Inter", "system-ui", "sans-serif"],
         appFont: ["var(--app-font)", "system-ui", "sans-serif"],
       },
     },

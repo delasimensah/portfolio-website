@@ -2,7 +2,8 @@
 
 import { Title, type TitleOrder } from "@mantine/core";
 import React from "react";
-import { cn } from "shared";
+
+import { cn } from "@/utils";
 
 type HeadingVariant = "page" | "section" | "subsection" | "card";
 

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-primary': '#0B0F19',
+                        'bg-surface': '#111827',
+                        'text-primary': '#E5E7EB',
+                        'text-secondary': '#9CA3AF',
+                        'accent-primary': '#6366F1',
+                        'accent-hover': '#818CF8'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+</head>
+<body class="bg-bg-primary text-text-primary font-sans">
+
+<header id="header" class="bg-bg-surface/80 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="text-xl font-bold text-text-primary">DevStudio</div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Home</a>
+                <a href="#" class="text-accent-primary font-medium">Case Studies</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Pricing</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Process</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-text-primary hover:text-accent-primary">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="aria-hero" class="relative h-[600px] flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block bg-accent-primary/10 border border-accent-primary/30 rounded-full px-6 py-2 mb-6">
+                <span class="text-accent-primary font-medium">Case Study</span>
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-bold text-text-primary mb-6">ARIA — Music Streaming Platform</h1>
+            <p class="text-xl text-text-secondary">Empowering artists to earn directly from their fans through subscriptions, tips, and goal-based funding.</p>
+        </div>
+    </div>
+</section>
+
+<section id="aria-mobile-display" class="py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-bg-surface rounded-xl p-8 lg:p-12 border border-gray-800">
+            <div class="text-center text-text-secondary mb-6 text-sm uppercase tracking-wider">Mobile Experience</div>
+            <div class="h-[600px] bg-bg-primary rounded-xl border-2 border-dashed border-gray-700 flex items-center justify-center">
+                <span class="text-text-secondary text-lg">[MOBILE SCREENSHOT PLACEHOLDER]</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="aria-overview" class="py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">Project Overview</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                <div class="text-text-secondary text-sm mb-2 uppercase tracking-wider">Timeline</div>
+                <div class="text-3xl font-bold text-text-primary">8 Weeks</div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                <div class="text-text-secondary text-sm mb-2 uppercase tracking-wider">Project Value</div>
+                <div class="text-3xl font-bold text-accent-primary">$5,000+</div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                <div class="text-text-secondary text-sm mb-2 uppercase tracking-wider">Platforms</div>
+                <div class="text-3xl font-bold text-text-primary">Web + Mobile</div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                <div class="text-text-secondary text-sm mb-2 uppercase tracking-wider">Users</div>
+                <div class="text-3xl font-bold text-text-primary">5000+</div>
+            </div>
+        </div>
+        <div class="mt-6 bg-bg-surface rounded-xl p-8 border border-gray-800 text-center">
+            <div class="text-text-secondary text-sm mb-2 uppercase tracking-wider">Artists Onboarded</div>
+            <div class="text-3xl font-bold text-text-primary">800+</div>
+        </div>
+    </div>
+</section>
+
+<section id="aria-problem" class="py-20 bg-bg-surface/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">The Problem</h2>
+            <div class="h-1 w-20 bg-accent-primary rounded-full mb-8"></div>
+        </div>
+        <div class="space-y-6 text-lg text-text-secondary leading-relaxed">
+            <p>Emerging artists struggle to earn meaningful income on traditional streaming platforms.</p>
+            <p>Revenue depends on scale rather than direct fan support.</p>
+            <p class="text-text-primary font-semibold text-xl pt-4">ARIA was designed to enable direct monetization from core fans.</p>
+        </div>
+    </div>
+</section>
+
+<section id="aria-solution" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">The Solution</h2>
+            <div class="h-1 w-20 bg-accent-primary rounded-full mb-8"></div>
+        </div>
+        <p class="text-lg text-text-secondary mb-12">Built a streaming platform with:</p>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-bg-surface rounded-xl p-6 border border-gray-800">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-play text-accent-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Music Playback</h3>
+                        <p class="text-text-secondary">Seamless streaming experience across all devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-6 border border-gray-800">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-folder-open text-accent-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Library Management</h3>
+                        <p class="text-text-secondary">Organize and manage your music collection.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-6 border border-gray-800">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user-plus text-accent-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Artist Subscriptions</h3>
+                        <p class="text-text-secondary">Monthly subscriptions to support favorite artists.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-6 border border-gray-800">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-dollar-sign text-accent-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Direct Tipping</h3>
+                        <p class="text-text-secondary">Send tips directly to artists you love.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-6 border border-gray-800">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-bullseye text-accent-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Goal-Based Funding</h3>
+                        <p class="text-text-secondary">Support artists in achieving specific creative goals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-6 border border-gray-800">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-shield-alt text-accent-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Secure Authentication</h3>
+                        <p class="text-text-secondary">Protected accounts with role-based access.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 md:col-span-2">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-users text-accent-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Artist and Listener Roles</h3>
+                        <p class="text-text-secondary">Distinct experiences tailored for creators and fans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="aria-web-experience" class="py-20 bg-bg-surface/50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">Web Experience</h2>
+            <div class="h-1 w-20 bg-accent-primary rounded-full mb-8"></div>
+        </div>
+        <div class="bg-bg-surface rounded-xl p-8 lg:p-12 border border-gray-800 mb-8">
+            <div class="text-center text-text-secondary mb-6 text-sm uppercase tracking-wider">Desktop Platform</div>
+            <div class="h-[500px] bg-bg-primary rounded-xl border-2 border-dashed border-gray-700 flex items-center justify-center">
+                <span class="text-text-secondary text-lg">[WEB SCREENSHOT PLACEHOLDER]</span>
+            </div>
+        </div>
+        <div class="space-y-4 text-lg text-text-secondary">
+            <p>The web platform provides a full-featured experience for both artists and listeners.</p>
+            <p>Artists can manage their content, track earnings, and engage with their community through a comprehensive dashboard.</p>
+            <p>Listeners enjoy high-quality streaming, playlist creation, and seamless payment options to support their favorite creators.</p>
+        </div>
+    </div>
+</section>
+
+<section id="aria-outcome" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">Outcome</h2>
+            <div class="h-1 w-20 bg-accent-primary rounded-full mb-8"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-users text-accent-primary text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-text-primary">500+</div>
+                </div>
+                <p class="text-text-secondary">Active users engaging with the platform</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-microphone text-accent-primary text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-text-primary">800+</div>
+                </div>
+                <p class="text-text-secondary">Artists onboarded and earning</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-chart-line text-accent-primary text-xl"></i>
+                    </div>
+                    <div class="text-xl font-bold text-text-primary">Direct Monetization</div>
+                </div>
+                <p class="text-text-secondary">Infrastructure enabling artist revenue</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-accent-primary text-xl"></i>
+                    </div>
+                    <div class="text-xl font-bold text-text-primary">Cross-Platform</div>
+                </div>
+                <p class="text-text-secondary">Seamless experience across devices</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 md:col-span-2">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-rocket text-accent-primary text-xl"></i>
+                    </div>
+                    <div class="text-xl font-bold text-text-primary">Structured Foundation</div>
+                </div>
+                <p class="text-text-secondary">Scalable architecture built for long-term growth and feature expansion</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="aria-cta" class="py-20 bg-bg-surface/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">Ready to Build Your Platform?</h2>
+        <p class="text-xl text-text-secondary mb-12">Let's create a product that delivers real value to your users.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="bg-accent-primary hover:bg-accent-hover text-white px-12 py-6 rounded-xl text-xl font-semibold transition-all duration-200 hover:transform hover:scale-105">
+                Start Your Project
+            </button>
+            <button class="border border-gray-600 text-text-primary hover:border-accent-primary px-12 py-6 rounded-xl text-xl font-semibold transition-all duration-200 hover:text-accent-primary">
+                View All Case Studies
+            </button>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="bg-bg-surface border-t border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="text-xl font-bold text-text-primary mb-4">DevStudio</div>
+                <p class="text-text-secondary">Web and mobile products delivered in 4–8 weeks.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Services</h4>
+                <ul class="space-y-2 text-text-secondary">
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Web Development</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Mobile Apps</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Backend Systems</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Company</h4>
+                <ul class="space-y-2 text-text-secondary">
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">About</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Process</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-text-secondary">
+            <p>&copy; 2024 DevStudio. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

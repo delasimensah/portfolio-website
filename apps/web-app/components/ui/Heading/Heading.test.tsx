@@ -2,6 +2,21 @@ import { render, screen } from "@/test-utils";
 
 import Heading from "./Heading";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 describe("Heading", () => {
   it("renders page variant", () => {
     render(<Heading variant="page">Page Title</Heading>);

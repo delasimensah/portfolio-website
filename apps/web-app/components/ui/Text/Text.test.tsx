@@ -4,6 +4,16 @@ import { render } from "@/test-utils";
 
 import Text from "./Text";
 
+
+
+
+
+
+
+
+
+
+
 describe("Text Component", () => {
   it("renders correctly with default props", () => {
     const { getByText } = render(<Text>Hello World</Text>);

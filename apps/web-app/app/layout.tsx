@@ -1,19 +1,18 @@
 import "@mantine/core/styles.css";
-import "@mantine/dates/styles.css";
-import "@mantine/notifications/styles.css";
-import "@mantine/spotlight/styles.css";
 import "./globals.css";
 
 import type { Metadata } from "next";
 import React from "react";
 
+import { Footer, Header } from "@/components";
 import { appfont } from "@/constants";
 
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Template App",
-  description: "A starter Next.js application",
+  title: "Delasi Mensah",
+  description:
+    "I build web and mobile products for startups and businesses.",
 };
 
 interface RootLayoutProps {
@@ -23,8 +22,12 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" className={appfont.variable} suppressHydrationWarning>
-      <body className="font-regular bg-black">
-        <Providers>{children}</Providers>
+      <body className={`${appfont.variable} bg-bg-primary font-sans text-text-primary`}>
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

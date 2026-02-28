@@ -32,8 +32,8 @@ export const ASSETS = {
   },
   // Images (stored in public/images/)
   images: {
-    // Add your image assets here
-    // background: "/images/background.png",
-    // hero: "/images/hero.jpg",
+    heroAriaIos: "/images/aria-mobile-ios.png",
+    ariaWeb: "/images/aria-web.png",
+    crownLussoWeb: "/images/crown-lusso-web.png",
   },
 } as const;

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-primary': '#0B0F19',
+                        'bg-surface': '#111827',
+                        'text-primary': '#E5E7EB',
+                        'text-secondary': '#9CA3AF',
+                        'accent-primary': '#6366F1',
+                        'accent-hover': '#818CF8'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+</head>
+<body class="bg-bg-primary text-text-primary font-sans">
+
+<!-- Header -->
+<header id="header" class="bg-bg-surface/80 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="text-xl font-bold text-text-primary">DevStudio</div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-text-primary hover:text-accent-primary transition-colors duration-200">Home</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Case Studies</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Pricing</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Process</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-text-primary hover:text-accent-primary">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="relative h-[800px] flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8">
+            <div class="space-y-6">
+                <h1 class="text-4xl lg:text-6xl font-bold text-text-primary leading-tight">
+                    Web and Mobile Products Delivered in 4–8 Weeks
+                </h1>
+                <p class="text-xl text-text-secondary max-w-lg">
+                    Clear scope. Transparent pricing. Structured delivery.<br>
+                    Projects start at $3,000.
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="bg-accent-primary hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 hover:transform hover:scale-105">
+                    Start Your Project
+                </button>
+                <button class="border border-gray-600 text-text-primary hover:border-accent-primary px-8 py-4 rounded-xl font-semibold transition-all duration-200 hover:text-accent-primary">
+                    View Case Studies
+                </button>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="bg-bg-surface rounded-xl p-8 shadow-2xl border border-gray-800">
+                <div class="text-center text-text-secondary">
+                    [HERO PRODUCT PLACEHOLDER]
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What You Get Section -->
+<section id="what-you-get" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">What You Get</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-globe text-accent-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Web Application</h3>
+                <p class="text-text-secondary">Fully responsive web platform built for your users and business needs.</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-mobile-alt text-accent-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">iOS & Android Mobile App</h3>
+                <p class="text-text-secondary">Native mobile experience for both iOS and Android platforms.</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-database text-accent-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Backend System</h3>
+                <p class="text-text-secondary">Database, authentication, storage, and all server infrastructure.</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-rocket text-accent-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Launch-Ready Product</h3>
+                <p class="text-text-secondary">Complete product ready for your users from day one.</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-cloud-upload-alt text-accent-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Deployment Support</h3>
+                <p class="text-text-secondary">Full deployment assistance to get your product live.</p>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-file-alt text-accent-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Clear Documentation</h3>
+                <p class="text-text-secondary">Complete documentation for maintenance and future development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How I Work Section -->
+<section id="how-i-work" class="py-20 bg-bg-surface/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">How I Work</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-accent-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-white text-2xl font-bold">1</span>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Define</h3>
+                <p class="text-text-secondary">Define what actually needs to be built.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-accent-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-white text-2xl font-bold">2</span>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Simplify</h3>
+                <p class="text-text-secondary">Remove unnecessary features.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-accent-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-white text-2xl font-bold">3</span>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Build</h3>
+                <p class="text-text-secondary">Build the core system.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-accent-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-white text-2xl font-bold">4</span>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Launch</h3>
+                <p class="text-text-secondary">Launch and refine.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modern Development Workflow Section -->
+<section id="modern-workflow" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-8">
+                Built With Modern Tools — Delivered With Accountability
+            </h2>
+            <div class="space-y-8 text-lg">
+                <p class="text-text-secondary">
+                    I use AI tools to speed up development and reduce repetitive work.
+                </p>
+                <div class="bg-bg-surface rounded-xl p-8 border border-gray-800">
+                    <h3 class="text-xl font-semibold text-text-primary mb-6">What that means for you:</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-clock text-accent-primary"></i>
+                            </div>
+                            <h4 class="font-semibold text-text-primary mb-2">Faster build times</h4>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-sync text-accent-primary"></i>
+                            </div>
+                            <h4 class="font-semibold text-text-primary mb-2">Cleaner iterations</h4>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bullseye text-accent-primary"></i>
+                            </div>
+                            <h4 class="font-semibold text-text-primary mb-2">More focus on product decisions</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4 text-text-secondary">
+                    <p>AI improves execution speed.</p>
+                    <p class="text-text-primary font-semibold">I handle scope, architecture, and final responsibility.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Preview Section -->
+<section id="pricing-preview" class="py-20 bg-bg-surface/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="bg-bg-surface rounded-xl p-12 border border-gray-800">
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-text-secondary mb-2">Starting From:</p>
+                        <p class="text-5xl font-bold text-text-primary">$3,000</p>
+                    </div>
+                    <div>
+                        <p class="text-text-secondary mb-2">Typical Range:</p>
+                        <p class="text-2xl font-semibold text-text-primary">$3,000 – $6,000+</p>
+                    </div>
+                    <p class="text-text-secondary">Delivered in 4–8 weeks.</p>
+                    <button class="bg-accent-primary hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 hover:transform hover:scale-105">
+                        View Pricing
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Studies Preview Section -->
+<section id="case-studies-preview" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Case Studies</h2>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                <h3 class="text-2xl font-bold text-text-primary mb-4">ARIA</h3>
+                <p class="text-text-secondary mb-6">Direct-to-fan music monetization</p>
+                <div class="bg-bg-primary rounded-xl p-8 text-center">
+                    <div class="text-text-secondary">[MOBILE SCREENSHOT PLACEHOLDER]</div>
+                </div>
+            </div>
+            <div class="bg-bg-surface rounded-xl p-8 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                <h3 class="text-2xl font-bold text-text-primary mb-4">Crown Lusso</h3>
+                <p class="text-text-secondary mb-6">Property booking and management system</p>
+                <div class="bg-bg-primary rounded-xl p-8 text-center">
+                    <div class="text-text-secondary">[MOBILE SCREENSHOT PLACEHOLDER]</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="bg-accent-primary hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 hover:transform hover:scale-105">
+                View Case Studies
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section id="final-cta" class="py-20 bg-bg-surface/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-8">Ready to Build?</h2>
+            <button class="bg-accent-primary hover:bg-accent-hover text-white px-12 py-6 rounded-xl text-xl font-semibold transition-all duration-200 hover:transform hover:scale-105">
+                Start Your Project
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="bg-bg-surface border-t border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="text-xl font-bold text-text-primary mb-4">DevStudio</div>
+                <p class="text-text-secondary">Web and mobile products delivered in 4–8 weeks.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Services</h4>
+                <ul class="space-y-2 text-text-secondary">
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Web Development</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Mobile Apps</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Backend Systems</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Company</h4>
+                <ul class="space-y-2 text-text-secondary">
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">About</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Process</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-text-secondary">
+            <p>&copy; 2024 DevStudio. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

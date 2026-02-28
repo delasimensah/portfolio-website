@@ -4,32 +4,13 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [
-        "mobile-app/.expo/**",
-        "mobile-app/dist/**",
-        "web-app/.next/**",
-        "web-app/dist/**"
-      ]
+      "outputs": ["web-app/.next/**", "web-app/dist/**"]
     },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "lint:fix": {
-      "dependsOn": ["^lint:fix"]
-    },
-    "type-check": {
-      "dependsOn": ["^type-check"]
-    },
-    "test": {
-      "dependsOn": ["^test"],
-      "outputs": ["coverage/**"]
-    },
-    "clean": {
-      "cache": false
-    }
+    "dev": { "cache": false, "persistent": true },
+    "lint": { "dependsOn": ["^lint"] },
+    "lint:fix": { "dependsOn": ["^lint:fix"] },
+    "type-check": { "dependsOn": ["^type-check"] },
+    "test": { "dependsOn": ["^test"], "outputs": ["coverage/**"] },
+    "clean": { "cache": false }
   }
 }

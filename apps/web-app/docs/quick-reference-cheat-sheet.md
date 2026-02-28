@@ -87,10 +87,7 @@ import Button from "../Button/Button";
 
 // ✅ Cross-folder imports - use @ notation
 import { Button, Text } from "@/components";
-import { User } from "@/types";
 import { COLORS } from "@/constants";
-import { supabase } from "@/services";
-import { useAuthStore } from "@/hooks";
 import { cn } from "@/utils";
 ```
 
@@ -144,12 +141,7 @@ router.back();
 
 ### **Route URLs**
 
-- **Sign In** — `app/(auth)/sign-in/page.tsx` → `/sign-in`
-- **Sign Up** — `app/(auth)/sign-up/page.tsx` → `/sign-up`
-- **Onboarding** — `app/(onboarding)/onboarding/page.tsx` → `/onboarding`
-- **Page 1** — `app/(main-app)/page1/page.tsx` → `/page1`
-
-**Note:** Replace `page1` with your actual page name.
+Add pages as `app/[route]/page.tsx` (e.g. `app/about/page.tsx` → `/about`).
 
 ---
 
@@ -209,7 +201,6 @@ yarn build
 
 - [Component Building Guide](../../../docs/component-building-guide.md) - How to build components
 - [Import Patterns Guide](../../../docs/import-patterns-guide.md) - Import/export rules
-- [Navigation Guide](./navigation-guide.md) - Routing and navigation
 - [Type Organization Guide](../../../docs/type-organization-guide.md) - TypeScript patterns
 
 ---

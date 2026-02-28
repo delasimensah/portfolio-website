@@ -4,6 +4,16 @@ import { render } from "@/test-utils";
 
 import Skeleton from "./Skeleton";
 
+
+
+
+
+
+
+
+
+
+
 describe("Skeleton", () => {
   it("renders correctly", () => {
     const { container } = render(<Skeleton />);

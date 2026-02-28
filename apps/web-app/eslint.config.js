@@ -1,7 +1,5 @@
 const { FlatCompat } = require("@eslint/eslintrc");
 const js = require("@eslint/js");
-const path = require("path");
-
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
@@ -73,9 +71,11 @@ module.exports = [
     // Jest-specific configuration for test files
     files: ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.tsx"],
     ...require("eslint-plugin-jest").configs["flat/recommended"],
+    rules: {
+      "import/order": "off",
+    },
   },
   {
     ignores: [".next/*", "node_modules/*", "dist/*", "build/*"],
   },
 ];
-

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-primary': '#0B0F19',
+                        'bg-surface': '#111827',
+                        'text-primary': '#E5E7EB',
+                        'text-secondary': '#9CA3AF',
+                        'accent-primary': '#6366F1',
+                        'accent-hover': '#818CF8'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+</head>
+<body class="bg-bg-primary text-text-primary font-sans">
+
+<header id="header" class="bg-bg-surface/80 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="text-xl font-bold text-text-primary">DevStudio</div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Home</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Case Studies</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Pricing</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Process</a>
+                <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors duration-200">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-text-primary hover:text-accent-primary">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="services-hero" class="relative h-[600px] flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl lg:text-6xl font-bold text-text-primary mb-6">Services</h1>
+            <p class="text-xl text-text-secondary">Clear scope. Transparent pricing. Structured delivery.</p>
+        </div>
+    </div>
+</section>
+
+<section id="launch-ready-product" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-bg-surface rounded-xl p-8 lg:p-12 border border-gray-800">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-6">Launch-Ready Product Build</h2>
+                <p class="text-lg text-text-secondary mb-8 leading-relaxed">
+                    I build the first working version of your product — the version you can launch, test with real users, and grow from.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-bg-primary rounded-xl p-6">
+                        <p class="text-text-secondary mb-2">Timeline</p>
+                        <p class="text-3xl font-bold text-text-primary">4–8 weeks</p>
+                    </div>
+                    <div class="bg-bg-primary rounded-xl p-6">
+                        <p class="text-text-secondary mb-2">Starting From</p>
+                        <p class="text-3xl font-bold text-accent-primary">$3,000</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-text-primary mb-6">Includes</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-accent-primary mt-1"></i>
+                                <span class="text-text-secondary">Product scoping session</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-accent-primary mt-1"></i>
+                                <span class="text-text-secondary">Web application</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-accent-primary mt-1"></i>
+                                <span class="text-text-secondary">Mobile app (iOS & Android)</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-accent-primary mt-1"></i>
+                                <span class="text-text-secondary">Backend system</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-accent-primary mt-1"></i>
+                                <span class="text-text-secondary">Authentication and role management</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-accent-primary mt-1"></i>
+                                <span class="text-text-secondary">3–5 core workflows</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-accent-primary mt-1"></i>
+                                <span class="text-text-secondary">Deployment to your accounts</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-accent-primary mt-1"></i>
+                                <span class="text-text-secondary">Basic documentation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-800 pt-8">
+                        <h3 class="text-2xl font-semibold text-text-primary mb-6">Not Included</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-times-circle text-text-secondary mt-1"></i>
+                                <span class="text-text-secondary">Enterprise-scale systems</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-times-circle text-text-secondary mt-1"></i>
+                                <span class="text-text-secondary">Large integrations unless scoped</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-times-circle text-text-secondary mt-1"></i>
+                                <span class="text-text-secondary">Ongoing feature expansion after launch</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-times-circle text-text-secondary mt-1"></i>
+                                <span class="text-text-secondary">App store or hosting fees</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="ai-fits-in" class="py-20 bg-bg-surface/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Where AI Fits In</h2>
+                <p class="text-2xl font-semibold text-accent-primary">AI Is a Tool — Not the Strategy</p>
+            </div>
+
+            <div class="bg-bg-surface rounded-xl p-8 lg:p-12 border border-gray-800">
+                <p class="text-lg text-text-secondary mb-8 text-center">
+                    AI tools can generate code quickly.<br>
+                    But building a real product requires:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-bg-primary rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-lightbulb text-accent-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Defining what should be built</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bg-primary rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-sitemap text-accent-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Structuring workflows around business goals</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bg-primary rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-drafting-compass text-accent-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Designing clean architecture</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bg-primary rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-search text-accent-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Reviewing and refining generated code</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bg-primary rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-cogs text-accent-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Ensuring long-term maintainability</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bg-primary rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-rocket text-accent-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Deployment and production setup</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bg-primary rounded-xl p-6 md:col-span-2">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-accent-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-user-check text-accent-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-text-primary mb-2">Ongoing accountability</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center space-y-4">
+                    <p class="text-xl text-text-primary font-semibold">AI helps with speed.</p>
+                    <p class="text-xl text-accent-primary font-bold">I provide structure and responsibility.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="application-types" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Types of Applications</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">Real Estate Platforms</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-check text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">Booking Systems</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-store text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">Marketplace Apps</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">CRM Systems</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-credit-card text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">Subscription Platforms</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">Internal Dashboards</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-user-tie text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">Client Portals</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-boxes text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">Inventory Systems</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200">
+                    <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-accent-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary">Educational Platforms</h3>
+                </div>
+
+                <div class="bg-bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent-primary/50 transition-all duration-200 sm:col-span-2 lg:col-span-3">
+                    <div class="flex items-center justify-center">
+                        <div class="w-12 h-12 bg-accent-primary/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tasks text-accent-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary">Operational Management Tools</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services-cta" class="py-20 bg-bg-surface/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-8">Ready to Build Your Product?</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-accent-primary hover:bg-accent-hover text-white px-12 py-6 rounded-xl text-xl font-semibold transition-all duration-200 hover:transform hover:scale-105">
+                    Start Your Project
+                </button>
+                <button class="border border-gray-600 text-text-primary hover:border-accent-primary px-12 py-6 rounded-xl text-xl font-semibold transition-all duration-200 hover:text-accent-primary">
+                    View Pricing
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="bg-bg-surface border-t border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="text-xl font-bold text-text-primary mb-4">DevStudio</div>
+                <p class="text-text-secondary">Web and mobile products delivered in 4–8 weeks.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Services</h4>
+                <ul class="space-y-2 text-text-secondary">
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Web Development</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Mobile Apps</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Backend Systems</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Company</h4>
+                <ul class="space-y-2 text-text-secondary">
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">About</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Process</a></li>
+                    <li><a href="#" class="hover:text-accent-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-text-primary mb-4">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-text-secondary hover:text-accent-primary transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-text-secondary">
+            <p>&copy; 2024 DevStudio. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
