@@ -15,6 +15,7 @@ interface ButtonProps {
   onClick?: () => void;
   type?: "button" | "submit";
   href?: string;
+  disabled?: boolean;
 }
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
@@ -40,6 +41,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   type = "button",
   href,
+  disabled,
 }) => {
   const baseClasses = cn(
     "inline-flex items-center justify-center font-semibold",
@@ -71,6 +73,7 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       className={baseClasses}
       onClick={onClick}
+      disabled={disabled}
       {...motionProps}
     >
       {children}

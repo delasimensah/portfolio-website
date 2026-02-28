@@ -9,7 +9,7 @@ interface ProvidersProps {
 
 export const Providers = ({ children }: ProvidersProps) => {
   return (
-    <MantineProvider>
+    <MantineProvider forceColorScheme="dark">
       {children}
     </MantineProvider>
   );

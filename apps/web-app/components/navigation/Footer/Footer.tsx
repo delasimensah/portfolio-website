@@ -3,7 +3,7 @@
 import { Box } from "@mantine/core";
 import {
   IconBrandGithub,
-  IconBrandInstagram,
+  // IconBrandInstagram,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import React from "react";
@@ -17,17 +17,21 @@ const FOOTER_LINKS = {
 };
 
 const SOCIAL_LINKS = [
-  { href: "#", icon: IconBrandInstagram, label: "Instagram" },
-  { href: "#", icon: IconBrandGithub, label: "GitHub" },
+  // { href: "https://www.instagram.com/_delasimensah/", icon: IconBrandInstagram, label: "Instagram" },
+  {
+    href: "https://github.com/delasimensah",
+    icon: IconBrandGithub,
+    label: "GitHub",
+  },
 ];
 
 const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-gray-800 bg-bg-surface py-12">
+    <footer className="bg-bg-surface border-t border-gray-800 py-12">
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Box className="grid gap-8 md:grid-cols-3">
           <Box>
-            <div className="mb-4 text-xl font-bold text-text-primary">
+            <div className="text-text-primary mb-4 text-xl font-bold">
               delasi mensah
             </div>
             <p className="text-text-secondary">
@@ -35,13 +39,13 @@ const Footer: React.FC = () => {
             </p>
           </Box>
           <Box>
-            <h4 className="mb-4 font-semibold text-text-primary">Company</h4>
-            <ul className="space-y-2 text-text-secondary">
+            <h4 className="text-text-primary mb-4 font-semibold">Company</h4>
+            <ul className="text-text-secondary space-y-2">
               {FOOTER_LINKS.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="transition-colors hover:text-accent-primary"
+                    className="hover:text-accent-primary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -50,14 +54,16 @@ const Footer: React.FC = () => {
             </ul>
           </Box>
           <Box>
-            <h4 className="mb-4 font-semibold text-text-primary">Connect</h4>
+            <h4 className="text-text-primary mb-4 font-semibold">Connect</h4>
             <Box className="flex space-x-4">
               {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
                 <Link
                   key={label}
                   href={href}
-                  className="text-text-secondary transition-colors hover:text-accent-primary"
+                  className="text-text-secondary hover:text-accent-primary transition-colors"
                   aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Icon size={24} />
                 </Link>
@@ -65,8 +71,11 @@ const Footer: React.FC = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="mt-8 border-t border-gray-800 pt-8 text-center text-text-secondary">
-          <p>&copy; {new Date().getFullYear()} delasi mensah. All rights reserved.</p>
+        <Box className="text-text-secondary mt-8 border-t border-gray-800 pt-8 text-center">
+          <p>
+            &copy; {new Date().getFullYear()} delasi mensah. All rights
+            reserved.
+          </p>
         </Box>
       </Box>
     </footer>

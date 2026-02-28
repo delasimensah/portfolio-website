@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
               variants={heroVariants}
               className="text-4xl font-bold leading-tight text-text-primary lg:text-6xl"
             >
-              Web and Mobile Products Delivered in 4–8 Weeks
+              Web and Mobile Products Delivered in 6–8 Weeks
             </motion.h1>
             <motion.p
               initial="hidden"

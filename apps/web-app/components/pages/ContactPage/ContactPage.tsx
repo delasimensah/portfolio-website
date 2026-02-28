@@ -1,11 +1,16 @@
 import React from "react";
 
+import ContactForm from "../../contact/ContactForm/ContactForm";
+import ContactHeroSection from "../../contact/ContactHeroSection/ContactHeroSection";
+import ContactWhatNextSection from "../../contact/ContactWhatNextSection/ContactWhatNextSection";
+
 const ContactPage: React.FC = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <h1 className="mb-4 text-3xl font-bold text-text-primary">Contact</h1>
-      <p className="text-text-secondary">Contact page coming soon.</p>
-    </div>
+    <>
+      <ContactHeroSection />
+      <ContactForm />
+      <ContactWhatNextSection />
+    </>
   );
 };
 

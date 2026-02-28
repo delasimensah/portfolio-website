@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Group, Title } from "@mantine/core";
+import { Box, Group, Stack, Title } from "@mantine/core";
 import {
   IconCheck,
   IconCurrencyDollar,
@@ -61,8 +61,8 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
                       card.fullWidth ? "md:col-span-2" : ""
                     }`}
                   >
-                    <Group align="flex-start" gap={16}>
-                      <Box className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-primary/20">
+                    <Stack gap={16}>
+                      <Box className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-primary/20">
                         {ICON_MAP[card.iconKey]}
                       </Box>
                       <Box>
@@ -71,7 +71,7 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
                         </Title>
                         <Text className="text-text-secondary">{card.description}</Text>
                       </Box>
-                    </Group>
+                    </Stack>
                   </Box>
                 ))}
               </Box>
@@ -85,14 +85,14 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
                   key={group.title}
                   className="rounded-xl border border-gray-800 bg-bg-surface p-8"
                 >
-                  <Group gap={16} className="mb-6">
+                  <Stack gap={12} className="mb-6">
                     <Box className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-primary/20">
                       {ICON_MAP[group.iconKey]}
                     </Box>
                     <Title order={3} className="text-2xl font-bold text-text-primary">
                       {group.title}
                     </Title>
-                  </Group>
+                  </Stack>
                   <Box className="space-y-4">
                     {group.items.map((item: string) => (
                       <Group key={item} align="flex-start" gap={12}>

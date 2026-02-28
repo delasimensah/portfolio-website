@@ -1,11 +1,30 @@
 import React from "react";
 
+import AboutApproachSection from "../../about/AboutApproachSection/AboutApproachSection";
+import AboutBioSection from "../../about/AboutBioSection/AboutBioSection";
+import AboutCTASection from "../../about/AboutCTASection/AboutCTASection";
+import AboutDeliverySection from "../../about/AboutDeliverySection/AboutDeliverySection";
+import AboutFocusSection from "../../about/AboutFocusSection/AboutFocusSection";
+import AboutHeroSection from "../../about/AboutHeroSection/AboutHeroSection";
+import AboutPrinciplesSection from "../../about/AboutPrinciplesSection/AboutPrinciplesSection";
+import AboutTechStackSection from "../../about/AboutTechStackSection/AboutTechStackSection";
+import AboutWhoIWorkWithSection from "../../about/AboutWhoIWorkWithSection/AboutWhoIWorkWithSection";
+import AboutWhyFixedPricingSection from "../../about/AboutWhyFixedPricingSection/AboutWhyFixedPricingSection";
+
 const AboutPage: React.FC = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <h1 className="mb-4 text-3xl font-bold text-text-primary">About</h1>
-      <p className="text-text-secondary">About page coming soon.</p>
-    </div>
+    <>
+      <AboutHeroSection />
+      <AboutBioSection />
+      <AboutFocusSection />
+      <AboutApproachSection />
+      <AboutTechStackSection />
+      <AboutWhyFixedPricingSection />
+      <AboutDeliverySection />
+      <AboutPrinciplesSection />
+      <AboutWhoIWorkWithSection />
+      <AboutCTASection />
+    </>
   );
 };
 
