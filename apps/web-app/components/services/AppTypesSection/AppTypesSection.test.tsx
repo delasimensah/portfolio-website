@@ -6,7 +6,7 @@ describe("AppTypesSection", () => {
   it("renders the heading", () => {
     render(<AppTypesSection />);
     expect(
-      screen.getByRole("heading", { name: /products I build/i })
+      screen.getByRole("heading", { name: /types of applications/i })
     ).toBeInTheDocument();
   });
 

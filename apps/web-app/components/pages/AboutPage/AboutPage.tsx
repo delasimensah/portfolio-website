@@ -10,7 +10,6 @@ import AboutPrinciplesSection from "../../about/AboutPrinciplesSection/AboutPrin
 import AboutTechStackSection from "../../about/AboutTechStackSection/AboutTechStackSection";
 import AboutWhoIWorkWithSection from "../../about/AboutWhoIWorkWithSection/AboutWhoIWorkWithSection";
 import AboutWhyFixedPricingSection from "../../about/AboutWhyFixedPricingSection/AboutWhyFixedPricingSection";
-import TypicalTimelineSection from "../../home/TypicalTimelineSection/TypicalTimelineSection";
 
 const AboutPage: React.FC = () => {
   return (
@@ -21,7 +20,6 @@ const AboutPage: React.FC = () => {
       <AboutApproachSection />
       <AboutTechStackSection />
       <AboutWhyFixedPricingSection />
-      <TypicalTimelineSection />
       <AboutDeliverySection />
       <AboutPrinciplesSection />
       <AboutWhoIWorkWithSection />

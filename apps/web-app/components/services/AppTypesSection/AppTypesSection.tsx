@@ -77,7 +77,7 @@ const AppTypesSection: React.FC = () => {
     <section className="py-20">
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-16">
-          <SectionTitle>Products I Build</SectionTitle>
+          <SectionTitle>Types of Applications</SectionTitle>
         </FadeInSection>
         <Box className="mx-auto max-w-5xl">
           <Box className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
