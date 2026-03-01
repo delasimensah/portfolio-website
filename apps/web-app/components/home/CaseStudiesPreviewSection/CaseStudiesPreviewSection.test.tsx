@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import CaseStudiesPreviewSection from "./CaseStudiesPreviewSection";
 
 describe("CaseStudiesPreviewSection", () => {
   it("renders section title", () => {
     render(<CaseStudiesPreviewSection />);
-    expect(screen.getByRole("heading", { name: /my work/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /my work/i })
+    ).toBeInTheDocument();
   });
 
   it("renders case study cards", () => {
@@ -16,6 +18,8 @@ describe("CaseStudiesPreviewSection", () => {
 
   it("renders View My Work button", () => {
     render(<CaseStudiesPreviewSection />);
-    expect(screen.getByRole("link", { name: /view my work/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /view my work/i })
+    ).toBeInTheDocument();
   });
 });

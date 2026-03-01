@@ -11,7 +11,10 @@ const ServicesCTASection: React.FC = () => {
     <section className="bg-bg-surface/50 py-20">
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mx-auto max-w-2xl text-center">
-          <Title order={2} className="mb-8 text-3xl font-bold text-text-primary lg:text-4xl">
+          <Title
+            order={2}
+            className="mb-8 text-3xl font-bold text-text-primary lg:text-4xl"
+          >
             Ready to Build Your Product?
           </Title>
           <Box className="flex flex-col justify-center gap-4 sm:flex-row">

@@ -8,7 +8,7 @@ Short reference so you can get good results from Cursor and avoid common frictio
 
 **Chat** is the conversation interface: the place where you talk to the AI. It has tabs, history, checkpoints, and export. You use it for explanations, step-by-step help, and back-and-forth.
 
-**Agent** is the *mode* that can actually *do* things in that conversation: edit files, run terminal commands, search the codebase, use the browser. You open the Agent side panel with **Cmd+I** (Mac) / **Ctrl+I** (Windows/Linux) and describe a goal; it then plans and applies changes using its tools.
+**Agent** is the _mode_ that can actually _do_ things in that conversation: edit files, run terminal commands, search the codebase, use the browser. You open the Agent side panel with **Cmd+I** (Mac) / **Ctrl+I** (Windows/Linux) and describe a goal; it then plans and applies changes using its tools.
 
 So: **Chat** = where you have the conversation. **Agent** = the “do it for me” mode inside that conversation (vs **Ask** = read-only, **Plan** = plan first then build, **Debug** = investigate then fix). When you want code changed or commands run, you’re using Agent mode in Chat.
 

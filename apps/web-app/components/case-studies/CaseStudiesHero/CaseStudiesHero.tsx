@@ -19,7 +19,10 @@ const CaseStudiesHero: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
-            <Title order={1} className="text-4xl font-bold text-text-primary lg:text-6xl">
+            <Title
+              order={1}
+              className="text-4xl font-bold text-text-primary lg:text-6xl"
+            >
               My Work
             </Title>
           </MotionBox>

@@ -24,7 +24,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" className={appfont.variable} suppressHydrationWarning>
       <body
-        className={`${appfont.variable} bg-bg-primary text-text-primary font-sans`}
+        className={`${appfont.variable} bg-bg-primary font-sans text-text-primary`}
       >
         <Providers>
           <Header />

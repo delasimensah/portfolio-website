@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import AboutPrinciplesSection from "./AboutPrinciplesSection";
 
 describe("AboutPrinciplesSection", () => {
   it("renders the section heading", () => {
     render(<AboutPrinciplesSection />);
-    expect(screen.getByRole("heading", { name: /core principles/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /core principles/i })
+    ).toBeInTheDocument();
   });
 
   it("renders all principles", () => {

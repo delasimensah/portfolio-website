@@ -11,7 +11,7 @@ Use this when you have created a **project-specific repo** from this template an
 1. **Updates `.gitignore`** in the current repo by appending:
    - `/docs`
    - `/.cursor`
-   So Git will ignore the root `docs/` folder and the `.cursor/` folder (including `.cursor/rules/`).
+     So Git will ignore the root `docs/` folder and the `.cursor/` folder (including `.cursor/rules/`).
 
 2. **Stops tracking those paths** by running `git rm -r --cached docs` and `git rm -r --cached .cursor`. The files and folders remain on disk; they are only removed from Git’s index so future changes are not committed.
 

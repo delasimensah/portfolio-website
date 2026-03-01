@@ -1,10 +1,12 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import ContactPage from "./ContactPage";
 
 describe("ContactPage", () => {
   it("renders without crashing", () => {
     render(<ContactPage />);
-    expect(screen.getByRole("heading", { name: /contact/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /contact/i })
+    ).toBeInTheDocument();
   });
 });

@@ -16,7 +16,12 @@ interface AppTypeCardProps {
   iconBoxGradient?: string;
 }
 
-const AppTypeCard: React.FC<AppTypeCardProps> = ({ icon, title, className, iconBoxGradient }) => {
+const AppTypeCard: React.FC<AppTypeCardProps> = ({
+  icon,
+  title,
+  className,
+  iconBoxGradient,
+}) => {
   return (
     <MotionBox
       whileHover={{ y: -4 }}

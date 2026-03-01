@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import WhatYouGetCard from "./WhatYouGetCard";
 
@@ -12,6 +12,8 @@ describe("WhatYouGetCard", () => {
       />
     );
     expect(screen.getByText("Web Application")).toBeInTheDocument();
-    expect(screen.getByText("Fully responsive web platform.")).toBeInTheDocument();
+    expect(
+      screen.getByText("Fully responsive web platform.")
+    ).toBeInTheDocument();
   });
 });

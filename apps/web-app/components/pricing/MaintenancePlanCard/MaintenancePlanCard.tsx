@@ -37,7 +37,10 @@ const MaintenancePlanCard: React.FC<MaintenancePlanCardProps> = ({
         </Title>
         <Text className="text-3xl font-bold text-accent-primary">
           {price}
-          <Text component="span" className="text-lg font-normal text-text-secondary">
+          <Text
+            component="span"
+            className="text-lg font-normal text-text-secondary"
+          >
             /month
           </Text>
         </Text>

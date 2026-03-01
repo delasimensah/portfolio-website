@@ -12,7 +12,10 @@ const CaseStudiesCTASection: React.FC = () => {
     <section className="py-20">
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mx-auto max-w-2xl text-center">
-          <Title order={2} className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl">
+          <Title
+            order={2}
+            className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl"
+          >
             Ready to Build Your Product?
           </Title>
           <Text className="mb-12 text-xl text-text-secondary">

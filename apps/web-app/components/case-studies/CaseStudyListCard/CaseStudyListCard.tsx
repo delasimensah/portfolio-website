@@ -26,7 +26,10 @@ const CaseStudyListCard: React.FC<CaseStudyListCardProps> = ({ study }) => {
     >
       <Box className="p-8 lg:p-12">
         <Box className="mb-6">
-          <Title order={2} className="mb-2 text-3xl font-bold text-text-primary">
+          <Title
+            order={2}
+            className="mb-2 text-3xl font-bold text-text-primary"
+          >
             {study.title}
           </Title>
           <Text className="text-text-secondary">{study.tagline}</Text>
@@ -46,11 +49,17 @@ const CaseStudyListCard: React.FC<CaseStudyListCardProps> = ({ study }) => {
         <Box className="mb-8 grid grid-cols-2 gap-4">
           <Box className="rounded-xl bg-bg-primary p-4">
             <Text className="mb-1 text-sm text-text-secondary">Timeline</Text>
-            <Text className="text-xl font-bold text-text-primary">{study.timeline}</Text>
+            <Text className="text-xl font-bold text-text-primary">
+              {study.timeline}
+            </Text>
           </Box>
           <Box className="rounded-xl bg-bg-primary p-4">
-            <Text className="mb-1 text-sm text-text-secondary">Project Value</Text>
-            <Text className="text-xl font-bold text-accent-primary">{study.value}</Text>
+            <Text className="mb-1 text-sm text-text-secondary">
+              Project Value
+            </Text>
+            <Text className="text-xl font-bold text-accent-primary">
+              {study.value}
+            </Text>
           </Box>
         </Box>
 

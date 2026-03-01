@@ -18,7 +18,7 @@ const heroVariants = {
 const ContactHeroSection: React.FC = () => {
   return (
     <section className="relative flex min-h-[500px] items-center">
-      <Box className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center w-full">
+      <Box className="mx-auto w-full max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -52,7 +52,8 @@ const ContactHeroSection: React.FC = () => {
           variants={heroVariants}
         >
           <Text className="mx-auto mb-8 max-w-3xl text-xl leading-relaxed text-text-secondary">
-            Planning a web or mobile product? Share the details below and I&apos;ll review them within 1–2 business days.
+            Planning a web or mobile product? Share the details below and
+            I&apos;ll review them within 1–2 business days.
           </Text>
           <Text className="text-2xl font-semibold text-accent-primary">
             Projects start at $1,500 and are delivered in 4–8 weeks.

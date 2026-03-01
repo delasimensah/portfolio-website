@@ -10,9 +10,21 @@ import StaggerItem from "../../shared/StaggerContainer/StaggerItem";
 import HowIWorkStep from "../HowIWorkStep/HowIWorkStep";
 
 const STEPS = [
-  { step: 1, title: "Define", description: "Clearly define the product scope and outcome." },
-  { step: 2, title: "Simplify", description: "Unclutter and streamline the user experience." },
-  { step: 3, title: "Build", description: "Build the full product: UI, workflows, and infrastructure." },
+  {
+    step: 1,
+    title: "Define",
+    description: "Clearly define the product scope and outcome.",
+  },
+  {
+    step: 2,
+    title: "Simplify",
+    description: "Unclutter and streamline the user experience.",
+  },
+  {
+    step: 3,
+    title: "Build",
+    description: "Build the full product: UI, workflows, and infrastructure.",
+  },
   { step: 4, title: "Launch", description: "Launch, refine, optimise." },
 ];
 
@@ -26,7 +38,10 @@ const STEP_GRADIENTS = [
 const HowIWorkSection: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-bg-surface/50 py-20">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-subtle opacity-100" aria-hidden />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-subtle opacity-100"
+        aria-hidden
+      />
       <Box className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-16">
           <SectionTitle>How I Work</SectionTitle>

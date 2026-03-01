@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import AboutApproachSection from "./AboutApproachSection";
 
 describe("AboutApproachSection", () => {
   it("renders the section heading", () => {
     render(<AboutApproachSection />);
-    expect(screen.getByRole("heading", { name: /my approach/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /my approach/i })
+    ).toBeInTheDocument();
   });
 
   it("renders both approach cards", () => {

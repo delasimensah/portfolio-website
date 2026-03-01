@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import WhatYouGetSection from "./WhatYouGetSection";
 
 describe("WhatYouGetSection", () => {
   it("renders section title", () => {
     render(<WhatYouGetSection />);
-    expect(screen.getByRole("heading", { name: /what you get/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /what you get/i })
+    ).toBeInTheDocument();
   });
 
   it("renders all cards", () => {

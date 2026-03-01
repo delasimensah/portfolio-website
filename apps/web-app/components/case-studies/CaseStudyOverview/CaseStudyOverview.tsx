@@ -10,7 +10,10 @@ import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import Text from "../../ui/Text/Text";
 
 interface CaseStudyOverviewProps {
-  study: Pick<CaseStudy, "timeline" | "value" | "platforms" | "additionalStats">;
+  study: Pick<
+    CaseStudy,
+    "timeline" | "value" | "platforms" | "additionalStats"
+  >;
 }
 
 const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ study }) => {

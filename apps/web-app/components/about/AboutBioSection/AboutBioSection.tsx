@@ -19,12 +19,18 @@ const AboutBioSection: React.FC = () => {
     <section className="py-20">
       <Box className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
-          <Title order={2} className="mb-10 text-3xl font-bold text-text-primary lg:text-4xl">
+          <Title
+            order={2}
+            className="mb-10 text-3xl font-bold text-text-primary lg:text-4xl"
+          >
             Hi, I&apos;m a Product-Minded Developer
           </Title>
           <Stack gap={20}>
             {BIO_PARAGRAPHS.map((paragraph, i) => (
-              <Text key={i} className="text-lg leading-relaxed text-text-secondary">
+              <Text
+                key={i}
+                className="text-lg leading-relaxed text-text-secondary"
+              >
                 {paragraph}
               </Text>
             ))}

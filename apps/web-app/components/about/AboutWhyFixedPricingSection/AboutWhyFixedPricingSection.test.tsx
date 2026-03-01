@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import AboutWhyFixedPricingSection from "./AboutWhyFixedPricingSection";
 
@@ -12,7 +12,9 @@ describe("AboutWhyFixedPricingSection", () => {
 
   it("renders the hourly billing explanation", () => {
     render(<AboutWhyFixedPricingSection />);
-    expect(screen.getByText(/hourly billing creates perverse incentives/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/hourly billing creates perverse incentives/i)
+    ).toBeInTheDocument();
   });
 
   it("renders the discovery note", () => {

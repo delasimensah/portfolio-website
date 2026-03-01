@@ -38,11 +38,11 @@ const CaseStudyWebExperience: React.FC<CaseStudyWebExperienceProps> = ({
             <Box>
               <Title
                 order={2}
-                className="text-text-primary mb-6 text-3xl font-bold lg:text-4xl"
+                className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl"
               >
                 {study.webSectionTitle}
               </Title>
-              <Box className="bg-accent-primary h-1 w-20 rounded-full" />
+              <Box className="h-1 w-20 rounded-full bg-accent-primary" />
             </Box>
 
             {screenshots.length > 0 && (
@@ -61,11 +61,11 @@ const CaseStudyWebExperience: React.FC<CaseStudyWebExperienceProps> = ({
             )}
           </Box>
 
-          <Box className="bg-bg-surface mb-8 rounded-xl border border-gray-800 p-8 lg:p-12">
-            <Text className="text-text-secondary mb-6 text-center text-sm uppercase tracking-wider">
+          <Box className="mb-8 rounded-xl border border-gray-800 bg-bg-surface p-8 lg:p-12">
+            <Text className="mb-6 text-center text-sm uppercase tracking-wider text-text-secondary">
               {study.webSectionLabel}
             </Text>
-            <Box className="bg-bg-primary overflow-hidden rounded-xl">
+            <Box className="overflow-hidden rounded-xl bg-bg-primary">
               <Image
                 src={study.webImageSrc}
                 alt={study.webImageAlt}
@@ -79,7 +79,7 @@ const CaseStudyWebExperience: React.FC<CaseStudyWebExperienceProps> = ({
 
           <Box className="space-y-4">
             {study.webSectionText.map((paragraph, i) => (
-              <Text key={i} className="text-text-secondary text-lg">
+              <Text key={i} className="text-lg text-text-secondary">
                 {paragraph}
               </Text>
             ))}

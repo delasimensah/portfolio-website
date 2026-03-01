@@ -16,17 +16,20 @@ interface PricingExample {
 const EXAMPLES: PricingExample[] = [
   {
     platform: "Web App Only",
-    description: "Single-platform web application with core workflows, authentication, and deployment.",
+    description:
+      "Single-platform web application with core workflows, authentication, and deployment.",
     price: "~$1,500",
   },
   {
     platform: "Mobile App Only",
-    description: "iOS and Android app with core workflows, authentication, and App Store deployment.",
+    description:
+      "iOS and Android app with core workflows, authentication, and App Store deployment.",
     price: "~$2,000",
   },
   {
     platform: "Web + Mobile",
-    description: "Full web and mobile product sharing the same backend, deployed to all platforms.",
+    description:
+      "Full web and mobile product sharing the same backend, deployed to all platforms.",
     price: "$3,500+",
   },
 ];
@@ -59,7 +62,7 @@ const PricingExamplesSection: React.FC = () => {
                   {example.platform}
                 </Text>
 
-                <Text className="mb-6 text-text-secondary leading-relaxed">
+                <Text className="mb-6 leading-relaxed text-text-secondary">
                   {example.description}
                 </Text>
 
@@ -71,7 +74,7 @@ const PricingExamplesSection: React.FC = () => {
           </Box>
 
           <Box className="mt-8 rounded-xl border border-accent-primary/20 bg-accent-primary/10 p-6">
-            <Text className="text-text-secondary leading-relaxed">
+            <Text className="leading-relaxed text-text-secondary">
               <span className="font-semibold text-text-primary">
                 More complexity = higher cost.
               </span>{" "}

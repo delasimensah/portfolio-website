@@ -30,13 +30,22 @@ const PaymentTermsSection: React.FC = () => {
           </Box>
           <Box className="grid gap-6 md:grid-cols-2">
             <Box className="rounded-xl border border-gray-800 bg-bg-surface p-8">
-              <Title order={3} className="mb-6 text-xl font-semibold text-text-primary">
+              <Title
+                order={3}
+                className="mb-6 text-xl font-semibold text-text-primary"
+              >
                 Standard Structure
               </Title>
               <Stack gap={12}>
                 {PAYMENT_SPLITS.map((split) => (
-                  <Box key={split.label} className="rounded-xl bg-bg-primary p-4">
-                    <Text component="span" className="text-2xl font-bold text-accent-primary">
+                  <Box
+                    key={split.label}
+                    className="rounded-xl bg-bg-primary p-4"
+                  >
+                    <Text
+                      component="span"
+                      className="text-2xl font-bold text-accent-primary"
+                    >
                       {split.percent}
                     </Text>
                     <Text className="text-text-secondary">{split.label}</Text>
@@ -46,7 +55,10 @@ const PaymentTermsSection: React.FC = () => {
             </Box>
 
             <Box className="rounded-xl border border-gray-800 bg-bg-surface p-8">
-              <Title order={3} className="mb-6 text-xl font-semibold text-text-primary">
+              <Title
+                order={3}
+                className="mb-6 text-xl font-semibold text-text-primary"
+              >
                 What&apos;s Included
               </Title>
               <Stack gap={12}>

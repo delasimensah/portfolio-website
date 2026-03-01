@@ -79,9 +79,9 @@ With **Auto** enabled, Cursor picks the model for each task based on fit and cur
 
 **Auto pricing (per million tokens):**
 
-- Input + cache write: $1.25  
-- Output: $6.00  
-- Cache read: $0.25  
+- Input + cache write: $1.25
+- Output: $6.00
+- Cache read: $0.25
 
 Usage (including Auto) appears in the editor and on the [dashboard](https://cursor.com/dashboard?tab=usage). If you turn off Auto and pick a model yourself, you pay that model’s [listed API price](./models.md#model-pricing).
 
@@ -103,7 +103,7 @@ Bugbot is **separate** from Cursor subscriptions and has its own plans (Pro, Tea
 
 Cloud Agents are billed at the [API price of the model](./models.md#model-pricing) you select. When you first use them, you set a **spend limit**.
 
-*Note: VM compute for cloud agents will be priced in the future.*
+_Note: VM compute for cloud agents will be priced in the future._
 
 Full setup, security, and dashboard: [Cloud Agents](./cloud-agents.md).
 

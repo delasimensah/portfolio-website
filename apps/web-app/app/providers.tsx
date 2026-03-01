@@ -8,9 +8,5 @@ interface ProvidersProps {
 }
 
 export const Providers = ({ children }: ProvidersProps) => {
-  return (
-    <MantineProvider forceColorScheme="dark">
-      {children}
-    </MantineProvider>
-  );
+  return <MantineProvider forceColorScheme="dark">{children}</MantineProvider>;
 };

@@ -54,8 +54,7 @@ const CARDS = [
   {
     icon: <IconCloudUpload size={24} className={ICON_WHITE} />,
     title: "Deployment Support",
-    description:
-      "Deployment to your accounts and support until you're live.",
+    description: "Deployment to your accounts and support until you're live.",
   },
   {
     icon: <IconFileDescription size={24} className={ICON_WHITE} />,

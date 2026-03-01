@@ -10,9 +10,12 @@ import Text from "../../ui/Text/Text";
 const CaseStudyCTA: React.FC = () => {
   return (
     <section className="bg-bg-surface/50 py-20">
-      <Box className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <Box className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <FadeInSection>
-          <Title order={2} className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl">
+          <Title
+            order={2}
+            className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl"
+          >
             Want to build something like this?
           </Title>
           <Text className="mb-12 text-xl text-text-secondary">

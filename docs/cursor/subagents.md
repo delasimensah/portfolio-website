@@ -59,7 +59,7 @@ For simple, single-purpose tasks (e.g. “generate a changelog”, “format imp
 
 The Agent **automatically** uses subagents when it makes sense. To add **custom** subagents, create markdown files in **`.cursor/agents/`** (project) or **`~/.cursor/agents/`** (user) with YAML frontmatter and a prompt. You can also ask the Agent to create one, e.g.:
 
-*“Create a subagent file at .cursor/agents/verifier.md with YAML frontmatter (name, description) and a prompt. The verifier should validate completed work, check implementations are functional, run tests, and report what passed vs what’s incomplete.”*
+_“Create a subagent file at .cursor/agents/verifier.md with YAML frontmatter (name, description) and a prompt. The verifier should validate completed work, check implementations are functional, run tests, and report what passed vs what’s incomplete.”_
 
 ---
 
@@ -87,6 +87,7 @@ model: inherit
 You are a security expert auditing code for vulnerabilities.
 
 When invoked:
+
 1. Identify security-sensitive code paths
 2. Check for common vulnerabilities (injection, XSS, auth bypass)
 3. Verify secrets are not hardcoded
@@ -119,13 +120,13 @@ Call a subagent by **name** with `/` or by name in natural language:
 - `/debugger investigate this error`
 - `/security-auditor review the payment module`
 
-Or: *“Use the verifier subagent to confirm the auth flow is complete.”*
+Or: _“Use the verifier subagent to confirm the auth flow is complete.”_
 
 ### Parallel execution
 
 Ask for parallel work; the Agent can send multiple Task (subagent) calls in one message:
 
-*“Review the API changes and update the documentation in parallel.”*
+_“Review the API changes and update the documentation in parallel.”_
 
 ---
 
@@ -133,7 +134,7 @@ Ask for parallel work; the Agent can send multiple Task (subagent) calls in one 
 
 Subagents can be **resumed** so you can continue a previous run. Each run returns an **agent ID**. Use it to resume with full context:
 
-*“Resume agent abc123 and analyze the remaining test failures.”*
+_“Resume agent abc123 and analyze the remaining test failures.”_
 
 Background subagents persist state; you can resume after they finish to keep the conversation going.
 
@@ -152,9 +153,9 @@ A **verifier** subagent checks that claimed work is actually done and working (t
 
 For complex flows, the parent can chain specialist subagents:
 
-1. **Planner** – Requirements and technical plan  
-2. **Implementer** – Build from the plan  
-3. **Verifier** – Confirm implementation matches requirements  
+1. **Planner** – Requirements and technical plan
+2. **Implementer** – Build from the plan
+3. **Verifier** – Confirm implementation matches requirements
 
 Hand off with structured output so the next subagent has clear context.
 

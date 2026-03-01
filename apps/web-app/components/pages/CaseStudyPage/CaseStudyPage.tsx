@@ -18,7 +18,11 @@ interface CaseStudyPageProps {
 const CaseStudyPage: React.FC<CaseStudyPageProps> = ({ study }) => {
   return (
     <>
-      <CaseStudyHero title={study.title} tagline={study.tagline} websiteUrl={study.websiteUrl} />
+      <CaseStudyHero
+        title={study.title}
+        tagline={study.tagline}
+        websiteUrl={study.websiteUrl}
+      />
 
       <CaseStudyMobileDisplay
         imageSrc={study.mobileImageSrc}
@@ -32,7 +36,10 @@ const CaseStudyPage: React.FC<CaseStudyPageProps> = ({ study }) => {
 
       <CaseStudySolution solution={study.solution} />
 
-      <CaseStudyWebExperience study={study} screenshots={study.webScreenshots} />
+      <CaseStudyWebExperience
+        study={study}
+        screenshots={study.webScreenshots}
+      />
 
       <CaseStudyOutcome outcomes={study.outcomes} />
 

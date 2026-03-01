@@ -52,7 +52,10 @@ const TypicalTimelineSection: React.FC = () => {
       <Box className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <Box className="mb-12">
-            <Title order={2} className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl">
+            <Title
+              order={2}
+              className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl"
+            >
               Typical Timeline
             </Title>
             <Box className="h-1 w-20 rounded-full bg-accent-primary" />
@@ -64,15 +67,25 @@ const TypicalTimelineSection: React.FC = () => {
                   <Box
                     className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${STEP_GRADIENTS[i]}`}
                   >
-                    <span className="text-lg font-bold text-white">{phase.step}</span>
+                    <span className="text-lg font-bold text-white">
+                      {phase.step}
+                    </span>
                   </Box>
-                  <Text component="span" className="mb-2 block text-sm font-medium text-accent-primary">
+                  <Text
+                    component="span"
+                    className="mb-2 block text-sm font-medium text-accent-primary"
+                  >
                     {phase.period}
                   </Text>
-                  <Title order={3} className="mb-3 text-lg font-semibold text-text-primary">
+                  <Title
+                    order={3}
+                    className="mb-3 text-lg font-semibold text-text-primary"
+                  >
                     {phase.title}
                   </Title>
-                  <Text className="text-text-secondary">{phase.description}</Text>
+                  <Text className="text-text-secondary">
+                    {phase.description}
+                  </Text>
                 </Box>
               </StaggerItem>
             ))}

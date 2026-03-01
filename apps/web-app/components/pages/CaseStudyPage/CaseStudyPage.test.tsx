@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import CaseStudyPage from "./CaseStudyPage";
 
@@ -14,8 +14,10 @@ const mockStudy = {
   techList: ["React Native mobile app"],
   mobileImageSrc: "/images/aria-mobile-ios.png",
   mobileImageAlt: "Aria mobile",
+  mobileScreenshots: [] as { src: string; alt: string }[],
   webImageSrc: "/images/aria-web.png",
   webImageAlt: "Aria web",
+  webScreenshots: [] as { src: string; alt: string }[],
   webSectionTitle: "Web Experience",
   webSectionLabel: "Desktop Platform",
   webSectionText: ["A great platform."],

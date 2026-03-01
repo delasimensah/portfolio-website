@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import WhatAffectsPricingSection from "./WhatAffectsPricingSection";
 
 describe("WhatAffectsPricingSection", () => {
   it("renders the section heading", () => {
     render(<WhatAffectsPricingSection />);
-    expect(screen.getByRole("heading", { name: /what affects pricing/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /what affects pricing/i })
+    ).toBeInTheDocument();
   });
 
   it("renders all five factors", () => {

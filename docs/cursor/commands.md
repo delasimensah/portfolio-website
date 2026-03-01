@@ -93,9 +93,11 @@ Example **onboard-new-developer.md** content:
 # Onboard New Developer
 
 ## Overview
+
 Comprehensive onboarding process to get a new developer up and running quickly.
 
 ## Steps
+
 1. **Environment setup**
    - Install required tools
    - Set up development environment
@@ -109,6 +111,7 @@ Comprehensive onboarding process to get a new developer up and running quickly.
    - Set up local database
 
 ## Onboarding Checklist
+
 - [ ] Development environment ready
 - [ ] All tests passing
 - [ ] Can run application locally

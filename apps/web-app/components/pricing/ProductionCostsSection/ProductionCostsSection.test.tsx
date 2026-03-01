@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import ProductionCostsSection from "./ProductionCostsSection";
 
 describe("ProductionCostsSection", () => {
   it("renders the heading", () => {
     render(<ProductionCostsSection />);
-    expect(screen.getByRole("heading", { name: /production costs/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /production costs/i })
+    ).toBeInTheDocument();
   });
 
   it("renders cost rows", () => {

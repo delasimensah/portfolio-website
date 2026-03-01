@@ -1,7 +1,12 @@
 "use client";
 
 import { Box, Title } from "@mantine/core";
-import { IconBox, IconCalendar, IconListCheck, IconTool } from "@tabler/icons-react";
+import {
+  IconBox,
+  IconCalendar,
+  IconListCheck,
+  IconTool,
+} from "@tabler/icons-react";
 import React from "react";
 
 import FadeInSection from "../../shared/FadeInSection/FadeInSection";
@@ -43,7 +48,10 @@ const AboutFocusSection: React.FC = () => {
       <Box className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <Box className="mb-12 text-center">
-            <Title order={2} className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl">
+            <Title
+              order={2}
+              className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl"
+            >
               I focus on:
             </Title>
             <Box className="mx-auto h-1 w-20 rounded-full bg-accent-primary" />
@@ -59,7 +67,10 @@ const AboutFocusSection: React.FC = () => {
                 >
                   {item.icon}
                 </Box>
-                <Title order={3} className="mb-3 text-2xl font-bold text-text-primary">
+                <Title
+                  order={3}
+                  className="mb-3 text-2xl font-bold text-text-primary"
+                >
                   {item.title}
                 </Title>
                 <Text className="text-text-secondary">{item.description}</Text>

@@ -59,11 +59,7 @@ const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <MotionLink
-        href={href}
-        className={baseClasses}
-        {...motionProps}
-      >
+      <MotionLink href={href} className={baseClasses} {...motionProps}>
         {children}
       </MotionLink>
     );

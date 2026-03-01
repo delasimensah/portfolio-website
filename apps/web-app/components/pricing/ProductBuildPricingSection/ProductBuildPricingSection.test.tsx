@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import ProductBuildPricingSection from "./ProductBuildPricingSection";
 
 describe("ProductBuildPricingSection", () => {
   it("renders the heading", () => {
     render(<ProductBuildPricingSection />);
-    expect(screen.getByRole("heading", { name: /product build/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /product build/i })
+    ).toBeInTheDocument();
   });
 
   it("renders pricing stats", () => {

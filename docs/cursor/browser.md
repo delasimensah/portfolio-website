@@ -29,7 +29,7 @@ Browser actions (screenshots, clicks, etc.) show up in chat and in a browser win
 - **Scroll** — Scroll the page
 - **Screenshot** — Capture the current view (Agent sees it as an image)
 - **Console output** — Read console logs (e.g. errors, warnings)
-- **Network traffic** — Monitor HTTP requests/responses, API calls, payloads, status codes. *(Agent panel only for now; layout support coming.)*
+- **Network traffic** — Monitor HTTP requests/responses, API calls, payloads, status codes. _(Agent panel only for now; layout support coming.)_
 
 ---
 
@@ -66,10 +66,10 @@ Each workspace has its own browser context, so projects don’t share storage or
 ## Use cases
 
 - **Web development** – Integrate with Figma, Linear, design systems, component libraries. See the [Web Development cookbook](https://docs.cursor.com/cookbook/web-development).
-- **Accessibility** – Audit and improve a11y (WCAG): contrast, semantic HTML, ARIA, keyboard nav, alt text. Use `@browser` with a prompt like: *Check color contrast, verify semantic HTML and ARIA, test keyboard navigation, find missing alt text.*
+- **Accessibility** – Audit and improve a11y (WCAG): contrast, semantic HTML, ARIA, keyboard nav, alt text. Use `@browser` with a prompt like: _Check color contrast, verify semantic HTML and ARIA, test keyboard navigation, find missing alt text._
 - **Automated testing** – Run flows, fill forms, click through, test responsive layouts, check error messages and console errors; capture screenshots for visual regression.
-- **Design to code** – Point at a mockup; Agent extracts colors/typography and generates HTML/CSS. Prompt e.g. *Analyze this design mockup, extract colors and typography, generate pixel-perfect HTML and CSS.*
-- **UI from screenshots** – Compare current UI to a design screenshot and adjust spacing, colors, typography. Prompt e.g. *Compare current UI to this design screenshot and adjust spacing, colors, and typography to match.*
+- **Design to code** – Point at a mockup; Agent extracts colors/typography and generates HTML/CSS. Prompt e.g. _Analyze this design mockup, extract colors and typography, generate pixel-perfect HTML and CSS._
+- **UI from screenshots** – Compare current UI to a design screenshot and adjust spacing, colors, typography. Prompt e.g. _Compare current UI to this design screenshot and adjust spacing, colors, and typography to match._
 
 ---
 
@@ -91,7 +91,7 @@ In **Agent Settings** you can set:
 
 - **Manual approval** — Review each browser action (recommended)
 - **Allow-listed actions** — Actions on your allowlist run automatically; others need approval
-- **Auto-run** — All browser actions run without approval *(use with caution)*
+- **Auto-run** — All browser actions run without approval _(use with caution)_
 
 Never use auto-run with untrusted code or unknown sites. The Agent could run malicious scripts or submit sensitive data.
 
@@ -134,7 +134,7 @@ Access then follows your MCP allowlist/denylist.
 
 ### Origin allowlist
 
-Admins can set an **origin allowlist** so the Agent can only automatically navigate to (and run MCP tools on) certain origins. *This feature must be enabled for your org by Cursor; contact your account team if you don’t see it.*
+Admins can set an **origin allowlist** so the Agent can only automatically navigate to (and run MCP tools on) certain origins. _This feature must be enabled for your org by Cursor; contact your account team if you don’t see it._
 
 **Configuration:**
 

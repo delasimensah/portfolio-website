@@ -57,8 +57,7 @@ For local use with Cursor, stdio is simplest: Cursor starts the server and no UR
 
 To generate the initial server code: in Agent chat, write a short spec (e.g. “MCP server that exposes a tool X and a resource Y”) and @-mention the [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) README (or Python SDK, etc.). Ask the Agent to create the project and entrypoint. Then run the Inspector and add to `mcp.json` as above.
 
-
-**Example refactor prompt** (adding HTTP to an existing stdio server): *“Based on the existing MCP server, create a new file that implements the HTTP protocol. Move shared logic to a core module; keep stdio and HTTP as separate transport implementations. @[MCP SDK README URL]”*
+**Example refactor prompt** (adding HTTP to an existing stdio server): _“Based on the existing MCP server, create a new file that implements the HTTP protocol. Move shared logic to a core module; keep stdio and HTTP as separate transport implementations. @[MCP SDK README URL]”_
 
 ---
 

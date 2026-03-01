@@ -214,17 +214,13 @@ Claude uses a similar format; Cursor maps Claude hook names to Cursor names auto
     "PreToolUse": [
       {
         "matcher": "Shell",
-        "hooks": [
-          { "type": "command", "command": "./hooks/validate-shell.sh" }
-        ]
+        "hooks": [{ "type": "command", "command": "./hooks/validate-shell.sh" }]
       }
     ],
     "PostToolUse": [
       {
         "matcher": ".*",
-        "hooks": [
-          { "type": "command", "command": "./hooks/audit.sh" }
-        ]
+        "hooks": [{ "type": "command", "command": "./hooks/audit.sh" }]
       }
     ]
   }
@@ -256,6 +252,7 @@ Claude uses a similar format; Cursor maps Claude hook names to Cursor names auto
 ### Exit code behavior
 
 Same as Cursor hooks:
+
 - **0** = success, use JSON output
 - **2** = block action
 - **other** = fail-open (action proceeds). You can share scripts between Cursor and Claude Code.

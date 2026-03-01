@@ -11,7 +11,10 @@ interface ServiceCheckItemProps {
   included: boolean;
 }
 
-const ServiceCheckItem: React.FC<ServiceCheckItemProps> = ({ label, included }) => {
+const ServiceCheckItem: React.FC<ServiceCheckItemProps> = ({
+  label,
+  included,
+}) => {
   return (
     <Group align="flex-start" gap={12}>
       {included ? (

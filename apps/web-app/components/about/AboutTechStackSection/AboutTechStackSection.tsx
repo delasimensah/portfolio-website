@@ -46,21 +46,28 @@ const AboutTechStackSection: React.FC = () => {
         <FadeInSection>
           <SectionTitle className="mb-4 text-left">The Tech Stack</SectionTitle>
           <Text className="mb-12 text-lg text-text-secondary">
-            A proven, modern stack that prioritises developer velocity and product stability.
+            A proven, modern stack that prioritises developer velocity and
+            product stability.
           </Text>
 
           <Box className="mb-16 grid grid-cols-2 gap-6 lg:grid-cols-4">
             {TECH_CATEGORIES.map((category) => (
               <Box
                 key={category.label}
-                className="rounded-xl border border-border bg-surface p-6"
+                className="bg-surface rounded-xl border border-border p-6"
               >
-                <Title order={4} className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-secondary">
+                <Title
+                  order={4}
+                  className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-secondary"
+                >
                   {category.label}
                 </Title>
                 <Stack gap={8}>
                   {category.items.map((item) => (
-                    <Text key={item} className="text-sm font-medium text-text-primary">
+                    <Text
+                      key={item}
+                      className="text-sm font-medium text-text-primary"
+                    >
                       {item}
                     </Text>
                   ))}
@@ -69,14 +76,21 @@ const AboutTechStackSection: React.FC = () => {
             ))}
           </Box>
 
-          <Title order={3} className="mb-6 text-2xl font-bold text-text-primary">
+          <Title
+            order={3}
+            className="mb-6 text-2xl font-bold text-text-primary"
+          >
             Why This Stack?
           </Title>
           <Stack gap={12}>
             {WHY_STACK_REASONS.map((reason) => (
               <Box key={reason} className="flex items-start gap-3">
                 <Box className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-success to-success-dark">
-                  <IconCheck size={14} strokeWidth={2.5} className="text-white" />
+                  <IconCheck
+                    size={14}
+                    strokeWidth={2.5}
+                    className="text-white"
+                  />
                 </Box>
                 <Text className="text-base text-text-secondary">{reason}</Text>
               </Box>

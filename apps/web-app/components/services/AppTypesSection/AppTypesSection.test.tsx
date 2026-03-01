@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import AppTypesSection from "./AppTypesSection";
 
 describe("AppTypesSection", () => {
   it("renders the heading", () => {
     render(<AppTypesSection />);
-    expect(screen.getByRole("heading", { name: /products I build/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /products I build/i })
+    ).toBeInTheDocument();
   });
 
   it("renders app type cards", () => {

@@ -16,7 +16,11 @@ interface CaseStudyHeroProps {
   websiteUrl?: string;
 }
 
-const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ title, tagline, websiteUrl }) => {
+const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({
+  title,
+  tagline,
+  websiteUrl,
+}) => {
   return (
     <section className="flex h-[500px] items-center lg:h-[600px]">
       <Box className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -38,7 +42,10 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ title, tagline, websiteUr
             transition={{ delay: 0.1, duration: 0.5 }}
             className="mb-6"
           >
-            <Title order={1} className="text-4xl font-bold text-text-primary lg:text-6xl">
+            <Title
+              order={1}
+              className="text-4xl font-bold text-text-primary lg:text-6xl"
+            >
               {title}
             </Title>
           </MotionBox>

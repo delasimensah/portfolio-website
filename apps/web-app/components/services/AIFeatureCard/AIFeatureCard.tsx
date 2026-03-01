@@ -9,7 +9,11 @@ interface AIFeatureCardProps {
   className?: string;
 }
 
-const AIFeatureCard: React.FC<AIFeatureCardProps> = ({ icon, title, className }) => {
+const AIFeatureCard: React.FC<AIFeatureCardProps> = ({
+  icon,
+  title,
+  className,
+}) => {
   return (
     <Box className={`rounded-xl bg-bg-primary p-6 ${className ?? ""}`}>
       <Stack gap={12}>

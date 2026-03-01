@@ -212,7 +212,8 @@ const ContactForm: React.FC = () => {
                   <IconCheck size={16} className="text-white" />
                 </Box>
                 <Text className="text-success">
-                  Sent! I&apos;ll review your details and get back to you within 1–2 business days.
+                  Sent! I&apos;ll review your details and get back to you within
+                  1–2 business days.
                 </Text>
               </Box>
             )}
@@ -223,7 +224,8 @@ const ContactForm: React.FC = () => {
                   <IconX size={16} className="text-white" />
                 </Box>
                 <Text className="text-error">
-                  Something went wrong. Please try again or email me directly at mensadelasi@gmail.com.
+                  Something went wrong. Please try again or email me directly at
+                  mensadelasi@gmail.com.
                 </Text>
               </Box>
             )}

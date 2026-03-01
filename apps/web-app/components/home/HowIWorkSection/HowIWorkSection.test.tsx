@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import HowIWorkSection from "./HowIWorkSection";
 
 describe("HowIWorkSection", () => {
   it("renders section title", () => {
     render(<HowIWorkSection />);
-    expect(screen.getByRole("heading", { name: /how i work/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /how i work/i })
+    ).toBeInTheDocument();
   });
 
   it("renders all 4 steps", () => {

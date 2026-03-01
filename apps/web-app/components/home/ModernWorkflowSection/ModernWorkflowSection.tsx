@@ -1,11 +1,7 @@
 "use client";
 
 import { Box } from "@mantine/core";
-import {
-  IconClock,
-  IconRefresh,
-  IconTarget,
-} from "@tabler/icons-react";
+import { IconClock, IconRefresh, IconTarget } from "@tabler/icons-react";
 import React from "react";
 
 import FadeInSection from "../../shared/FadeInSection/FadeInSection";
@@ -34,7 +30,8 @@ const ModernWorkflowSection: React.FC = () => {
           </h2>
           <Box className="space-y-8 text-lg">
             <p className="text-text-secondary">
-              I use modern tools to speed up development and reduce repetitive work.
+              I use modern tools to speed up development and reduce repetitive
+              work.
             </p>
             <Box className="rounded-xl border border-gray-800 bg-bg-surface p-8">
               <h3 className="mb-6 text-xl font-semibold text-text-primary">
@@ -43,7 +40,9 @@ const ModernWorkflowSection: React.FC = () => {
               <StaggerContainer className="grid gap-6 md:grid-cols-3">
                 {BENEFITS.map(({ icon: Icon, title }, i) => (
                   <StaggerItem key={title} className="text-center">
-                    <Box className={`mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${BENEFIT_GRADIENTS[i]}`}>
+                    <Box
+                      className={`mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${BENEFIT_GRADIENTS[i]}`}
+                    >
                       <Icon size={24} className="text-white" />
                     </Box>
                     <h4 className="font-semibold text-text-primary">{title}</h4>

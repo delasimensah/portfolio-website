@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import AboutTechStackSection from "./AboutTechStackSection";
 
 describe("AboutTechStackSection", () => {
   it("renders the tech stack heading", () => {
     render(<AboutTechStackSection />);
-    expect(screen.getByRole("heading", { name: /the tech stack/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /the tech stack/i })
+    ).toBeInTheDocument();
   });
 
   it("renders all four tech categories", () => {
@@ -18,6 +20,8 @@ describe("AboutTechStackSection", () => {
 
   it("renders the Why This Stack section", () => {
     render(<AboutTechStackSection />);
-    expect(screen.getByRole("heading", { name: /why this stack/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /why this stack/i })
+    ).toBeInTheDocument();
   });
 });

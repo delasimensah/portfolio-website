@@ -54,17 +54,20 @@ When planning, focus on three areas:
 **Availability in practice** ([High availability](https://systemdesignschool.io/fundamentals/availability)): Availability % = (operational time / total time) × 100. "Nines" (e.g. 99.9% = three nines, 99.99% = four nines) translate to allowed downtime per year. **SLAs** (service-level agreements) set contractual uptime targets; cloud providers (Supabase, Vercel, etc.) publish SLAs. Choose a target that matches product needs and document it; rely on provider SLAs for infra and add client retries and graceful degradation to improve perceived availability. For **how** to achieve it (redundancy, failover, health checks, eliminating single points of failure), see [How to achieve high availability](https://systemdesignschool.io/fundamentals/how-to-achieve-high-availability). For **tech stacks** that support HA (high availability), see [Tech stacks to achieve high availability](https://systemdesignschool.io/fundamentals/tech-stacks-to-achieve-high-availability); in this repo, Supabase and hosting (Vercel, EAS) provide managed HA (high availability)—choose plans and regions accordingly.
 
 **Latency in practice** ([Latency](https://systemdesignschool.io/fundamentals/latency)): Latency is the delay between request and response. Users typically expect sub-second for pages and low milliseconds for API calls; high latency hurts engagement and conversions. Reduce it by:
+
 - fewer network hops (CDN (Content Delivery Network) for static assets, edge where useful)
 - fast data access (indexes, efficient queries)
 - avoiding N+1 and over-fetching
 - using TanStack Query to cache and dedupe. Set targets per use case (e.g. critical path vs background) and measure.
 
 **Throughput** ([Throughput](https://systemdesignschool.io/fundamentals/throughput)): Throughput is work completed per unit time (e.g. requests/sec, QPS — queries per second). It measures system capacity; latency measures per-request delay. To increase throughput:
+
 - scale horizontally (more instances)
 - cache to reduce backend load
 - use async processing (queues) for bursty work. In this repo, Supabase and hosting have limits; design for expected QPS (queries per second) and use the scaling strategies in the Building blocks section when you approach those limits.
 
 **QPS and system design** ([QPS and system design](https://systemdesignschool.io/fundamentals/qps)): **RPS** = total requests/sec (all types); **QPS (queries per second)** = database queries per second. The DB is often the bottleneck, so QPS is monitored closely. Architecture by tier:
+
 - **Low (1–100 QPS)** — monolith, single instance, simple database (this repo fits here for many products)
 - **Medium (100–1K)** — horizontal scaling, caching, read replicas, containers
 - **High (1K–100K)** — microservices, message queues, distributed stores, heavy caching
@@ -228,9 +231,10 @@ Eight strategies to satisfy scalability Non-Functional Requirements (NFRs) (use 
 - **Combining techniques** — Decomposition first, then partition + cache + read/write separation; tune for bottlenecks. In this repo: apply only where the feature actually hits limits.
 - **Business adaptation** — Shape traffic via product (e.g. stagger sales by region/day, eventual consistency UX). In this repo: design flows to smooth load or accept eventual consistency when appropriate.
 
-*Source: [How to scale a system](https://systemdesignschool.io/fundamentals/how-to-scale-a-system)*
+_Source: [How to scale a system](https://systemdesignschool.io/fundamentals/how-to-scale-a-system)_
 
 **Microservices vs monolithic** ([Microservices vs monolithic](https://systemdesignschool.io/fundamentals/microservices)): A **monolith** deploys as one unit; simpler to build and operate but harder to scale parts independently. **Microservices** split by capability and deploy separately; better for independent scaling and teams but add operational and network complexity. This repo is a **modular monolith**:
+
 - separate apps (web, mobile) and a shared package with clear boundaries
 - Supabase edge functions give isolated server workloads without full microservices. Consider splitting into separate services (or more edge functions) when a single capability needs different scale, release cadence, or team ownership.
 
@@ -247,4 +251,4 @@ When planning, follow this order (see [planning checklist](./planning-checklist.
 5. **High-level design** — Components, data flow, boundaries; ensure every requirement is covered.
 6. **Detailed design** — Identify hard parts, propose options and tradeoffs, state what’s deferred.
 
-*Sources: [What is a system design interview?](https://systemdesignschool.io/fundamentals/what-is-system-design-interview), [Interview template](https://systemdesignschool.io/fundamentals/system-design-interview-template), [Core challenges](https://systemdesignschool.io/fundamentals/core-challenges-in-web-scale-app), [How to scale a system](https://systemdesignschool.io/fundamentals/how-to-scale-a-system), [Study guide](https://systemdesignschool.io/fundamentals/system-design-interview-study-guide), [API design intro](https://systemdesignschool.io/fundamentals/api-design-intro)*
+_Sources: [What is a system design interview?](https://systemdesignschool.io/fundamentals/what-is-system-design-interview), [Interview template](https://systemdesignschool.io/fundamentals/system-design-interview-template), [Core challenges](https://systemdesignschool.io/fundamentals/core-challenges-in-web-scale-app), [How to scale a system](https://systemdesignschool.io/fundamentals/how-to-scale-a-system), [Study guide](https://systemdesignschool.io/fundamentals/system-design-interview-study-guide), [API design intro](https://systemdesignschool.io/fundamentals/api-design-intro)_

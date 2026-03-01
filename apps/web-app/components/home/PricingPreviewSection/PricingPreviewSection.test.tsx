@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import PricingPreviewSection from "./PricingPreviewSection";
 
@@ -10,6 +10,8 @@ describe("PricingPreviewSection", () => {
 
   it("renders View Services button", () => {
     render(<PricingPreviewSection />);
-    expect(screen.getByRole("link", { name: /view services/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /view services/i })
+    ).toBeInTheDocument();
   });
 });

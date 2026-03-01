@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import AboutFocusSection from "./AboutFocusSection";
 
 describe("AboutFocusSection", () => {
   it("renders the section heading", () => {
     render(<AboutFocusSection />);
-    expect(screen.getByRole("heading", { name: /i focus on/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /i focus on/i })
+    ).toBeInTheDocument();
   });
 
   it("renders all focus items", () => {

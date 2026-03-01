@@ -19,11 +19,16 @@ const AboutWhyFixedPricingSection: React.FC = () => {
     <section className="py-20">
       <Box className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
-          <Box className="rounded-2xl border border-border bg-surface p-10">
-            <SectionTitle className="mb-10 text-left">Why Fixed Scope &amp; Pricing?</SectionTitle>
+          <Box className="bg-surface rounded-2xl border border-border p-10">
+            <SectionTitle className="mb-10 text-left">
+              Why Fixed Scope &amp; Pricing?
+            </SectionTitle>
             <Stack gap={20}>
               {PARAGRAPHS.map((paragraph, i) => (
-                <Text key={i} className="text-lg leading-relaxed text-text-secondary">
+                <Text
+                  key={i}
+                  className="text-lg leading-relaxed text-text-secondary"
+                >
                   {paragraph}
                 </Text>
               ))}

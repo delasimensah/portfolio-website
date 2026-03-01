@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import TypicalTimelineSection from "./TypicalTimelineSection";
 
 describe("TypicalTimelineSection", () => {
   it("renders the section heading", () => {
     render(<TypicalTimelineSection />);
-    expect(screen.getByRole("heading", { name: /typical timeline/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /typical timeline/i })
+    ).toBeInTheDocument();
   });
 
   it("renders all four timeline phases", () => {

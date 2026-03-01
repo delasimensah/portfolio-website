@@ -44,6 +44,7 @@ Natural: `@Cursor with opus, fix the login bug in backend-api`
 Inline: `@Cursor branch=dev autopr=false Fix the login bug in backend-api`
 
 Precedence:
+
 - explicit values override defaults
 - later values override earlier
 - inline options override settings modal

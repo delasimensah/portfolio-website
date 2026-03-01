@@ -16,8 +16,8 @@ Fill this from the [project requirements questionnaire](./project-requirements-q
 
 ## 2. Users and platforms
 
-- **Users:**  
-- **MVP (Minimum Viable Product) platforms:** Web only / Mobile only / Both  
+- **Users:**
+- **MVP (Minimum Viable Product) platforms:** Web only / Mobile only / Both
 - **Notes:** (e.g. admin vs end user, regions.)
 
 ---
@@ -26,10 +26,9 @@ Fill this from the [project requirements questionnaire](./project-requirements-q
 
 Numbered list of the main user journeys in scope for the Minimum Viable Product (MVP). Mark later phases if useful.
 
-1.  
-2.  
-3.  
-…
+1.
+2.
+3.  …
 
 **Out of scope for MVP (Minimum Viable Product):** (Explicit list so scope doesn’t creep.)
 
@@ -55,28 +54,28 @@ One bullet per system: name, purpose, and owner/access.
 
 ## 6. Rules and compliance
 
-- **Permissions:** Who can see/do what.  
-- **Compliance:** GDPR (General Data Protection Regulation), retention, PII (personally identifiable information), or other.  
+- **Permissions:** Who can see/do what.
+- **Compliance:** GDPR (General Data Protection Regulation), retention, PII (personally identifiable information), or other.
 - **Special rules:** Approval flows, visibility, etc.
 
 ---
 
 ## 7. Non-functional requirements (summary)
 
-- **Scale:** (e.g. “Small internal; &lt;100 users.”)  
-- **Availability / latency:** (if relevant.)  
+- **Scale:** (e.g. “Small internal; &lt;100 users.”)
+- **Availability / latency:** (if relevant.)
 - **Offline / realtime:** (if relevant.)
 
 ---
 
 ## 8. Success and priorities
 
-- **Success metric for MVP (Minimum Viable Product):**  
+- **Success metric for MVP (Minimum Viable Product):**
 - **Must-have vs nice-to-have:** (Or “see Core flows; everything listed is must-have.”)
 
 ---
 
 ## Next steps
 
-- Run the [planning checklist](./planning-checklist.md) (Non-Functional Requirements (NFRs), resource estimation, core entities and API, high-level design, risks).  
+- Run the [planning checklist](./planning-checklist.md) (Non-Functional Requirements (NFRs), resource estimation, core entities and API, high-level design, risks).
 - Use [new-project-kickoff.md](./new-project-kickoff.md) for scope, time, and cost estimates.

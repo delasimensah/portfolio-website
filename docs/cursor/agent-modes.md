@@ -64,7 +64,7 @@ For small or familiar tasks, using Agent mode directly is fine.
 
 If the agent built something that doesn’t match what you wanted, **go back to the plan** instead of trying to fix it with more prompts: revert the changes, make the plan more specific, and run it again. That’s often faster and cleaner than correcting a half-done agent run.
 
-For bigger changes, invest time in a **precise, well-scoped plan**. Figuring out *what* should change is often the hard part—and a good fit for you. With a clear plan, you can leave implementation to the agent.
+For bigger changes, invest time in a **precise, well-scoped plan**. Figuring out _what_ should change is often the hard part—and a good fit for you. With a clear plan, you can leave implementation to the agent.
 
 ---
 
@@ -103,11 +103,11 @@ Use Debug mode when normal Agent usage isn’t enough and you want the agent to 
 
 For **specialized workflows**, you can define [custom slash commands](./commands.md) that combine fixed instructions with guidance on which tools to use (e.g. “only search, no edits”).
 
-**Note:** Custom *modes* are deprecated in Cursor 2.1. If you had custom modes, use **“Export Custom Modes”** to turn them into custom commands.
+**Note:** Custom _modes_ are deprecated in Cursor 2.1. If you had custom modes, use **“Export Custom Modes”** to turn them into custom commands.
 
 ### Example: `/debug`-style command
 
-You can create a `/debug` command that tells the agent to investigate before fixing. In the command prompt, include something like: *“Investigate using search and terminal first. Only propose fixes after you understand the root cause.”*
+You can create a `/debug` command that tells the agent to investigate before fixing. In the command prompt, include something like: _“Investigate using search and terminal first. Only propose fixes after you understand the root cause.”_
 
 Custom commands can:
 
@@ -153,7 +153,7 @@ Custom slash commands let you:
 - Share commands with your team (team commands).
 - Store commands in your project (e.g. `.cursor/commands`).
 
-To restrict tools, add it to the command prompt (e.g. *“Use only search tools (read file, codebase search, grep)—do not edit files or run terminal commands.”*).
+To restrict tools, add it to the command prompt (e.g. _“Use only search tools (read file, codebase search, grep)—do not edit files or run terminal commands.”_).
 
 See the [Commands documentation](https://docs.cursor.com/agent/chat/commands) for creating and using custom slash commands.
 

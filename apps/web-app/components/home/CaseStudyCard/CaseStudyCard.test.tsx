@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import CaseStudyCard from "./CaseStudyCard";
 
@@ -13,6 +13,8 @@ describe("CaseStudyCard", () => {
       />
     );
     expect(screen.getByText("Aria")).toBeInTheDocument();
-    expect(screen.getByText("Direct-to-fan music monetization")).toBeInTheDocument();
+    expect(
+      screen.getByText("Direct-to-fan music monetization")
+    ).toBeInTheDocument();
   });
 });

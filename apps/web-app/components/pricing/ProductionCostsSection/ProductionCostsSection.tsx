@@ -21,10 +21,15 @@ const ProductionCostsSection: React.FC = () => {
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mx-auto max-w-4xl">
           <Box className="rounded-xl border border-gray-800 bg-bg-surface p-8 lg:p-12">
-            <Title order={2} className="mb-2 text-3xl font-bold text-text-primary lg:text-4xl">
+            <Title
+              order={2}
+              className="mb-2 text-3xl font-bold text-text-primary lg:text-4xl"
+            >
               Production Costs
             </Title>
-            <Text className="mb-8 text-xl text-accent-primary">(Paid Directly by You)</Text>
+            <Text className="mb-8 text-xl text-accent-primary">
+              (Paid Directly by You)
+            </Text>
             <Box className="mb-8">
               {COSTS.map((cost, index) => (
                 <ProductionCostRow
@@ -39,7 +44,9 @@ const ProductionCostsSection: React.FC = () => {
               <Text className="font-semibold text-text-primary">
                 You own your accounts and billing.
               </Text>
-              <Text className="text-text-secondary">I handle setup and deployment.</Text>
+              <Text className="text-text-secondary">
+                I handle setup and deployment.
+              </Text>
             </Box>
           </Box>
         </FadeInSection>

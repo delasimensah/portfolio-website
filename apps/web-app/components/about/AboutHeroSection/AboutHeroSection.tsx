@@ -41,10 +41,15 @@ const AboutHeroSection: React.FC = () => {
             custom={1}
             variants={heroVariants}
           >
-            <Title order={1} className="text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              I build structured web and mobile products for founders and businesses that value{" "}
+            <Title
+              order={1}
+              className="text-4xl font-bold leading-tight text-text-primary lg:text-5xl"
+            >
+              I build structured web and mobile products for founders and
+              businesses that value{" "}
               <span className="bg-gradient-to-r from-accent-primary to-accent-hover bg-clip-text text-transparent">
-                clarity, predictable execution, and a product that&apos;s ready to ship.
+                clarity, predictable execution, and a product that&apos;s ready
+                to ship.
               </span>
             </Title>
           </motion.div>

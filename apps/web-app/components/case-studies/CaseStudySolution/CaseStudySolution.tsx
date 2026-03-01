@@ -50,7 +50,10 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
       <Box className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <Box className="mb-12">
-            <Title order={2} className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl">
+            <Title
+              order={2}
+              className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl"
+            >
               The Solution
             </Title>
             <Box className="mb-8 h-1 w-20 rounded-full bg-accent-primary" />
@@ -70,14 +73,21 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
                     }`}
                   >
                     <Stack gap={16}>
-                      <Box className={`flex h-10 w-10 items-center justify-center rounded-xl ${CARD_GRADIENTS[idx % CARD_GRADIENTS.length]}`}>
+                      <Box
+                        className={`flex h-10 w-10 items-center justify-center rounded-xl ${CARD_GRADIENTS[idx % CARD_GRADIENTS.length]}`}
+                      >
                         {ICON_MAP[card.iconKey]}
                       </Box>
                       <Box>
-                        <Title order={3} className="mb-2 text-xl font-semibold text-text-primary">
+                        <Title
+                          order={3}
+                          className="mb-2 text-xl font-semibold text-text-primary"
+                        >
                           {card.title}
                         </Title>
-                        <Text className="text-text-secondary">{card.description}</Text>
+                        <Text className="text-text-secondary">
+                          {card.description}
+                        </Text>
                       </Box>
                     </Stack>
                   </Box>
@@ -94,10 +104,15 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
                   className="rounded-xl border border-gray-800 bg-bg-surface p-8"
                 >
                   <Stack gap={12} className="mb-6">
-                    <Box className={`flex h-12 w-12 items-center justify-center rounded-xl ${CARD_GRADIENTS[gIdx % CARD_GRADIENTS.length]}`}>
+                    <Box
+                      className={`flex h-12 w-12 items-center justify-center rounded-xl ${CARD_GRADIENTS[gIdx % CARD_GRADIENTS.length]}`}
+                    >
                       {ICON_MAP[group.iconKey]}
                     </Box>
-                    <Title order={3} className="text-2xl font-bold text-text-primary">
+                    <Title
+                      order={3}
+                      className="text-2xl font-bold text-text-primary"
+                    >
                       {group.title}
                     </Title>
                   </Stack>

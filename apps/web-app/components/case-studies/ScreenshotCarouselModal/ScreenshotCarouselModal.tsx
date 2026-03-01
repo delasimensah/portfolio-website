@@ -18,11 +18,13 @@ interface ScreenshotCarouselModalProps {
   variant?: "mobile" | "web";
 }
 
-const IMAGE_CONTAINER_CLASS = "relative flex min-h-[280px] items-center justify-center overflow-hidden rounded-xl bg-bg-primary";
+const IMAGE_CONTAINER_CLASS =
+  "relative flex min-h-[280px] items-center justify-center overflow-hidden rounded-xl bg-bg-primary";
 const IMAGE_CONTAINER_CLASS_WEB = "max-h-[65vh]";
 const IMAGE_CONTAINER_CLASS_MOBILE = "max-h-[60vh]";
 
-const IMAGE_CLASS_BASE = "w-full object-contain transition-opacity duration-300";
+const IMAGE_CLASS_BASE =
+  "w-full object-contain transition-opacity duration-300";
 
 const ScreenshotCarouselModal: React.FC<ScreenshotCarouselModalProps> = ({
   title,
@@ -46,7 +48,8 @@ const ScreenshotCarouselModal: React.FC<ScreenshotCarouselModalProps> = ({
 
   useEffect(() => {
     if (!opened || screenshots.length === 0) return;
-    const prevIndex = (activeIndex - 1 + screenshots.length) % screenshots.length;
+    const prevIndex =
+      (activeIndex - 1 + screenshots.length) % screenshots.length;
     const nextIndex = (activeIndex + 1) % screenshots.length;
     [prevIndex, nextIndex].forEach((i) => {
       if (i !== activeIndex) {
@@ -71,11 +74,14 @@ const ScreenshotCarouselModal: React.FC<ScreenshotCarouselModalProps> = ({
     setDisplayIndex(activeIndex);
   }, [activeIndex]);
 
-  const handleDotClick = useCallback((i: number) => {
-    if (i === activeIndex) return;
-    setActiveIndex(i);
-    setImageLoaded(false);
-  }, [activeIndex]);
+  const handleDotClick = useCallback(
+    (i: number) => {
+      if (i === activeIndex) return;
+      setActiveIndex(i);
+      setImageLoaded(false);
+    },
+    [activeIndex]
+  );
 
   const current = screenshots[activeIndex];
   const display = screenshots[displayIndex];
@@ -95,9 +101,17 @@ const ScreenshotCarouselModal: React.FC<ScreenshotCarouselModalProps> = ({
       styles={{
         header: { backgroundColor: "var(--color-bg-surface)" },
         body: { backgroundColor: "var(--color-bg-surface)", padding: "24px" },
-        title: { color: "var(--color-text-primary)", fontWeight: 700, fontSize: "1.125rem" },
+        title: {
+          color: "var(--color-text-primary)",
+          fontWeight: 700,
+          fontSize: "1.125rem",
+        },
         close: { color: "var(--color-text-secondary)" },
-        content: { maxHeight: "90vh", display: "flex", flexDirection: "column" },
+        content: {
+          maxHeight: "90vh",
+          display: "flex",
+          flexDirection: "column",
+        },
       }}
     >
       <Box

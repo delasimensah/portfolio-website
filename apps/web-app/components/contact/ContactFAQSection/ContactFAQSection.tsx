@@ -51,8 +51,7 @@ const FAQS = [
   },
   {
     question: "How does payment work?",
-    answer:
-      "50% upfront to begin work, 50% upon delivery. No surprises.",
+    answer: "50% upfront to begin work, 50% upon delivery. No surprises.",
   },
   {
     question: "How do I get started?",
@@ -68,16 +67,28 @@ interface FAQItemProps {
   onToggle: () => void;
 }
 
-const answerTransition = { type: "tween", duration: 0.3, ease: "easeInOut" };
+const answerTransition = {
+  type: "tween" as const,
+  duration: 0.3,
+  ease: "easeInOut" as const,
+};
 
-const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onToggle }) => {
+const FAQItem: React.FC<FAQItemProps> = ({
+  question,
+  answer,
+  isOpen,
+  onToggle,
+}) => {
   return (
     <Box
       className="cursor-pointer rounded-xl border border-gray-800 bg-bg-surface transition-colors duration-200 hover:border-accent-primary/40"
       onClick={onToggle}
     >
       <Box className="flex items-center justify-between px-6 py-5">
-        <Title order={3} className="pr-6 text-base font-semibold text-text-primary">
+        <Title
+          order={3}
+          className="pr-6 text-base font-semibold text-text-primary"
+        >
           {question}
         </Title>
         <motion.div
@@ -120,7 +131,9 @@ const ContactFAQSection: React.FC = () => {
       <Box className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <Box className="mb-12 text-center">
-            <SectionTitle className="mb-6">Frequently Asked Questions</SectionTitle>
+            <SectionTitle className="mb-6">
+              Frequently Asked Questions
+            </SectionTitle>
             <Box className="mx-auto h-1 w-20 rounded-full bg-accent-primary" />
           </Box>
 

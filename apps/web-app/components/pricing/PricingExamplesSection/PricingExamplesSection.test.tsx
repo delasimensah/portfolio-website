@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import PricingExamplesSection from "./PricingExamplesSection";
 
@@ -24,6 +24,8 @@ describe("PricingExamplesSection", () => {
 
   it("renders the complexity note", () => {
     render(<PricingExamplesSection />);
-    expect(screen.getByText(/More complexity = higher cost/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/More complexity = higher cost/i)
+    ).toBeInTheDocument();
   });
 });

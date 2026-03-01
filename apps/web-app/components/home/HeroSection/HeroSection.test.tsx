@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import HeroSection from "./HeroSection";
 
@@ -12,7 +12,11 @@ describe("HeroSection", () => {
 
   it("renders CTA buttons", () => {
     render(<HeroSection />);
-    expect(screen.getByRole("link", { name: /build your product/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /view my work/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /build your product/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /view my work/i })
+    ).toBeInTheDocument();
   });
 });

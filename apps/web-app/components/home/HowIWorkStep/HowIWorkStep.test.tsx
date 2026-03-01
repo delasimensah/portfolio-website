@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import HowIWorkStep from "./HowIWorkStep";
 
@@ -13,6 +13,8 @@ describe("HowIWorkStep", () => {
     );
     expect(screen.getByText("1")).toBeInTheDocument();
     expect(screen.getByText("Define")).toBeInTheDocument();
-    expect(screen.getByText("Define what actually needs to be built.")).toBeInTheDocument();
+    expect(
+      screen.getByText("Define what actually needs to be built.")
+    ).toBeInTheDocument();
   });
 });

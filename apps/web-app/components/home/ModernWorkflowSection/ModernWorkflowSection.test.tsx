@@ -1,13 +1,11 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import ModernWorkflowSection from "./ModernWorkflowSection";
 
 describe("ModernWorkflowSection", () => {
   it("renders headline", () => {
     render(<ModernWorkflowSection />);
-    expect(
-      screen.getByText(/built with modern tools/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/built with modern tools/i)).toBeInTheDocument();
   });
 
   it("renders benefits", () => {

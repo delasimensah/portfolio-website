@@ -18,17 +18,20 @@ const FACTORS = [
   {
     icon: <IconSearch size={24} className="text-white" />,
     title: "Clear Requirements",
-    description: "I spend real time upfront understanding what you need, so we build the right thing and not the wrong thing fast.",
+    description:
+      "I spend real time upfront understanding what you need, so we build the right thing and not the wrong thing fast.",
   },
   {
     icon: <IconCode size={24} className="text-white" />,
     title: "Production-Ready Code",
-    description: "Code you won't need to throw out in six months. Clean structure, no shortcuts.",
+    description:
+      "Code you won't need to throw out in six months. Clean structure, no shortcuts.",
   },
   {
     icon: <IconRocket size={24} className="text-white" />,
     title: "Launch Support",
-    description: "I handle deployment and stay available after launch, not just until the code is done.",
+    description:
+      "I handle deployment and stay available after launch, not just until the code is done.",
   },
 ];
 
@@ -51,13 +54,20 @@ const WhatMakesSuccessSection: React.FC = () => {
                 key={factor.title}
                 className="rounded-xl border border-gray-800 bg-bg-surface p-8"
               >
-                <Box className={`mb-6 flex h-12 w-12 items-center justify-center rounded-xl ${FACTOR_GRADIENTS[i]}`}>
+                <Box
+                  className={`mb-6 flex h-12 w-12 items-center justify-center rounded-xl ${FACTOR_GRADIENTS[i]}`}
+                >
                   {factor.icon}
                 </Box>
-                <Title order={3} className="mb-4 text-xl font-bold text-text-primary">
+                <Title
+                  order={3}
+                  className="mb-4 text-xl font-bold text-text-primary"
+                >
                   {factor.title}
                 </Title>
-                <Text className="text-text-secondary">{factor.description}</Text>
+                <Text className="text-text-secondary">
+                  {factor.description}
+                </Text>
               </Box>
             ))}
           </Box>

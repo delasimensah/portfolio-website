@@ -33,7 +33,10 @@ const AboutApproachSection: React.FC = () => {
       <Box className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <Box className="mb-12">
-            <Title order={2} className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl">
+            <Title
+              order={2}
+              className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl"
+            >
               My Approach
             </Title>
             <Box className="h-1 w-20 rounded-full bg-accent-primary" />
@@ -45,11 +48,16 @@ const AboutApproachSection: React.FC = () => {
                 className="rounded-xl border border-gray-800 bg-bg-surface p-8"
               >
                 <Group align="flex-start" gap={24}>
-                  <Box className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${APPROACH_GRADIENTS[i]}`}>
+                  <Box
+                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${APPROACH_GRADIENTS[i]}`}
+                  >
                     {item.icon}
                   </Box>
                   <Box>
-                    <Title order={3} className="mb-3 text-xl font-bold text-text-primary">
+                    <Title
+                      order={3}
+                      className="mb-3 text-xl font-bold text-text-primary"
+                    >
                       {item.title}
                     </Title>
                     <Text className="text-lg leading-relaxed text-text-secondary">

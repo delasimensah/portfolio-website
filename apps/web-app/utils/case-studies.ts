@@ -84,37 +84,118 @@ export const CASE_STUDIES: CaseStudy[] = [
     mobileImageSrc: ASSETS.images.ariaMobileIos,
     mobileImageAlt: "Aria mobile app screenshot",
     mobileScreenshots: [
-      { src: "/images/aria/mobile-screenshots/aria-mobile-1.png", alt: "Aria mobile screenshot 1" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-2.png", alt: "Aria mobile screenshot 2" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-3.png", alt: "Aria mobile screenshot 3" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-4.png", alt: "Aria mobile screenshot 4" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-5.png", alt: "Aria mobile screenshot 5" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-6.png", alt: "Aria mobile screenshot 6" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-7.png", alt: "Aria mobile screenshot 7" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-8.png", alt: "Aria mobile screenshot 8" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-9.png", alt: "Aria mobile screenshot 9" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-10.png", alt: "Aria mobile screenshot 10" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-11.png", alt: "Aria mobile screenshot 11" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-12.png", alt: "Aria mobile screenshot 12" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-13.png", alt: "Aria mobile screenshot 13" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-14.png", alt: "Aria mobile screenshot 14" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-15.png", alt: "Aria mobile screenshot 15" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-16.png", alt: "Aria mobile screenshot 16" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-17.png", alt: "Aria mobile screenshot 17" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-18.png", alt: "Aria mobile screenshot 18" },
-      { src: "/images/aria/mobile-screenshots/aria-mobile-19.png", alt: "Aria mobile screenshot 19" },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-1.png",
+        alt: "Aria mobile screenshot 1",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-2.png",
+        alt: "Aria mobile screenshot 2",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-3.png",
+        alt: "Aria mobile screenshot 3",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-4.png",
+        alt: "Aria mobile screenshot 4",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-5.png",
+        alt: "Aria mobile screenshot 5",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-6.png",
+        alt: "Aria mobile screenshot 6",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-7.png",
+        alt: "Aria mobile screenshot 7",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-8.png",
+        alt: "Aria mobile screenshot 8",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-9.png",
+        alt: "Aria mobile screenshot 9",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-10.png",
+        alt: "Aria mobile screenshot 10",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-11.png",
+        alt: "Aria mobile screenshot 11",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-12.png",
+        alt: "Aria mobile screenshot 12",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-13.png",
+        alt: "Aria mobile screenshot 13",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-14.png",
+        alt: "Aria mobile screenshot 14",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-15.png",
+        alt: "Aria mobile screenshot 15",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-16.png",
+        alt: "Aria mobile screenshot 16",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-17.png",
+        alt: "Aria mobile screenshot 17",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-18.png",
+        alt: "Aria mobile screenshot 18",
+      },
+      {
+        src: "/images/aria/mobile-screenshots/aria-mobile-19.png",
+        alt: "Aria mobile screenshot 19",
+      },
     ],
     webImageSrc: ASSETS.images.ariaWeb,
     webImageAlt: "Aria web platform screenshot",
     webScreenshots: [
-      { src: "/images/aria/web-screenshots/aria-web-1.png", alt: "Aria web screenshot 1" },
-      { src: "/images/aria/web-screenshots/aria-web-2.png", alt: "Aria web screenshot 2" },
-      { src: "/images/aria/web-screenshots/aria-web-3.png", alt: "Aria web screenshot 3" },
-      { src: "/images/aria/web-screenshots/aria-web-4.png", alt: "Aria web screenshot 4" },
-      { src: "/images/aria/web-screenshots/aria-web-5.png", alt: "Aria web screenshot 5" },
-      { src: "/images/aria/web-screenshots/aria-web-6.png", alt: "Aria web screenshot 6" },
-      { src: "/images/aria/web-screenshots/aria-web-7.png", alt: "Aria web screenshot 7" },
-      { src: "/images/aria/web-screenshots/aria-web-8.png", alt: "Aria web screenshot 8" },
+      {
+        src: "/images/aria/web-screenshots/aria-web-1.png",
+        alt: "Aria web screenshot 1",
+      },
+      {
+        src: "/images/aria/web-screenshots/aria-web-2.png",
+        alt: "Aria web screenshot 2",
+      },
+      {
+        src: "/images/aria/web-screenshots/aria-web-3.png",
+        alt: "Aria web screenshot 3",
+      },
+      {
+        src: "/images/aria/web-screenshots/aria-web-4.png",
+        alt: "Aria web screenshot 4",
+      },
+      {
+        src: "/images/aria/web-screenshots/aria-web-5.png",
+        alt: "Aria web screenshot 5",
+      },
+      {
+        src: "/images/aria/web-screenshots/aria-web-6.png",
+        alt: "Aria web screenshot 6",
+      },
+      {
+        src: "/images/aria/web-screenshots/aria-web-7.png",
+        alt: "Aria web screenshot 7",
+      },
+      {
+        src: "/images/aria/web-screenshots/aria-web-8.png",
+        alt: "Aria web screenshot 8",
+      },
     ],
     webSectionTitle: "Web Experience",
     webSectionLabel: "Desktop Platform",
@@ -135,7 +216,8 @@ export const CASE_STUDIES: CaseStudy[] = [
         {
           iconKey: "playerPlay",
           title: "Music Playback",
-          description: "Music playback across web and mobile, with consistent quality.",
+          description:
+            "Music playback across web and mobile, with consistent quality.",
         },
         {
           iconKey: "folder",
@@ -155,7 +237,8 @@ export const CASE_STUDIES: CaseStudy[] = [
         {
           iconKey: "target",
           title: "Goal-Based Funding",
-          description: "Fund an artist's next project, recording session, or tour.",
+          description:
+            "Fund an artist's next project, recording session, or tour.",
         },
         {
           iconKey: "shield",
@@ -165,7 +248,8 @@ export const CASE_STUDIES: CaseStudy[] = [
         {
           iconKey: "users",
           title: "Artist and Listener Roles",
-          description: "Artists and listeners get completely different interfaces, each built for how they actually use the app.",
+          description:
+            "Artists and listeners get completely different interfaces, each built for how they actually use the app.",
           fullWidth: true,
         },
       ],
@@ -219,42 +303,138 @@ export const CASE_STUDIES: CaseStudy[] = [
     mobileImageSrc: ASSETS.images.crownLussoMobileIos,
     mobileImageAlt: "Crown Lusso mobile app screenshot",
     mobileScreenshots: [
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-1.png", alt: "Crown Lusso mobile screenshot 1" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-2.png", alt: "Crown Lusso mobile screenshot 2" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-3.png", alt: "Crown Lusso mobile screenshot 3" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-4.png", alt: "Crown Lusso mobile screenshot 4" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-5.png", alt: "Crown Lusso mobile screenshot 5" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-6.png", alt: "Crown Lusso mobile screenshot 6" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-7.png", alt: "Crown Lusso mobile screenshot 7" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-8.png", alt: "Crown Lusso mobile screenshot 8" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-9.png", alt: "Crown Lusso mobile screenshot 9" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-10.png", alt: "Crown Lusso mobile screenshot 10" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-11.png", alt: "Crown Lusso mobile screenshot 11" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-12.png", alt: "Crown Lusso mobile screenshot 12" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-13.png", alt: "Crown Lusso mobile screenshot 13" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-14.png", alt: "Crown Lusso mobile screenshot 14" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-15.png", alt: "Crown Lusso mobile screenshot 15" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-16.png", alt: "Crown Lusso mobile screenshot 16" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-17.png", alt: "Crown Lusso mobile screenshot 17" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-18.png", alt: "Crown Lusso mobile screenshot 18" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-19.png", alt: "Crown Lusso mobile screenshot 19" },
-      { src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-20.png", alt: "Crown Lusso mobile screenshot 20" },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-1.png",
+        alt: "Crown Lusso mobile screenshot 1",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-2.png",
+        alt: "Crown Lusso mobile screenshot 2",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-3.png",
+        alt: "Crown Lusso mobile screenshot 3",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-4.png",
+        alt: "Crown Lusso mobile screenshot 4",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-5.png",
+        alt: "Crown Lusso mobile screenshot 5",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-6.png",
+        alt: "Crown Lusso mobile screenshot 6",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-7.png",
+        alt: "Crown Lusso mobile screenshot 7",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-8.png",
+        alt: "Crown Lusso mobile screenshot 8",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-9.png",
+        alt: "Crown Lusso mobile screenshot 9",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-10.png",
+        alt: "Crown Lusso mobile screenshot 10",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-11.png",
+        alt: "Crown Lusso mobile screenshot 11",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-12.png",
+        alt: "Crown Lusso mobile screenshot 12",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-13.png",
+        alt: "Crown Lusso mobile screenshot 13",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-14.png",
+        alt: "Crown Lusso mobile screenshot 14",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-15.png",
+        alt: "Crown Lusso mobile screenshot 15",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-16.png",
+        alt: "Crown Lusso mobile screenshot 16",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-17.png",
+        alt: "Crown Lusso mobile screenshot 17",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-18.png",
+        alt: "Crown Lusso mobile screenshot 18",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-19.png",
+        alt: "Crown Lusso mobile screenshot 19",
+      },
+      {
+        src: "/images/crown-lusso/mobile-screenshots/crown-lusso-mobile-20.png",
+        alt: "Crown Lusso mobile screenshot 20",
+      },
     ],
     webImageSrc: ASSETS.images.crownLussoWeb,
     webImageAlt: "Crown Lusso web dashboard screenshot",
     webScreenshots: [
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-1.png", alt: "Crown Lusso web screenshot 1" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-2.png", alt: "Crown Lusso web screenshot 2" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-3.png", alt: "Crown Lusso web screenshot 3" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-4.png", alt: "Crown Lusso web screenshot 4" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-5.png", alt: "Crown Lusso web screenshot 5" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-6.png", alt: "Crown Lusso web screenshot 6" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-7.png", alt: "Crown Lusso web screenshot 7" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-8.png", alt: "Crown Lusso web screenshot 8" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-9.png", alt: "Crown Lusso web screenshot 9" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-10.png", alt: "Crown Lusso web screenshot 10" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-11.png", alt: "Crown Lusso web screenshot 11" },
-      { src: "/images/crown-lusso/web-screenshots/crown-lusso-web-12.png", alt: "Crown Lusso web screenshot 12" },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-1.png",
+        alt: "Crown Lusso web screenshot 1",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-2.png",
+        alt: "Crown Lusso web screenshot 2",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-3.png",
+        alt: "Crown Lusso web screenshot 3",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-4.png",
+        alt: "Crown Lusso web screenshot 4",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-5.png",
+        alt: "Crown Lusso web screenshot 5",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-6.png",
+        alt: "Crown Lusso web screenshot 6",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-7.png",
+        alt: "Crown Lusso web screenshot 7",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-8.png",
+        alt: "Crown Lusso web screenshot 8",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-9.png",
+        alt: "Crown Lusso web screenshot 9",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-10.png",
+        alt: "Crown Lusso web screenshot 10",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-11.png",
+        alt: "Crown Lusso web screenshot 11",
+      },
+      {
+        src: "/images/crown-lusso/web-screenshots/crown-lusso-web-12.png",
+        alt: "Crown Lusso web screenshot 12",
+      },
     ],
     webSectionTitle: "Web Dashboard",
     webSectionLabel: "Management Interface",
@@ -308,7 +488,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       {
         iconKey: "eye",
         stat: "Live Visibility",
-        description: "The team sees every booking and property status in real time",
+        description:
+          "The team sees every booking and property status in real time",
       },
       {
         iconKey: "sitemap",

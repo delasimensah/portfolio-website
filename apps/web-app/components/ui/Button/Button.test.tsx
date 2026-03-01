@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import Button from "./Button";
@@ -6,13 +6,15 @@ import Button from "./Button";
 describe("Button", () => {
   it("renders with children", () => {
     render(<Button>Click me</Button>);
-    expect(screen.getByRole("button", { name: /click me/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /click me/i })
+    ).toBeInTheDocument();
   });
 
   it("applies primary variant by default", () => {
     render(<Button>Primary</Button>);
     const btn = screen.getByRole("button");
-    expect(btn).toHaveClass("bg-accent-primary");
+    expect(btn).toHaveClass("from-accent-primary");
   });
 
   it("applies secondary variant", () => {

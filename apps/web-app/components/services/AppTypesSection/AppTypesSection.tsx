@@ -29,15 +29,42 @@ const APP_GRADIENTS = [
 ];
 
 const APP_TYPES = [
-  { icon: <IconBuilding size={24} className={ICON_WHITE} />, title: "Real Estate Platforms" },
-  { icon: <IconCalendarCheck size={24} className={ICON_WHITE} />, title: "Booking Systems" },
-  { icon: <IconBuildingStore size={24} className={ICON_WHITE} />, title: "Marketplace Apps" },
-  { icon: <IconUsers size={24} className={ICON_WHITE} />, title: "CRM Systems" },
-  { icon: <IconCreditCard size={24} className={ICON_WHITE} />, title: "Subscription Platforms" },
-  { icon: <IconChartLine size={24} className={ICON_WHITE} />, title: "Internal Dashboards" },
-  { icon: <IconUserStar size={24} className={ICON_WHITE} />, title: "Client Portals" },
-  { icon: <IconPackage size={24} className={ICON_WHITE} />, title: "Inventory Systems" },
-  { icon: <IconSchool size={24} className={ICON_WHITE} />, title: "Educational Platforms" },
+  {
+    icon: <IconBuilding size={24} className={ICON_WHITE} />,
+    title: "Real Estate Platforms",
+  },
+  {
+    icon: <IconCalendarCheck size={24} className={ICON_WHITE} />,
+    title: "Booking Systems",
+  },
+  {
+    icon: <IconBuildingStore size={24} className={ICON_WHITE} />,
+    title: "Marketplace Apps",
+  },
+  {
+    icon: <IconUsers size={24} className={ICON_WHITE} />,
+    title: "CRM Systems",
+  },
+  {
+    icon: <IconCreditCard size={24} className={ICON_WHITE} />,
+    title: "Subscription Platforms",
+  },
+  {
+    icon: <IconChartLine size={24} className={ICON_WHITE} />,
+    title: "Internal Dashboards",
+  },
+  {
+    icon: <IconUserStar size={24} className={ICON_WHITE} />,
+    title: "Client Portals",
+  },
+  {
+    icon: <IconPackage size={24} className={ICON_WHITE} />,
+    title: "Inventory Systems",
+  },
+  {
+    icon: <IconSchool size={24} className={ICON_WHITE} />,
+    title: "Educational Platforms",
+  },
   {
     icon: <IconCheckbox size={24} className={ICON_WHITE} />,
     title: "Operational Management Tools",

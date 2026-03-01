@@ -1,17 +1,18 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import Footer from "./Footer";
 
 describe("Footer", () => {
   it("renders brand name", () => {
     render(<Footer />);
-    expect(screen.getByText(/devstudio/i)).toBeInTheDocument();
+    expect(screen.getByText(/delasi mensah/i)).toBeInTheDocument();
   });
 
-  it("renders Services section", () => {
+  it("renders Company section with links", () => {
     render(<Footer />);
-    expect(screen.getByText("Services")).toBeInTheDocument();
-    expect(screen.getByText("Web Development")).toBeInTheDocument();
+    expect(screen.getByText("Company")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /services/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /contact/i })).toBeInTheDocument();
   });
 
   it("renders Company section", () => {

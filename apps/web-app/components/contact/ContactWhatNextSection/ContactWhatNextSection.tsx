@@ -22,11 +22,11 @@ const ContactWhatNextSection: React.FC = () => {
         <FadeInSection>
           <Box className="mb-12 text-center">
             <SectionTitle className="mb-6">What Happens Next</SectionTitle>
-            <Box className="bg-accent-primary mx-auto h-1 w-20 rounded-full" />
+            <Box className="mx-auto h-1 w-20 rounded-full bg-accent-primary" />
           </Box>
 
-          <Box className="bg-bg-surface mb-12 rounded-xl border border-gray-800 p-8 lg:p-12">
-            <Text className="text-text-secondary mb-10 text-center text-xl">
+          <Box className="mb-12 rounded-xl border border-gray-800 bg-bg-surface p-8 lg:p-12">
+            <Text className="mb-10 text-center text-xl text-text-secondary">
               After you submit, I&apos;ll review your details and respond within
               1–2 business days.
             </Text>
@@ -39,7 +39,7 @@ const ContactWhatNextSection: React.FC = () => {
                   </Box>
                   <Title
                     order={3}
-                    className="text-text-primary text-2xl font-bold"
+                    className="text-2xl font-bold text-text-primary"
                   >
                     If it&apos;s a good fit:
                   </Title>
@@ -48,8 +48,8 @@ const ContactWhatNextSection: React.FC = () => {
                 <Stack gap={16} className="ml-16">
                   {GOOD_FIT_STEPS.map((step) => (
                     <Group key={step} gap={10} align="center">
-                      <Box className="bg-accent-primary h-2 w-2 shrink-0 rounded-full" />
-                      <Text className="text-text-secondary text-base">
+                      <Box className="h-2 w-2 shrink-0 rounded-full bg-accent-primary" />
+                      <Text className="text-base text-text-secondary">
                         {step}
                       </Text>
                     </Group>
@@ -64,21 +64,21 @@ const ContactWhatNextSection: React.FC = () => {
                   </Box>
                   <Title
                     order={3}
-                    className="text-text-primary text-2xl font-bold"
+                    className="text-2xl font-bold text-text-primary"
                   >
                     If it&apos;s not the right fit:
                   </Title>
                 </Group>
 
-                <Text className="text-text-secondary ml-16 text-lg">
+                <Text className="ml-16 text-lg text-text-secondary">
                   I&apos;ll let you know clearly.
                 </Text>
               </Stack>
             </Box>
           </Box>
 
-          <Box className="bg-bg-surface/30 rounded-xl border border-gray-800 px-8 py-6 text-center">
-            <Text className="text-text-secondary text-lg">
+          <Box className="rounded-xl border border-gray-800 bg-bg-surface/30 px-8 py-6 text-center">
+            <Text className="text-lg text-text-secondary">
               You retain full ownership of your production accounts and
               infrastructure.
             </Text>

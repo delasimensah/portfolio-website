@@ -49,17 +49,29 @@ const WhatAffectsPricingSection: React.FC = () => {
                 key={factor.number}
                 className="rounded-xl border border-gray-800 bg-bg-surface p-6"
               >
-                <Group gap={16} align="flex-start" className="flex-col items-stretch md:flex-row md:items-start">
+                <Group
+                  gap={16}
+                  align="flex-start"
+                  className="flex-col items-stretch md:flex-row md:items-start"
+                >
                   <Box className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent-primary/20">
-                    <Text component="span" className="text-sm font-bold text-accent-primary">
+                    <Text
+                      component="span"
+                      className="text-sm font-bold text-accent-primary"
+                    >
                       {factor.number}
                     </Text>
                   </Box>
                   <Box>
-                    <Title order={3} className="mb-1 text-base font-semibold text-text-primary">
+                    <Title
+                      order={3}
+                      className="mb-1 text-base font-semibold text-text-primary"
+                    >
                       {factor.title}
                     </Title>
-                    <Text className="text-text-secondary">{factor.description}</Text>
+                    <Text className="text-text-secondary">
+                      {factor.description}
+                    </Text>
                   </Box>
                 </Group>
               </Box>

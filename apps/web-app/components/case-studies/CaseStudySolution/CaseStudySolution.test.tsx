@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import CaseStudySolution from "./CaseStudySolution";
 
 describe("CaseStudySolution", () => {
   it("renders The Solution heading", () => {
     render(<CaseStudySolution solution={{ type: "cards", items: [] }} />);
-    expect(screen.getByRole("heading", { name: /the solution/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /the solution/i })
+    ).toBeInTheDocument();
   });
 
   it("renders cards layout with item titles", () => {
@@ -13,7 +15,13 @@ describe("CaseStudySolution", () => {
       <CaseStudySolution
         solution={{
           type: "cards",
-          items: [{ iconKey: "playerPlay", title: "Music Playback", description: "Seamless streaming." }],
+          items: [
+            {
+              iconKey: "playerPlay",
+              title: "Music Playback",
+              description: "Seamless streaming.",
+            },
+          ],
         }}
       />
     );
@@ -25,7 +33,13 @@ describe("CaseStudySolution", () => {
       <CaseStudySolution
         solution={{
           type: "groups",
-          groups: [{ iconKey: "deviceMobile", title: "Guest Mobile App", items: ["Browse properties"] }],
+          groups: [
+            {
+              iconKey: "deviceMobile",
+              title: "Guest Mobile App",
+              items: ["Browse properties"],
+            },
+          ],
         }}
       />
     );

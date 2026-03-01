@@ -51,6 +51,7 @@ This doc ties every [System Design School](https://systemdesignschool.io) topic 
 **[Authentication](https://systemdesignschool.io/fundamentals/api-design-authentication)** — The API must know who is calling; each request carries a credential (e.g. JWT). In this repo Supabase Auth handles sign-in/sign-up; `supabaseClient` is created with the session and sends the JWT on every request; Supabase verifies the JWT and RLS (Row Level Security) enforces what that user can read/write.
 
 **[Authorization](https://systemdesignschool.io/fundamentals/api-design-authorization)** — Once identity is known, you enforce what the caller is allowed to do (resource- or role-based). In this repo **RLS (Row Level Security)** in Supabase does that:
+
 - policies use `auth.uid()`, ownership columns, and roles (in profile or JWT)
 - edge functions verify again after the JWT
 

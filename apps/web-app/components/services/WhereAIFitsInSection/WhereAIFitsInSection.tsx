@@ -20,13 +20,35 @@ import AIFeatureCard from "../AIFeatureCard/AIFeatureCard";
 const ICON_WHITE = "text-white";
 
 const AI_FEATURES = [
-  { icon: <IconBulb size={20} className={ICON_WHITE} />, title: "Defining what should be built" },
-  { icon: <IconSitemap size={20} className={ICON_WHITE} />, title: "Structuring workflows around business goals" },
-  { icon: <IconCompass size={20} className={ICON_WHITE} />, title: "Designing clean architecture" },
-  { icon: <IconSearch size={20} className={ICON_WHITE} />, title: "Reviewing and refining generated code" },
-  { icon: <IconSettings size={20} className={ICON_WHITE} />, title: "Keeping the codebase maintainable" },
-  { icon: <IconRocket size={20} className={ICON_WHITE} />, title: "Deployment and production setup" },
-  { icon: <IconUserCheck size={20} className={ICON_WHITE} />, title: "Ongoing accountability", className: "md:col-span-2" },
+  {
+    icon: <IconBulb size={20} className={ICON_WHITE} />,
+    title: "Defining what should be built",
+  },
+  {
+    icon: <IconSitemap size={20} className={ICON_WHITE} />,
+    title: "Structuring workflows around business goals",
+  },
+  {
+    icon: <IconCompass size={20} className={ICON_WHITE} />,
+    title: "Designing clean architecture",
+  },
+  {
+    icon: <IconSearch size={20} className={ICON_WHITE} />,
+    title: "Reviewing and refining generated code",
+  },
+  {
+    icon: <IconSettings size={20} className={ICON_WHITE} />,
+    title: "Keeping the codebase maintainable",
+  },
+  {
+    icon: <IconRocket size={20} className={ICON_WHITE} />,
+    title: "Deployment and production setup",
+  },
+  {
+    icon: <IconUserCheck size={20} className={ICON_WHITE} />,
+    title: "Ongoing accountability",
+    className: "md:col-span-2",
+  },
 ];
 
 const WhereAIFitsInSection: React.FC = () => {
@@ -36,7 +58,10 @@ const WhereAIFitsInSection: React.FC = () => {
         <FadeInSection className="mx-auto max-w-4xl">
           <Box className="mb-12 text-center">
             <SectionTitle className="mb-4">Where AI Fits In</SectionTitle>
-            <Title order={3} className="text-2xl font-semibold text-accent-primary">
+            <Title
+              order={3}
+              className="text-2xl font-semibold text-accent-primary"
+            >
               AI is a tool, not the strategy
             </Title>
           </Box>
@@ -60,10 +85,16 @@ const WhereAIFitsInSection: React.FC = () => {
             </Box>
 
             <Box className="mt-12 space-y-2 text-center">
-              <Title order={3} className="text-xl font-semibold text-text-primary">
+              <Title
+                order={3}
+                className="text-xl font-semibold text-text-primary"
+              >
                 AI helps with speed.
               </Title>
-              <Title order={3} className="text-xl font-bold text-accent-primary">
+              <Title
+                order={3}
+                className="text-xl font-bold text-accent-primary"
+              >
                 I provide structure and responsibility.
               </Title>
             </Box>

@@ -1,11 +1,15 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import WhatMakesSuccessSection from "./WhatMakesSuccessSection";
 
 describe("WhatMakesSuccessSection", () => {
   it("renders the heading", () => {
     render(<WhatMakesSuccessSection />);
-    expect(screen.getByRole("heading", { name: /what makes these projects successful/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", {
+        name: /what makes these projects successful/i,
+      })
+    ).toBeInTheDocument();
   });
 
   it("renders all three factors", () => {

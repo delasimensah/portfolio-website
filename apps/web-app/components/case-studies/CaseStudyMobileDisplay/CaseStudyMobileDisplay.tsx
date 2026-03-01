@@ -29,9 +29,9 @@ const CaseStudyMobileDisplay: React.FC<CaseStudyMobileDisplayProps> = ({
     <section className="py-20">
       <Box className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
-          <Box className="bg-bg-surface rounded-xl border border-gray-800 p-8 lg:p-12">
+          <Box className="rounded-xl border border-gray-800 bg-bg-surface p-8 lg:p-12">
             <Box className="mb-6 flex items-center justify-between">
-              <Text className="text-text-secondary text-sm uppercase tracking-wider">
+              <Text className="text-sm uppercase tracking-wider text-text-secondary">
                 Mobile Experience
               </Text>
 
@@ -52,7 +52,7 @@ const CaseStudyMobileDisplay: React.FC<CaseStudyMobileDisplayProps> = ({
             </Box>
 
             <Box className="flex justify-center">
-              <Box className="bg-bg-primary w-[55%] overflow-hidden rounded-xl">
+              <Box className="w-[55%] overflow-hidden rounded-xl bg-bg-primary">
                 <Image
                   src={imageSrc}
                   alt={imageAlt}

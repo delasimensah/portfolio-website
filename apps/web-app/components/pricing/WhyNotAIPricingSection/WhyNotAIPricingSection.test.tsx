@@ -1,11 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import WhyNotAIPricingSection from "./WhyNotAIPricingSection";
 
 describe("WhyNotAIPricingSection", () => {
   it("renders the section heading", () => {
     render(<WhyNotAIPricingSection />);
-    expect(screen.getByRole("heading", { name: /why not just use an ai tool/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /why not just use an ai tool/i })
+    ).toBeInTheDocument();
   });
 
   it("renders value props", () => {
