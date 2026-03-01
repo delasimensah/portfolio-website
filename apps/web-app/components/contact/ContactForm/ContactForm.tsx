@@ -208,8 +208,10 @@ const ContactForm: React.FC = () => {
 
             {submitStatus === "success" && (
               <Box className="flex items-center gap-3 rounded-xl border border-green-500/30 bg-green-500/10 px-6 py-4">
-                <IconCheck size={20} className="shrink-0 text-green-400" />
-                <Text className="text-green-400">
+                <Box className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-success to-success-dark">
+                  <IconCheck size={16} className="text-white" />
+                </Box>
+                <Text className="text-success">
                   Sent! I&apos;ll review your details and get back to you within 1–2 business days.
                 </Text>
               </Box>
@@ -217,8 +219,10 @@ const ContactForm: React.FC = () => {
 
             {submitStatus === "error" && (
               <Box className="flex items-center gap-3 rounded-xl border border-red-500/30 bg-red-500/10 px-6 py-4">
-                <IconX size={20} className="shrink-0 text-red-400" />
-                <Text className="text-red-400">
+                <Box className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-error to-error-dark">
+                  <IconX size={16} className="text-white" />
+                </Box>
+                <Text className="text-error">
                   Something went wrong. Please try again or email me directly at mensadelasi@gmail.com.
                 </Text>
               </Box>

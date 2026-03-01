@@ -302,7 +302,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         iconKey: "phoneOff",
-        stat: "No More Phone Tags",
+        stat: "No More Phone Tag",
         description: "Guests book directly, staff don't take reservation calls",
       },
       {

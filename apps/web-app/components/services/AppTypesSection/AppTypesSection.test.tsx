@@ -5,7 +5,7 @@ import AppTypesSection from "./AppTypesSection";
 describe("AppTypesSection", () => {
   it("renders the heading", () => {
     render(<AppTypesSection />);
-    expect(screen.getByRole("heading", { name: /types of applications/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /products I build/i })).toBeInTheDocument();
   });
 
   it("renders app type cards", () => {

@@ -19,9 +19,10 @@ interface ButtonProps {
 }
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
-  primary: "bg-accent-primary hover:bg-accent-hover text-white",
+  primary:
+    "bg-gradient-to-br from-accent-primary to-accent-hover text-white shadow-sm hover:opacity-95 hover:shadow-md transition-all duration-200",
   secondary:
-    "border border-gray-600 text-text-primary hover:border-accent-primary hover:text-accent-primary",
+    "border border-gray-600 bg-gradient-to-br from-bg-surface to-gray-800/80 text-text-primary hover:border-accent-primary hover:from-accent-primary/10 hover:to-accent-hover/5 hover:text-accent-primary transition-all duration-200",
 };
 
 const SIZE_CLASSES = {

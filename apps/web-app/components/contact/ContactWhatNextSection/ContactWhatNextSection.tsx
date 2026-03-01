@@ -34,8 +34,8 @@ const ContactWhatNextSection: React.FC = () => {
             <Box className="grid gap-12 md:grid-cols-2">
               <Stack gap={24}>
                 <Group gap={16}>
-                  <Box className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-500/20">
-                    <IconCheck size={20} className="text-green-400" />
+                  <Box className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-success to-success-dark">
+                    <IconCheck size={20} className="text-white" />
                   </Box>
                   <Title
                     order={3}
@@ -59,8 +59,8 @@ const ContactWhatNextSection: React.FC = () => {
 
               <Stack gap={24}>
                 <Group gap={16}>
-                  <Box className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-500/20">
-                    <IconX size={20} className="text-red-400" />
+                  <Box className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-error to-error-dark">
+                    <IconX size={20} className="text-white" />
                   </Box>
                   <Title
                     order={3}

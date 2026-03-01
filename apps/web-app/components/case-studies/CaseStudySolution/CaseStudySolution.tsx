@@ -24,17 +24,25 @@ interface CaseStudySolutionProps {
   solution: Solution;
 }
 
+const ICON_WHITE = "text-white";
 const ICON_MAP: Record<string, React.ReactNode> = {
-  playerPlay: <IconPlayerPlay size={20} className="text-accent-primary" />,
-  folder: <IconFolder size={20} className="text-accent-primary" />,
-  userPlus: <IconUserPlus size={20} className="text-accent-primary" />,
-  currencyDollar: <IconCurrencyDollar size={20} className="text-accent-primary" />,
-  target: <IconTarget size={20} className="text-accent-primary" />,
-  shield: <IconShield size={20} className="text-accent-primary" />,
-  users: <IconUsers size={20} className="text-accent-primary" />,
-  deviceMobile: <IconDeviceMobile size={24} className="text-accent-primary" />,
-  desktop: <IconDeviceDesktop size={24} className="text-accent-primary" />,
+  playerPlay: <IconPlayerPlay size={20} className={ICON_WHITE} />,
+  folder: <IconFolder size={20} className={ICON_WHITE} />,
+  userPlus: <IconUserPlus size={20} className={ICON_WHITE} />,
+  currencyDollar: <IconCurrencyDollar size={20} className={ICON_WHITE} />,
+  target: <IconTarget size={20} className={ICON_WHITE} />,
+  shield: <IconShield size={20} className={ICON_WHITE} />,
+  users: <IconUsers size={20} className={ICON_WHITE} />,
+  deviceMobile: <IconDeviceMobile size={24} className={ICON_WHITE} />,
+  desktop: <IconDeviceDesktop size={24} className={ICON_WHITE} />,
 };
+
+const CARD_GRADIENTS = [
+  "bg-gradient-to-br from-accent-primary to-accent-hover",
+  "bg-gradient-to-br from-accent-secondary to-accent-secondary-dark",
+  "bg-gradient-to-br from-success to-success-dark",
+  "bg-gradient-to-br from-warm to-warm-dark",
+];
 
 const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
   return (
@@ -54,7 +62,7 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
                 Built a streaming platform with:
               </Text>
               <Box className="grid gap-6 md:grid-cols-2">
-                {solution.items.map((card: SolutionCard) => (
+                {solution.items.map((card: SolutionCard, idx: number) => (
                   <Box
                     key={card.title}
                     className={`rounded-xl border border-gray-800 bg-bg-surface p-6 ${
@@ -62,7 +70,7 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
                     }`}
                   >
                     <Stack gap={16}>
-                      <Box className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-primary/20">
+                      <Box className={`flex h-10 w-10 items-center justify-center rounded-xl ${CARD_GRADIENTS[idx % CARD_GRADIENTS.length]}`}>
                         {ICON_MAP[card.iconKey]}
                       </Box>
                       <Box>
@@ -80,13 +88,13 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
 
           {solution.type === "groups" && (
             <Box className="grid gap-8 md:grid-cols-2">
-              {solution.groups.map((group: SolutionGroup) => (
+              {solution.groups.map((group: SolutionGroup, gIdx: number) => (
                 <Box
                   key={group.title}
                   className="rounded-xl border border-gray-800 bg-bg-surface p-8"
                 >
                   <Stack gap={12} className="mb-6">
-                    <Box className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-primary/20">
+                    <Box className={`flex h-12 w-12 items-center justify-center rounded-xl ${CARD_GRADIENTS[gIdx % CARD_GRADIENTS.length]}`}>
                       {ICON_MAP[group.iconKey]}
                     </Box>
                     <Title order={3} className="text-2xl font-bold text-text-primary">
@@ -96,8 +104,8 @@ const CaseStudySolution: React.FC<CaseStudySolutionProps> = ({ solution }) => {
                   <Box className="space-y-4">
                     {group.items.map((item: string) => (
                       <Group key={item} align="flex-start" gap={12}>
-                        <Box className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-primary/20">
-                          <IconCheck size={12} className="text-accent-primary" />
+                        <Box className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-success to-success-dark">
+                          <IconCheck size={12} className="text-white" />
                         </Box>
                         <Text className="text-text-secondary">{item}</Text>
                       </Group>

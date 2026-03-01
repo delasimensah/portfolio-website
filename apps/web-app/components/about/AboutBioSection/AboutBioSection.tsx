@@ -11,7 +11,7 @@ const BIO_PARAGRAPHS = [
   "I've spent the last decade building software, both as a solo founder and as part of early-stage startup teams. I've launched products that failed, products that succeeded, and everything in between.",
   "What I learned: most MVPs never launch. Not because the idea was bad, but because the process was broken. Scope creep. Slow development cycles. Overly complex architecture. Feature bloat.",
   "So I built a better way. Fixed-scope builds. Modern, AI-accelerated workflows. Transparent pricing. And a tech stack that actually lets you move fast without breaking things.",
-  "I work with founders who value speed and simplicity over perfection.",
+  "I work with founders who want to move fast without endless scope creep.",
 ];
 
 const AboutBioSection: React.FC = () => {

@@ -10,6 +10,6 @@ describe("FinalCTASection", () => {
 
   it("renders CTA button", () => {
     render(<FinalCTASection />);
-    expect(screen.getByRole("link", { name: /start your project/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /start now/i })).toBeInTheDocument();
   });
 });

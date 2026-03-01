@@ -52,8 +52,8 @@ const PaymentTermsSection: React.FC = () => {
               <Stack gap={12}>
                 {INCLUDED.map((item) => (
                   <Group key={item} gap={12}>
-                    <Box className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-primary/20">
-                      <IconCheck size={12} className="text-accent-primary" />
+                    <Box className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-success to-success-dark">
+                      <IconCheck size={12} className="text-white" />
                     </Box>
                     <Text component="span" className="text-text-secondary">
                       {item}

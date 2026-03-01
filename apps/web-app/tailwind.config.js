@@ -54,6 +54,18 @@ module.exports = {
         "text-secondary": COLORS.textSecondary,
         "accent-primary": COLORS.accentPrimary,
         "accent-hover": COLORS.accentHover,
+        "accent-secondary": COLORS.accentSecondary,
+        "accent-secondary-dark": COLORS.accentSecondaryDark,
+        success: COLORS.success,
+        "success-dark": COLORS.successDark,
+        error: COLORS.error,
+        "error-dark": COLORS.errorDark,
+        warm: COLORS.warm,
+        "warm-dark": COLORS.warmDark,
+      },
+      backgroundImage: {
+        "gradient-subtle": "linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, transparent 50%, rgba(6, 182, 212, 0.06) 100%)",
+        "gradient-card": "linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%)",
       },
       fontFamily: {
         sans: ["var(--app-font)", "Inter", "system-ui", "sans-serif"],

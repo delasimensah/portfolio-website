@@ -19,8 +19,8 @@ const heroVariants = {
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative flex min-h-[600px] items-center lg:min-h-[800px]">
-      <Box className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+    <section className="relative flex min-h-[600px] items-center overflow-hidden lg:min-h-[800px]">
+      <Box className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <Box className="space-y-8">
           <Box className="space-y-6">
             <motion.h1
@@ -30,7 +30,10 @@ const HeroSection: React.FC = () => {
               variants={heroVariants}
               className="text-4xl font-bold leading-tight text-text-primary lg:text-6xl"
             >
-              Web and Mobile Products Delivered in 4–8 Weeks
+              Web and Mobile Products{" "}
+              <span className="bg-gradient-to-r from-accent-primary to-accent-hover bg-clip-text text-transparent">
+                Delivered in 4–8 Weeks
+              </span>
             </motion.h1>
             <motion.p
               initial="hidden"
@@ -39,9 +42,7 @@ const HeroSection: React.FC = () => {
               variants={heroVariants}
               className="max-w-lg text-xl text-text-secondary"
             >
-              Clear scope. Transparent pricing. Structured delivery.
-              <br />
-              Projects start at $1,500.
+              Structured delivery. Transparent pricing. Launch-ready results.
             </motion.p>
           </Box>
           <motion.div
@@ -52,10 +53,10 @@ const HeroSection: React.FC = () => {
             className="flex flex-col gap-4 sm:flex-row"
           >
             <Button href="/contact" size="md">
-              Start Your Project
+              Build Your Product
             </Button>
             <Button href="/case-studies" variant="secondary" size="md">
-              View Case Studies
+              View My Work
             </Button>
           </motion.div>
         </Box>

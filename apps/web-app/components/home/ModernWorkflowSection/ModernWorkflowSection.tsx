@@ -12,6 +12,12 @@ import FadeInSection from "../../shared/FadeInSection/FadeInSection";
 import StaggerContainer from "../../shared/StaggerContainer/StaggerContainer";
 import StaggerItem from "../../shared/StaggerContainer/StaggerItem";
 
+const BENEFIT_GRADIENTS = [
+  "bg-gradient-to-br from-accent-primary to-accent-hover",
+  "bg-gradient-to-br from-accent-secondary to-accent-secondary-dark",
+  "bg-gradient-to-br from-success to-success-dark",
+];
+
 const BENEFITS = [
   { icon: IconClock, title: "Faster build times" },
   { icon: IconRefresh, title: "Cleaner iterations" },
@@ -28,17 +34,17 @@ const ModernWorkflowSection: React.FC = () => {
           </h2>
           <Box className="space-y-8 text-lg">
             <p className="text-text-secondary">
-              I use AI tools to speed up development and reduce repetitive work.
+              I use modern tools to speed up development and reduce repetitive work.
             </p>
             <Box className="rounded-xl border border-gray-800 bg-bg-surface p-8">
               <h3 className="mb-6 text-xl font-semibold text-text-primary">
                 What that means for you:
               </h3>
               <StaggerContainer className="grid gap-6 md:grid-cols-3">
-                {BENEFITS.map(({ icon: Icon, title }) => (
+                {BENEFITS.map(({ icon: Icon, title }, i) => (
                   <StaggerItem key={title} className="text-center">
-                    <Box className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent-primary/20">
-                      <Icon size={24} className="text-accent-primary" />
+                    <Box className={`mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${BENEFIT_GRADIENTS[i]}`}>
+                      <Icon size={24} className="text-white" />
                     </Box>
                     <h4 className="font-semibold text-text-primary">{title}</h4>
                   </StaggerItem>
@@ -46,7 +52,7 @@ const ModernWorkflowSection: React.FC = () => {
               </StaggerContainer>
             </Box>
             <Box className="space-y-4 text-text-secondary">
-              <p>AI improves execution speed.</p>
+              <p>Modern tools improve execution speed.</p>
               <p className="font-semibold text-text-primary">
                 I handle scope, architecture, and final responsibility.
               </p>

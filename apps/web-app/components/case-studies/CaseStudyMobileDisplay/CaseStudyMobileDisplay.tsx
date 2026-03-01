@@ -42,7 +42,9 @@ const CaseStudyMobileDisplay: React.FC<CaseStudyMobileDisplayProps> = ({
                   onClick={() => setOpened(true)}
                 >
                   <Box className="flex items-center gap-2">
-                    <IconPhoto size={16} />
+                    <Box className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-accent-primary to-accent-hover">
+                      <IconPhoto size={14} className="text-white" />
+                    </Box>
                     View Screenshots
                   </Box>
                 </Button>

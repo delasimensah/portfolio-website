@@ -30,7 +30,7 @@ const ServicesHeroSection: React.FC = () => {
             transition={{ delay: 0.1, duration: 0.5 }}
           >
             <Text className="text-xl text-text-secondary">
-              Clear scope. Transparent pricing. Structured delivery.
+              Structured delivery. Transparent pricing. Launch-ready results.
             </Text>
           </MotionBox>
         </Box>

@@ -67,7 +67,7 @@ const CaseStudyListCard: React.FC<CaseStudyListCardProps> = ({ study }) => {
 
         <Link href={`/case-studies/${study.id}`} className="block">
           <Button size="md" className="w-full justify-center">
-            View Case Study
+            View Project
           </Button>
         </Link>
       </Box>

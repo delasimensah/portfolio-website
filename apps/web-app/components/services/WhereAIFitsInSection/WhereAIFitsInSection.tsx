@@ -17,16 +17,16 @@ import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import Text from "../../ui/Text/Text";
 import AIFeatureCard from "../AIFeatureCard/AIFeatureCard";
 
-const ICON_CLASS = "text-accent-primary";
+const ICON_WHITE = "text-white";
 
 const AI_FEATURES = [
-  { icon: <IconBulb size={20} className={ICON_CLASS} />, title: "Defining what should be built" },
-  { icon: <IconSitemap size={20} className={ICON_CLASS} />, title: "Structuring workflows around business goals" },
-  { icon: <IconCompass size={20} className={ICON_CLASS} />, title: "Designing clean architecture" },
-  { icon: <IconSearch size={20} className={ICON_CLASS} />, title: "Reviewing and refining generated code" },
-  { icon: <IconSettings size={20} className={ICON_CLASS} />, title: "Keeping the codebase maintainable" },
-  { icon: <IconRocket size={20} className={ICON_CLASS} />, title: "Deployment and production setup" },
-  { icon: <IconUserCheck size={20} className={ICON_CLASS} />, title: "Ongoing accountability", className: "md:col-span-2" },
+  { icon: <IconBulb size={20} className={ICON_WHITE} />, title: "Defining what should be built" },
+  { icon: <IconSitemap size={20} className={ICON_WHITE} />, title: "Structuring workflows around business goals" },
+  { icon: <IconCompass size={20} className={ICON_WHITE} />, title: "Designing clean architecture" },
+  { icon: <IconSearch size={20} className={ICON_WHITE} />, title: "Reviewing and refining generated code" },
+  { icon: <IconSettings size={20} className={ICON_WHITE} />, title: "Keeping the codebase maintainable" },
+  { icon: <IconRocket size={20} className={ICON_WHITE} />, title: "Deployment and production setup" },
+  { icon: <IconUserCheck size={20} className={ICON_WHITE} />, title: "Ongoing accountability", className: "md:col-span-2" },
 ];
 
 const WhereAIFitsInSection: React.FC = () => {

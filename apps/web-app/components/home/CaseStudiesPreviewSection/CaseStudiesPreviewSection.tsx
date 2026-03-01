@@ -15,7 +15,7 @@ const CaseStudiesPreviewSection: React.FC = () => {
     <section className="py-20">
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-16">
-          <SectionTitle>Case Studies</SectionTitle>
+          <SectionTitle>My Work</SectionTitle>
         </FadeInSection>
         <div className="mb-12 grid gap-8 lg:grid-cols-2">
           {CASE_STUDIES.map((study) => (
@@ -31,7 +31,7 @@ const CaseStudiesPreviewSection: React.FC = () => {
         </div>
         <FadeInSection className="text-center">
           <Button href="/case-studies" size="md">
-            View Case Studies
+            View My Work
           </Button>
         </FadeInSection>
       </Box>

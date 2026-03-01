@@ -21,7 +21,7 @@ const AboutDeliverySection: React.FC = () => {
                 Clear scope. Fixed timeline. Predictable execution.
               </Text>
               <Button href="/contact" size="lg">
-                Start Your Project
+                Build Your Product
               </Button>
             </Box>
           </Box>

@@ -27,7 +27,7 @@ const ContactHeroSection: React.FC = () => {
           className="mb-6 inline-block rounded-xl border border-accent-primary/30 bg-accent-primary/10 px-6 py-2"
         >
           <Text component="span" className="font-medium text-accent-primary">
-            Start Your Project
+            Build Your Product
           </Text>
         </motion.div>
 
@@ -41,7 +41,7 @@ const ContactHeroSection: React.FC = () => {
             order={1}
             className="mb-8 text-4xl font-bold leading-tight text-text-primary lg:text-6xl"
           >
-            Let&apos;s Build Something.
+            Let&apos;s Build Together.
           </Title>
         </motion.div>
 

@@ -28,8 +28,8 @@ const AboutPrinciplesSection: React.FC = () => {
           <Stack gap={24}>
             {PRINCIPLES.map((principle) => (
               <Group key={principle} align="flex-start" gap={16}>
-                <Box className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-primary/20">
-                  <IconCheck size={14} className="text-accent-primary" />
+                <Box className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-success to-success-dark">
+                  <IconCheck size={14} className="text-white" />
                 </Box>
                 <Text className="text-lg text-text-secondary">{principle}</Text>
               </Group>

@@ -20,10 +20,10 @@ const AboutCTASection: React.FC = () => {
           </Text>
           <Box className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button href="/contact" size="lg">
-              Start Your Project
+              Build Your Product
             </Button>
-            <Button href="/pricing" variant="secondary" size="lg">
-              View Pricing
+            <Button href="/services" variant="secondary" size="lg">
+              View Services
             </Button>
           </Box>
         </FadeInSection>

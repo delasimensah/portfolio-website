@@ -8,8 +8,8 @@ describe("PricingPreviewSection", () => {
     expect(screen.getByText("$1,500")).toBeInTheDocument();
   });
 
-  it("renders View Pricing button", () => {
+  it("renders View Services button", () => {
     render(<PricingPreviewSection />);
-    expect(screen.getByRole("link", { name: /view pricing/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /view services/i })).toBeInTheDocument();
   });
 });

@@ -13,4 +13,12 @@ export const COLORS = {
   textSecondary: "#9CA3AF",
   accentPrimary: "#6366F1",
   accentHover: "#818CF8",
+  accentSecondary: "#06B6D4",
+  accentSecondaryDark: "#0891B2",
+  success: "#22C55E",
+  successDark: "#16A34A",
+  error: "#EF4444",
+  errorDark: "#B91C1C",
+  warm: "#F59E0B",
+  warmDark: "#D97706",
 } as const;

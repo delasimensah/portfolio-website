@@ -20,10 +20,10 @@ const CaseStudyCTA: React.FC = () => {
           </Text>
           <Box className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button href="/contact" size="lg">
-              Start Your Project
+              Build Your Product
             </Button>
             <Button href="/case-studies" variant="secondary" size="lg">
-              View All Case Studies
+              View My Work
             </Button>
           </Box>
         </FadeInSection>

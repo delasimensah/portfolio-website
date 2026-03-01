@@ -10,7 +10,7 @@ describe("CaseStudiesCTASection", () => {
 
   it("renders CTA links", () => {
     render(<CaseStudiesCTASection />);
-    expect(screen.getByRole("link", { name: /start your project/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /view pricing/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /build your product/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /view services/i })).toBeInTheDocument();
   });
 });

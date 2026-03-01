@@ -10,9 +10,9 @@ import { cn } from "@/utils";
 
 const NAV_LINKS = [
   { href: "/services", label: "Services" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/case-studies", label: "Case Studies" },
   { href: "/about", label: "About" },
+  { href: "/case-studies", label: "My Work" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -48,11 +48,11 @@ const Header: React.FC = () => {
           </nav>
           <button
             type="button"
-            className="text-text-primary hover:text-accent-primary md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent-primary to-accent-hover text-white transition-opacity hover:opacity-90 md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <IconMenu2 size={24} />
+            <IconMenu2 size={22} />
           </button>
         </Box>
         {mobileMenuOpen && (

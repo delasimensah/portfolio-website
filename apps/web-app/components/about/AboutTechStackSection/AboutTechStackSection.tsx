@@ -75,8 +75,8 @@ const AboutTechStackSection: React.FC = () => {
           <Stack gap={12}>
             {WHY_STACK_REASONS.map((reason) => (
               <Box key={reason} className="flex items-start gap-3">
-                <Box className="mt-0.5 shrink-0 text-accent">
-                  <IconCheck size={18} strokeWidth={2.5} />
+                <Box className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-success to-success-dark">
+                  <IconCheck size={14} strokeWidth={2.5} className="text-white" />
                 </Box>
                 <Text className="text-base text-text-secondary">{reason}</Text>
               </Box>

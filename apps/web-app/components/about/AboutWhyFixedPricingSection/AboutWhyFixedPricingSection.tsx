@@ -10,7 +10,7 @@ import Text from "../../ui/Text/Text";
 const PARAGRAPHS = [
   "Hourly billing creates perverse incentives. The slower I work, the more I get paid. That's backwards.",
   "Fixed pricing aligns our interests. You want a working product as fast as possible. I want to deliver efficiently and move on to the next project. We both win when I ship fast.",
-  "More importantly: you know exactly what you're paying upfront. No surprise invoices. No ambiguous scope discussions halfway through. Just clear deliverables and a clear price.",
+  "More importantly, you know exactly what you're paying upfront. No surprise invoices. No ambiguous scope discussions halfway through. Just clear deliverables and a clear price.",
   "This only works if we define scope carefully at the start. That's why discovery is so important, and why it's included in every project.",
 ];
 

@@ -13,17 +13,17 @@ const CaseStudiesCTASection: React.FC = () => {
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mx-auto max-w-2xl text-center">
           <Title order={2} className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl">
-            Got a product to build?
+            Ready to Build Your Product?
           </Title>
           <Text className="mb-12 text-xl text-text-secondary">
             Tell me what you&apos;re working on.
           </Text>
           <Box className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button href="/contact" size="md">
-              Start Your Project
+              Build Your Product
             </Button>
-            <Button href="/pricing" variant="secondary" size="md">
-              View Pricing
+            <Button href="/services" variant="secondary" size="md">
+              View Services
             </Button>
           </Box>
         </FadeInSection>

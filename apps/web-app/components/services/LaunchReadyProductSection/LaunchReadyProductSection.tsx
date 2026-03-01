@@ -32,11 +32,11 @@ const LaunchReadyProductSection: React.FC = () => {
         <FadeInSection className="mx-auto max-w-4xl">
           <Box className="rounded-xl border border-gray-800 bg-bg-surface p-8 lg:p-12">
             <Title order={2} className="mb-6 text-3xl font-bold text-text-primary lg:text-4xl">
-              Launch-Ready Product Build
+              Launch-Ready Product
             </Title>
             <Text className="mb-8 text-lg leading-relaxed text-text-secondary">
-              I build the first working version of your product. The version you
-              can launch, test with real users, and grow from.
+              I build the first launch-ready version of your product, designed so
+              real users can use it, validate it, and help you grow.
             </Text>
 
             <Box className="mb-8 grid gap-4 md:grid-cols-2">
@@ -66,11 +66,14 @@ const LaunchReadyProductSection: React.FC = () => {
                 <Title order={3} className="mb-6 text-2xl font-semibold text-text-primary">
                   Not Included
                 </Title>
-                <Box className="grid gap-4 md:grid-cols-2">
+                <Box className="mb-4 grid gap-4 md:grid-cols-2">
                   {NOT_INCLUDED.map((item) => (
                     <ServiceCheckItem key={item} label={item} included={false} />
                   ))}
                 </Box>
+                <Text className="italic text-text-secondary">
+                  Available at added cost.
+                </Text>
               </Box>
             </Box>
           </Box>

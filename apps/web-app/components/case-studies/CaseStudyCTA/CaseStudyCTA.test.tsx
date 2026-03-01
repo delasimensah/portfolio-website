@@ -11,6 +11,6 @@ describe("CaseStudyCTA", () => {
   it("renders both CTA links", () => {
     render(<CaseStudyCTA />);
     expect(screen.getByRole("link", { name: /start your project/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /view all case studies/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /view my work/i })).toBeInTheDocument();
   });
 });

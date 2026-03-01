@@ -5,7 +5,7 @@ import ContactHeroSection from "./ContactHeroSection";
 describe("ContactHeroSection", () => {
   it("renders the heading", () => {
     render(<ContactHeroSection />);
-    expect(screen.getByRole("heading", { name: /let's build something/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /let's build together/i })).toBeInTheDocument();
   });
 
   it("renders pricing info", () => {

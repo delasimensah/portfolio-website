@@ -30,7 +30,7 @@ const PricingHeroSection: React.FC = () => {
             transition={{ delay: 0.1, duration: 0.5 }}
           >
             <Text className="text-xl text-text-secondary">
-              Transparent pricing. Clear scope. No surprises.
+              Transparent pricing. No surprises.
             </Text>
           </MotionBox>
         </Box>

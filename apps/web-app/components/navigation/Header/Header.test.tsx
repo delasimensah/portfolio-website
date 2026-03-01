@@ -11,7 +11,7 @@ describe("Header", () => {
   it("renders nav links on desktop", () => {
     render(<Header />);
     expect(screen.getByRole("link", { name: /services/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /case studies/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /my work/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /pricing/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /about/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /contact/i })).toBeInTheDocument();

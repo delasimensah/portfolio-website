@@ -7,15 +7,20 @@ import React from "react";
 import FadeInSection from "../../shared/FadeInSection/FadeInSection";
 import Text from "../../ui/Text/Text";
 
+const APPROACH_GRADIENTS = [
+  "bg-gradient-to-br from-accent-primary to-accent-hover",
+  "bg-gradient-to-br from-accent-secondary to-accent-secondary-dark",
+];
+
 const APPROACH_ITEMS = [
   {
-    icon: <IconRobot size={24} className="text-accent-primary" />,
-    title: "Modern Tools & AI",
+    icon: <IconRobot size={24} className="text-white" />,
+    title: "Modern Tools",
     description:
-      "I use modern tools, including AI, to write faster. What doesn't change is the judgment, the planning, and the review.",
+      "I use modern tools to work efficiently. What doesn't change is the judgment, the planning, and the review.",
   },
   {
-    icon: <IconUserCheck size={24} className="text-accent-primary" />,
+    icon: <IconUserCheck size={24} className="text-white" />,
     title: "Human Oversight",
     description:
       "Structure, judgment, and responsibility stay with me. Every decision is reviewed, every line of code is validated, and every deliverable is my responsibility.",
@@ -34,13 +39,13 @@ const AboutApproachSection: React.FC = () => {
             <Box className="h-1 w-20 rounded-full bg-accent-primary" />
           </Box>
           <Stack gap={24}>
-            {APPROACH_ITEMS.map((item) => (
+            {APPROACH_ITEMS.map((item, i) => (
               <Box
                 key={item.title}
                 className="rounded-xl border border-gray-800 bg-bg-surface p-8"
               >
                 <Group align="flex-start" gap={24}>
-                  <Box className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-primary/20">
+                  <Box className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${APPROACH_GRADIENTS[i]}`}>
                     {item.icon}
                   </Box>
                   <Box>

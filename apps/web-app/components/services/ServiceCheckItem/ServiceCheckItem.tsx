@@ -15,9 +15,9 @@ const ServiceCheckItem: React.FC<ServiceCheckItemProps> = ({ label, included }) 
   return (
     <Group align="flex-start" gap={12}>
       {included ? (
-        <IconCircleCheck size={20} className="mt-0.5 shrink-0 text-accent-primary" />
+        <IconCircleCheck size={20} className="mt-0.5 shrink-0 text-success" />
       ) : (
-        <IconCircleX size={20} className="mt-0.5 shrink-0 text-text-secondary" />
+        <IconCircleX size={20} className="mt-0.5 shrink-0 text-error" />
       )}
       <Text component="span" className="text-text-secondary">
         {label}

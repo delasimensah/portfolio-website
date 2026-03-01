@@ -28,7 +28,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ title, tagline, websiteUr
             className="mb-6 inline-block rounded-full border border-accent-primary/30 bg-accent-primary/10 px-6 py-2"
           >
             <Text component="span" className="font-medium text-accent-primary">
-              Case Study
+              Project
             </Text>
           </MotionBox>
 
@@ -62,10 +62,12 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ title, tagline, websiteUr
                 href={websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-accent-primary/30 bg-accent-primary/10 px-6 py-3 text-sm font-medium text-accent-primary transition-colors hover:bg-accent-primary/20"
+                className="inline-flex items-center gap-2 rounded-xl border border-accent-primary/30 bg-gradient-to-br from-accent-primary/10 to-accent-hover/5 px-6 py-3 text-sm font-medium text-accent-primary transition-all duration-200 hover:from-accent-primary/20 hover:to-accent-hover/10"
               >
                 Visit Website
-                <IconExternalLink size={16} />
+                <Box className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-accent-primary to-accent-hover">
+                  <IconExternalLink size={14} className="text-white" />
+                </Box>
               </Link>
             </MotionBox>
           )}

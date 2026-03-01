@@ -20,7 +20,7 @@ const CaseStudiesHero: React.FC = () => {
             className="mb-6"
           >
             <Title order={1} className="text-4xl font-bold text-text-primary lg:text-6xl">
-              Selected Projects
+              My Work
             </Title>
           </MotionBox>
 
@@ -30,7 +30,7 @@ const CaseStudiesHero: React.FC = () => {
             transition={{ delay: 0.1, duration: 0.5 }}
           >
             <Text className="text-xl text-text-secondary">
-              Work I&apos;ve done for actual clients.
+              Selected projects.
             </Text>
           </MotionBox>
         </Box>

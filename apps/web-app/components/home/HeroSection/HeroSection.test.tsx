@@ -12,7 +12,7 @@ describe("HeroSection", () => {
 
   it("renders CTA buttons", () => {
     render(<HeroSection />);
-    expect(screen.getByRole("link", { name: /start your project/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /view case studies/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /build your product/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /view my work/i })).toBeInTheDocument();
   });
 });

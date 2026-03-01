@@ -23,17 +23,25 @@ interface CaseStudyOutcomeProps {
   outcomes: OutcomeItem[];
 }
 
+const ICON_WHITE = "text-white";
 const ICON_MAP: Record<string, React.ReactNode> = {
-  users: <IconUsers size={24} className="text-accent-primary" />,
-  microphone: <IconMicrophone size={24} className="text-accent-primary" />,
-  chartLine: <IconChartLine size={24} className="text-accent-primary" />,
-  deviceMobile: <IconDeviceMobile size={24} className="text-accent-primary" />,
-  rocket: <IconRocket size={24} className="text-accent-primary" />,
-  calendarCheck: <IconCalendarCheck size={24} className="text-accent-primary" />,
-  phoneOff: <IconPhoneOff size={24} className="text-accent-primary" />,
-  eye: <IconEye size={24} className="text-accent-primary" />,
-  sitemap: <IconSitemap size={24} className="text-accent-primary" />,
+  users: <IconUsers size={24} className={ICON_WHITE} />,
+  microphone: <IconMicrophone size={24} className={ICON_WHITE} />,
+  chartLine: <IconChartLine size={24} className={ICON_WHITE} />,
+  deviceMobile: <IconDeviceMobile size={24} className={ICON_WHITE} />,
+  rocket: <IconRocket size={24} className={ICON_WHITE} />,
+  calendarCheck: <IconCalendarCheck size={24} className={ICON_WHITE} />,
+  phoneOff: <IconPhoneOff size={24} className={ICON_WHITE} />,
+  eye: <IconEye size={24} className={ICON_WHITE} />,
+  sitemap: <IconSitemap size={24} className={ICON_WHITE} />,
 };
+
+const OUTCOME_GRADIENTS = [
+  "bg-gradient-to-br from-accent-primary to-accent-hover",
+  "bg-gradient-to-br from-accent-secondary to-accent-secondary-dark",
+  "bg-gradient-to-br from-success to-success-dark",
+  "bg-gradient-to-br from-warm to-warm-dark",
+];
 
 const CaseStudyOutcome: React.FC<CaseStudyOutcomeProps> = ({ outcomes }) => {
   return (
@@ -47,7 +55,7 @@ const CaseStudyOutcome: React.FC<CaseStudyOutcomeProps> = ({ outcomes }) => {
             <Box className="h-1 w-20 rounded-full bg-accent-primary" />
           </Box>
           <Box className="grid gap-6 md:grid-cols-2">
-            {outcomes.map((item) => (
+            {outcomes.map((item, i) => (
               <Box
                 key={item.stat}
                 className={`rounded-xl border border-gray-800 bg-bg-surface p-8 ${
@@ -55,7 +63,7 @@ const CaseStudyOutcome: React.FC<CaseStudyOutcomeProps> = ({ outcomes }) => {
                 }`}
               >
                 <Group gap={16} className="mb-4">
-                  <Box className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-primary/20">
+                  <Box className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${OUTCOME_GRADIENTS[i % OUTCOME_GRADIENTS.length]}`}>
                     {ICON_MAP[item.iconKey]}
                   </Box>
                   <Title order={3} className="text-xl font-bold text-text-primary">

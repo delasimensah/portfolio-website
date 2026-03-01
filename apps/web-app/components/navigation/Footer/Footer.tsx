@@ -60,12 +60,12 @@ const Footer: React.FC = () => {
                 <Link
                   key={label}
                   href={href}
-                  className="text-text-secondary hover:text-accent-primary transition-colors"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent-primary to-accent-hover text-white transition-opacity hover:opacity-90"
                   aria-label={label}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon size={24} />
+                  <Icon size={20} />
                 </Link>
               ))}
             </Box>

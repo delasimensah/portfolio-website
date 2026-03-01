@@ -16,15 +16,15 @@ import FadeInSection from "../../shared/FadeInSection/FadeInSection";
 import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import Text from "../../ui/Text/Text";
 
-const ICON_CLASS = "text-accent-primary";
+const ICON_WHITE = "text-white";
 
 const VALUE_PROPS = [
-  { icon: <IconClipboardList size={20} className={ICON_CLASS} />, title: "Structured scoping" },
-  { icon: <IconChartLine size={20} className={ICON_CLASS} />, title: "Decisions tied to your business goals" },
-  { icon: <IconCompass size={20} className={ICON_CLASS} />, title: "Clean system design" },
-  { icon: <IconRocket size={20} className={ICON_CLASS} />, title: "Delivered ready to ship" },
-  { icon: <IconSettings size={20} className={ICON_CLASS} />, title: "Production setup" },
-  { icon: <IconUserCheck size={20} className={ICON_CLASS} />, title: "Accountability after launch" },
+  { icon: <IconClipboardList size={20} className={ICON_WHITE} />, title: "Structured scoping" },
+  { icon: <IconChartLine size={20} className={ICON_WHITE} />, title: "Decisions tied to your business goals" },
+  { icon: <IconCompass size={20} className={ICON_WHITE} />, title: "Clean system design" },
+  { icon: <IconRocket size={20} className={ICON_WHITE} />, title: "Delivered ready to ship" },
+  { icon: <IconSettings size={20} className={ICON_WHITE} />, title: "Production setup" },
+  { icon: <IconUserCheck size={20} className={ICON_WHITE} />, title: "Accountability after launch" },
 ];
 
 const WhyNotAIPricingSection: React.FC = () => {

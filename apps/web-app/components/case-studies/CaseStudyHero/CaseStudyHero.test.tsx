@@ -9,8 +9,8 @@ describe("CaseStudyHero", () => {
     expect(screen.getByText("Empowering artists.")).toBeInTheDocument();
   });
 
-  it("renders the Case Study badge", () => {
+  it("renders the Project badge", () => {
     render(<CaseStudyHero title="Test" tagline="Tagline" />);
-    expect(screen.getByText("Case Study")).toBeInTheDocument();
+    expect(screen.getByText("Project")).toBeInTheDocument();
   });
 });

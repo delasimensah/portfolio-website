@@ -5,9 +5,10 @@ import React from "react";
 import CaseStudiesPreviewSection from "../../home/CaseStudiesPreviewSection/CaseStudiesPreviewSection";
 import FinalCTASection from "../../home/FinalCTASection/FinalCTASection";
 import HeroSection from "../../home/HeroSection/HeroSection";
-import HowIWorkSection from "../../home/HowIWorkSection/HowIWorkSection";
+// import HowIWorkSection from "../../home/HowIWorkSection/HowIWorkSection";
 import ModernWorkflowSection from "../../home/ModernWorkflowSection/ModernWorkflowSection";
 import PricingPreviewSection from "../../home/PricingPreviewSection/PricingPreviewSection";
+import TypicalTimelineSection from "../../home/TypicalTimelineSection/TypicalTimelineSection";
 import WhatYouGetSection from "../../home/WhatYouGetSection/WhatYouGetSection";
 
 const HomePage: React.FC = () => {
@@ -15,7 +16,8 @@ const HomePage: React.FC = () => {
     <>
       <HeroSection />
       <WhatYouGetSection />
-      <HowIWorkSection />
+      {/* <HowIWorkSection /> */}
+      <TypicalTimelineSection />
       <ModernWorkflowSection />
       <PricingPreviewSection />
       <CaseStudiesPreviewSection />
