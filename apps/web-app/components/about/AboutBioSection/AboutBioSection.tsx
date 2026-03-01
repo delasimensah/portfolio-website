@@ -7,7 +7,7 @@ import FadeInSection from "../../shared/FadeInSection/FadeInSection";
 import Text from "../../ui/Text/Text";
 
 const BIO_PARAGRAPHS = [
-  "I help founders and small businesses build MVPs that actually ship, without the usual delays, scope creep, or technical debt.",
+  "I help founders and small businesses build MVPs (Minimum Viable Products: the first working version of their product, built to launch fast and test with real users) without the usual delays, scope creep, or technical debt.",
   "I've spent the last decade building software, both as a solo founder and as part of early-stage startup teams. I've launched products that failed, products that succeeded, and everything in between.",
   "What I learned: most MVPs never launch. Not because the idea was bad, but because the process was broken. Scope creep. Slow development cycles. Overly complex architecture. Feature bloat.",
   "So I built a better way. Fixed-scope builds. Modern, AI-accelerated workflows. Transparent pricing. And a tech stack that actually lets you move fast without breaking things.",

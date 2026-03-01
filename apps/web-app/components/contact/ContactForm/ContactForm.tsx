@@ -37,7 +37,7 @@ const TIMELINE_OPTIONS = [
 ];
 
 const BUDGET_OPTIONS = [
-  { value: "under-3000", label: "Under $3,000" },
+  { value: "1500-3000", label: "$1,500 – $3,000" },
   { value: "3000-4500", label: "$3,000 – $4,500" },
   { value: "4500-6000", label: "$4,500 – $6,000" },
   { value: "6000-plus", label: "$6,000+" },

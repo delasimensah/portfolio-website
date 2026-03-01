@@ -211,64 +211,105 @@ yarn submit:ios
 ### **Prerequisites**
 
 1. **Vercel Account**: Sign up at [vercel.com](https://vercel.com)
-2. **Vercel CLI** (optional): Install globally
+2. **Vercel CLI** installed globally and authenticated
 
 ```bash
 npm install -g vercel
+vercel login
 ```
 
-### **Step 1: Configure Vercel for Monorepo**
+`vercel login` opens your browser — authenticate with your GitHub account.
 
-**Option A: Via Vercel Dashboard**
+---
 
-1. Go to [vercel.com/new](https://vercel.com/new)
-2. Import your Git repository
-3. Configure project:
-   - **Framework Preset**: Next.js
-   - **Root Directory**: `apps/web-app`
-   - **Build Command**: `cd ../.. && yarn build --filter=@template/web-app`
-   - **Output Directory**: `.next`
-   - **Install Command**: `yarn install`
+### **Step 1: Add vercel.json to the monorepo root**
 
-**Option B: Via Vercel CLI**
+Before running any Vercel commands, create `vercel.json` at the repo root (not inside `apps/web-app`). This tells Vercel to use Yarn, run Turborepo, and find the Next.js output in the right place.
+
+```json
+{
+  "buildCommand": "yarn turbo run build --filter=@your-app-package-name",
+  "outputDirectory": "apps/your-app-folder/.next",
+  "installCommand": "yarn install",
+  "framework": "nextjs"
+}
+```
+
+Replace `@your-app-package-name` with the `name` field from your app's `package.json`, and `your-app-folder` with the folder name under `apps/`.
+
+---
+
+### **Step 2: Run the Vercel CLI from the monorepo root**
+
+Always run `vercel` from the repo root, not from inside `apps/web-app`. Vercel needs access to the root `package.json` to resolve Yarn workspaces correctly.
 
 ```bash
-cd project-template
+cd /path/to/your-monorepo-root
 vercel
 ```
 
-Follow the prompts to configure your project.
+The CLI will ask a series of questions. Answer them as follows:
 
-### **Step 2: Environment Variables**
+- **Set up and deploy?** → `Y`
+- **Which scope?** → select your personal Vercel account
+- **Link to existing project?** → `N` (first time), `Y` (if re-linking)
+- **What's your project's name?** → type a name or press Enter to accept the default
+- **In which directory is your code located?** → `./`
+- **Want to modify these settings?** → `N`
 
-**Set in Vercel Dashboard:**
+Vercel will then run a preview deployment. Check the output URL to confirm the build succeeded.
 
-1. Go to Project Settings → Environment Variables
-2. Add all required variables:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - Any other environment variables
+---
 
-**Or via CLI:**
+### **Step 4: Add environment variables**
+
+Add each required env var via the CLI. You will be prompted to paste the value and select which environments to apply it to — choose all three (Production, Preview, Development).
 
 ```bash
 vercel env add NEXT_PUBLIC_SUPABASE_URL
 vercel env add NEXT_PUBLIC_SUPABASE_ANON_KEY
 ```
 
-### **Step 3: Deploy**
+Add any other server-side secrets your app requires (e.g. `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, `STRIPE_SECRET_KEY`).
 
-**Automatic Deployment:**
+**Important:** Any env var used in an API route must also be declared in `turbo.json` under the `build` task's `env` array, otherwise Turborepo will strip it during the build. See the troubleshooting section for details.
 
-- Push to `main` branch → Production deployment
-- Create PR → Preview deployment
+---
 
-**Manual Deployment:**
+### **Step 5: Deploy to production**
 
 ```bash
-cd project-template
 vercel --prod
 ```
+
+This runs the full production build and deploys to your production URL.
+
+---
+
+### **Subsequent deploys**
+
+Every push to `main` on GitHub triggers an automatic production deployment. Pull requests get their own preview URL automatically.
+
+For manual production deploys from the CLI:
+
+```bash
+vercel --prod
+```
+
+---
+
+### **Via Vercel Dashboard (alternative)**
+
+If you prefer the dashboard over the CLI:
+
+1. Go to [vercel.com/new](https://vercel.com/new) and import your GitHub repository
+2. Set these fields before deploying:
+   - **Root Directory**: `apps/web-app` (or your app folder)
+   - **Framework Preset**: Next.js
+   - **Build Command**: `yarn turbo run build --filter=@your-app-package-name`
+   - **Output Directory**: `.next`
+   - **Install Command**: `yarn install`
+3. Add environment variables under the Environment Variables section before clicking Deploy
 
 **Reference**: [Vercel Monorepo Guide](https://vercel.com/docs/monorepos)
 
@@ -299,13 +340,14 @@ Located at `apps/mobile-app/eas.json`:
 
 ### **vercel.json** (Web)
 
-Create at root if needed for custom configuration:
+Required at the monorepo root. Update `--filter` and `outputDirectory` to match your app's package name:
 
 ```json
 {
-  "buildCommand": "cd ../.. && yarn build --filter=@template/web-app",
+  "buildCommand": "yarn turbo run build --filter=@template/web-app",
   "outputDirectory": "apps/web-app/.next",
-  "installCommand": "yarn install"
+  "installCommand": "yarn install",
+  "framework": "nextjs"
 }
 ```
 
@@ -415,13 +457,44 @@ eas project:init
 **"Build failed" on Vercel:**
 
 - Check Root Directory is set to `apps/web-app`
-- Verify build command includes monorepo context
+- Verify build command uses `yarn turbo run build --filter=@template/web-app`
 - Check environment variables are set
 
 **"Module not found" errors:**
 
 - Ensure `vercel.json` has correct build configuration
 - Check that shared package is properly linked
+
+**"Missing API key" or env var undefined at build time:**
+
+Turborepo strips any env var not explicitly declared in `turbo.json`. Add every server-side env var your app uses to the `build` task's `env` array:
+
+```json
+"build": {
+  "dependsOn": ["^build"],
+  "outputs": ["..."],
+  "env": ["SUPABASE_SERVICE_ROLE_KEY", "RESEND_API_KEY", "STRIPE_SECRET_KEY"]
+}
+```
+
+`NEXT_PUBLIC_*` variables are handled automatically and do not need to be listed.
+
+**SDK clients throwing at build time (Resend, Supabase admin, Stripe, etc.):**
+
+Do not instantiate SDK clients at module level. Turbopack evaluates module-level code during the build when env vars are not yet available.
+
+```typescript
+// Wrong — throws at build time
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST(request: Request) { ... }
+
+// Correct — only runs at request time
+export async function POST(request: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  ...
+}
+```
 
 ---
 
@@ -468,16 +541,23 @@ eas credentials
 
 ### **Web App - Vercel Commands**
 
+Run all commands from the monorepo root.
+
 ```bash
-# Deploy to Vercel
-vercel                    # Preview deployment
-vercel --prod            # Production deployment
+# First-time setup
+npm install -g vercel
+vercel login
+vercel                         # Links project + preview deploy (answer prompts — see Step 3)
 
-# Environment variables
-vercel env add VARIABLE_NAME
+# Production deploy
+vercel --prod
 
-# Check deployment status
+# Environment variables (repeat for each var)
+vercel env add VARIABLE_NAME   # Prompts for value, then select all 3 environments
+
+# Inspect deployments
 vercel ls
+vercel inspect [deployment-url]
 ```
 
 ---

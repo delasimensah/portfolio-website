@@ -61,7 +61,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tagline:
       "Artists earn directly from their fans through subscriptions, tips, and creative funding goals.",
     timeline: "8 Weeks",
-    value: "$5,000+",
+    value: "$5,500+",
     platforms: "Web + Mobile",
     additionalStats: [
       { label: "Users", value: "5000+" },

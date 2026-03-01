@@ -10,7 +10,7 @@ describe("LaunchReadyProductSection", () => {
 
   it("renders timeline and price", () => {
     render(<LaunchReadyProductSection />);
-    expect(screen.getByText("6–8 weeks")).toBeInTheDocument();
-    expect(screen.getByText("$3,000")).toBeInTheDocument();
+    expect(screen.getByText("4–8 weeks")).toBeInTheDocument();
+    expect(screen.getByText("$1,500")).toBeInTheDocument();
   });
 });

@@ -15,7 +15,7 @@ const AboutDeliverySection: React.FC = () => {
           <Box className="rounded-xl border border-accent-primary/30 bg-gradient-to-br from-accent-primary/10 to-accent-primary/5 p-12 text-center lg:p-16">
             <Box className="mx-auto max-w-3xl">
               <Title order={2} className="mb-8 text-3xl font-bold text-text-primary lg:text-5xl">
-                Projects start at $3,000 and are delivered in 6–8 weeks.
+                Projects start at $1,500 and are delivered in 4–8 weeks.
               </Title>
               <Text className="mb-12 text-xl text-text-secondary">
                 Clear scope. Fixed timeline. Predictable execution.

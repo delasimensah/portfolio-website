@@ -3,6 +3,7 @@ import React from "react";
 import MaintenancePlansSection from "../../pricing/MaintenancePlansSection/MaintenancePlansSection";
 import PaymentTermsSection from "../../pricing/PaymentTermsSection/PaymentTermsSection";
 import PricingCTASection from "../../pricing/PricingCTASection/PricingCTASection";
+import PricingExamplesSection from "../../pricing/PricingExamplesSection/PricingExamplesSection";
 import PricingHeroSection from "../../pricing/PricingHeroSection/PricingHeroSection";
 import ProductBuildPricingSection from "../../pricing/ProductBuildPricingSection/ProductBuildPricingSection";
 import ProductionCostsSection from "../../pricing/ProductionCostsSection/ProductionCostsSection";
@@ -14,6 +15,7 @@ const PricingPage: React.FC = () => {
     <>
       <PricingHeroSection />
       <ProductBuildPricingSection />
+      <PricingExamplesSection />
       <WhatAffectsPricingSection />
       <PaymentTermsSection />
       <MaintenancePlansSection />

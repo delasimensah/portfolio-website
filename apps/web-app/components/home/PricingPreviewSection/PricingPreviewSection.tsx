@@ -16,15 +16,15 @@ const PricingPreviewSection: React.FC = () => {
             <Box className="space-y-8">
               <Box>
                 <p className="mb-2 text-text-secondary">Starting From:</p>
-                <p className="text-5xl font-bold text-text-primary">$3,000</p>
+                <p className="text-5xl font-bold text-text-primary">$1,500</p>
               </Box>
               <Box>
                 <p className="mb-2 text-text-secondary">Typical Range:</p>
                 <p className="text-2xl font-semibold text-text-primary">
-                  $3,000 – $6,000+
+                  $1,500 – $6,000+
                 </p>
               </Box>
-              <p className="text-text-secondary">Delivered in 6–8 weeks.</p>
+              <p className="text-text-secondary">Delivered in 4–8 weeks.</p>
               <Button href="/pricing" size="md">
                 View Pricing
               </Button>

@@ -10,6 +10,6 @@ describe("ContactHeroSection", () => {
 
   it("renders pricing info", () => {
     render(<ContactHeroSection />);
-    expect(screen.getByText(/projects start at \$3,000/i)).toBeInTheDocument();
+    expect(screen.getByText(/projects start at \$1,500/i)).toBeInTheDocument();
   });
 });

@@ -55,7 +55,7 @@ const ContactHeroSection: React.FC = () => {
             Planning a web or mobile product? Share the details below and I&apos;ll review them within 1–2 business days.
           </Text>
           <Text className="text-2xl font-semibold text-accent-primary">
-            Projects start at $3,000 and are delivered in 6–8 weeks.
+            Projects start at $1,500 and are delivered in 4–8 weeks.
           </Text>
         </motion.div>
       </Box>

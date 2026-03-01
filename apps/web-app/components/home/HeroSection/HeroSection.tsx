@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
               variants={heroVariants}
               className="text-4xl font-bold leading-tight text-text-primary lg:text-6xl"
             >
-              Web and Mobile Products Delivered in 6–8 Weeks
+              Web and Mobile Products Delivered in 4–8 Weeks
             </motion.h1>
             <motion.p
               initial="hidden"
@@ -41,7 +41,7 @@ const HeroSection: React.FC = () => {
             >
               Clear scope. Transparent pricing. Structured delivery.
               <br />
-              Projects start at $3,000.
+              Projects start at $1,500.
             </motion.p>
           </Box>
           <motion.div
@@ -75,9 +75,9 @@ const HeroSection: React.FC = () => {
               <Image
                 src={ASSETS.images.heroAriaIos}
                 alt="Aria app on iOS"
-                width={320}
-                height={693}
-                className="w-full max-w-[320px] object-contain"
+                width={368}
+                height={797}
+                className="w-full max-w-[368px] object-contain"
                 priority
               />
             </motion.div>

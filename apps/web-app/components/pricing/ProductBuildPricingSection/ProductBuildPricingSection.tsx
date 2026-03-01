@@ -7,9 +7,9 @@ import FadeInSection from "../../shared/FadeInSection/FadeInSection";
 import Text from "../../ui/Text/Text";
 
 const STATS = [
-  { label: "Starting From", value: "$3,000", accent: true },
-  { label: "Typical Range", value: "$3,000 – $6,000+", accent: false },
-  { label: "Delivery Timeline", value: "6–8 weeks", accent: false },
+  { label: "Starting From", value: "$1,500", accent: true },
+  { label: "Typical Range", value: "$1,500 – $6,000+", accent: false },
+  { label: "Delivery Timeline", value: "4–8 weeks", accent: false },
 ];
 
 const ProductBuildPricingSection: React.FC = () => {

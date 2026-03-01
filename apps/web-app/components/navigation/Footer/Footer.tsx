@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
               delasi mensah
             </div>
             <p className="text-text-secondary">
-              Web and mobile products delivered in 6–8 weeks.
+              Web and mobile products delivered in 4–8 weeks.
             </p>
           </Box>
           <Box>

@@ -6,7 +6,7 @@ describe("HeroSection", () => {
   it("renders headline", () => {
     render(<HeroSection />);
     expect(
-      screen.getByText(/web and mobile products delivered in 6–8 weeks/i)
+      screen.getByText(/web and mobile products delivered in 4–8 weeks/i)
     ).toBeInTheDocument();
   });
 

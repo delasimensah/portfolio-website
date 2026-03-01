@@ -42,11 +42,11 @@ const LaunchReadyProductSection: React.FC = () => {
             <Box className="mb-8 grid gap-4 md:grid-cols-2">
               <Box className="rounded-xl bg-bg-primary p-6">
                 <Text className="mb-2 text-text-secondary">Timeline</Text>
-                <Text className="text-3xl font-bold text-text-primary">6–8 weeks</Text>
+                <Text className="text-3xl font-bold text-text-primary">4–8 weeks</Text>
               </Box>
               <Box className="rounded-xl bg-bg-primary p-6">
                 <Text className="mb-2 text-text-secondary">Starting From</Text>
-                <Text className="text-3xl font-bold text-accent-primary">$3,000</Text>
+                <Text className="text-3xl font-bold text-accent-primary">$1,500</Text>
               </Box>
             </Box>
 
