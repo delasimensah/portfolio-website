@@ -1,6 +1,8 @@
 import "@mantine/core/styles.css";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import React from "react";
 
@@ -29,6 +31,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           <main>{children}</main>
           <Footer />
         </Providers>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

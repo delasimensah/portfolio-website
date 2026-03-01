@@ -286,6 +286,40 @@ This runs the full production build and deploys to your production URL.
 
 ---
 
+### **Step 6: Enable Analytics and Speed Insights (optional but recommended)**
+
+Vercel provides two free monitoring tools you should enable on every web app:
+
+- **Web Analytics** — tracks page views and visitor counts
+- **Speed Insights** — tracks Core Web Vitals (load time, responsiveness, layout shift)
+
+**Enable in the Vercel dashboard:**
+
+1. Go to your project on [vercel.com/dashboard](https://vercel.com/dashboard)
+2. Click the **Analytics** tab → click **Enable**
+3. Click the **Speed Insights** tab → click **Enable**
+
+**Install the packages (from `apps/web-app`):**
+
+```bash
+yarn add @vercel/analytics @vercel/speed-insights
+```
+
+**Add to `app/layout.tsx`:**
+
+```tsx
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
+// Inside the <body> tag, before the closing </body>:
+<Analytics />
+<SpeedInsights />
+```
+
+Deploy again for the changes to take effect. Data will appear in the Vercel dashboard after real users visit the site.
+
+---
+
 ### **Subsequent deploys**
 
 Every push to `main` on GitHub triggers an automatic production deployment. Pull requests get their own preview URL automatically.
