@@ -19,7 +19,7 @@ const ProductionCostRow: React.FC<ProductionCostRowProps> = ({
   return (
     <Group
       justify="space-between"
-      className={`py-3 ${!last ? "border-b border-gray-800" : ""}`}
+      className={`flex-col items-start gap-1 py-3 md:flex-row md:items-center md:gap-0 ${!last ? "border-b border-gray-800" : ""}`}
     >
       <Text component="span" className="text-text-secondary">
         {label}

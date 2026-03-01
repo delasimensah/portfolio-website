@@ -28,7 +28,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       >
         <Providers>
           <Header />
-          <main>{children}</main>
+          <main className="pt-8 md:pt-10 lg:pt-12">{children}</main>
           <Footer />
         </Providers>
         <Analytics />
