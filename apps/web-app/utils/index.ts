@@ -3,6 +3,7 @@ export {
   CASE_STUDIES,
   getCaseStudyById,
   type CaseStudy,
+  type CaseStudyScreenshot,
   type OutcomeItem,
   type OverviewStat,
   type Solution,

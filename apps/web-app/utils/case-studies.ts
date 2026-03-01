@@ -30,11 +30,17 @@ export interface OutcomeItem {
   fullWidth?: boolean;
 }
 
+export interface CaseStudyScreenshot {
+  src: string;
+  alt: string;
+}
+
 export interface CaseStudy {
   id: string;
   title: string;
   description: string;
   tagline: string;
+  websiteUrl?: string;
   timeline: string;
   value: string;
   platforms: string;
@@ -42,8 +48,10 @@ export interface CaseStudy {
   techList: string[];
   mobileImageSrc: string;
   mobileImageAlt: string;
+  mobileScreenshots: CaseStudyScreenshot[];
   webImageSrc: string;
   webImageAlt: string;
+  webScreenshots: CaseStudyScreenshot[];
   webSectionTitle: string;
   webSectionLabel: string;
   webSectionText: string[];
@@ -60,6 +68,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     description: "Direct-to-fan music monetization",
     tagline:
       "Artists earn directly from their fans through subscriptions, tips, and creative funding goals.",
+    websiteUrl: "https://landing.ariamusic.com/",
     timeline: "8 Weeks",
     value: "$5,500+",
     platforms: "Web + Mobile",
@@ -74,8 +83,18 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     mobileImageSrc: ASSETS.images.ariaMobileIos,
     mobileImageAlt: "Aria mobile app screenshot",
+    mobileScreenshots: [
+      { src: ASSETS.images.ariaScreenshot1Mobile, alt: "Aria mobile screenshot 1" },
+      { src: ASSETS.images.ariaScreenshot2Mobile, alt: "Aria mobile screenshot 2" },
+      { src: ASSETS.images.ariaScreenshot3Mobile, alt: "Aria mobile screenshot 3" },
+    ],
     webImageSrc: ASSETS.images.ariaWeb,
     webImageAlt: "Aria web platform screenshot",
+    webScreenshots: [
+      { src: ASSETS.images.ariaScreenshot1Web, alt: "Aria web screenshot 1" },
+      { src: ASSETS.images.ariaScreenshot2Web, alt: "Aria web screenshot 2" },
+      { src: ASSETS.images.ariaScreenshot3Web, alt: "Aria web screenshot 3" },
+    ],
     webSectionTitle: "Web Experience",
     webSectionLabel: "Desktop Platform",
     webSectionText: [
@@ -166,6 +185,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     description: "Property booking and management system",
     tagline:
       "A booking and management system that cut out the phone calls and gave the team proper visibility over their properties.",
+    websiteUrl: "https://www.crownlusso.com/",
     timeline: "6 Weeks",
     value: "$3,500",
     platforms: "Web + Mobile",
@@ -177,8 +197,18 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     mobileImageSrc: ASSETS.images.crownLussoMobileIos,
     mobileImageAlt: "Crown Lusso mobile app screenshot",
+    mobileScreenshots: [
+      { src: ASSETS.images.crownLussoScreenshot1Mobile, alt: "Crown Lusso mobile screenshot 1" },
+      { src: ASSETS.images.crownLussoScreenshot2Mobile, alt: "Crown Lusso mobile screenshot 2" },
+      { src: ASSETS.images.crownLussoScreenshot3Mobile, alt: "Crown Lusso mobile screenshot 3" },
+    ],
     webImageSrc: ASSETS.images.crownLussoWeb,
     webImageAlt: "Crown Lusso web dashboard screenshot",
+    webScreenshots: [
+      { src: ASSETS.images.crownLussoScreenshot1Web, alt: "Crown Lusso web screenshot 1" },
+      { src: ASSETS.images.crownLussoScreenshot2Web, alt: "Crown Lusso web screenshot 2" },
+      { src: ASSETS.images.crownLussoScreenshot3Web, alt: "Crown Lusso web screenshot 3" },
+    ],
     webSectionTitle: "Web Dashboard",
     webSectionLabel: "Management Interface",
     webSectionText: [
