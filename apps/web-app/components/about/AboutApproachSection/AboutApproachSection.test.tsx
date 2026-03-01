@@ -12,7 +12,7 @@ describe("AboutApproachSection", () => {
 
   it("renders both approach cards", () => {
     render(<AboutApproachSection />);
-    expect(screen.getByText("Modern Tools & AI")).toBeInTheDocument();
+    expect(screen.getByText("Modern Tools")).toBeInTheDocument();
     expect(screen.getByText("Human Oversight")).toBeInTheDocument();
   });
 });

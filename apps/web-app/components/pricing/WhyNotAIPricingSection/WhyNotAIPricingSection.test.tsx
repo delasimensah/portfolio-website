@@ -13,6 +13,6 @@ describe("WhyNotAIPricingSection", () => {
   it("renders value props", () => {
     render(<WhyNotAIPricingSection />);
     expect(screen.getByText("Structured scoping")).toBeInTheDocument();
-    expect(screen.getByText("Launch-ready delivery")).toBeInTheDocument();
+    expect(screen.getByText("Delivered ready to ship")).toBeInTheDocument();
   });
 });

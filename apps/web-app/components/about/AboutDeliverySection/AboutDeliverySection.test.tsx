@@ -11,7 +11,7 @@ describe("AboutDeliverySection", () => {
   it("renders the CTA button", () => {
     render(<AboutDeliverySection />);
     expect(
-      screen.getByRole("link", { name: /start your project/i })
+      screen.getByRole("link", { name: /build your product/i })
     ).toBeInTheDocument();
   });
 });

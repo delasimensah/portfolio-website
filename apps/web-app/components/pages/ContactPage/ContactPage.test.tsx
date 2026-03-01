@@ -6,7 +6,7 @@ describe("ContactPage", () => {
   it("renders without crashing", () => {
     render(<ContactPage />);
     expect(
-      screen.getByRole("heading", { name: /contact/i })
+      screen.getByRole("heading", { name: /build together/i })
     ).toBeInTheDocument();
   });
 });

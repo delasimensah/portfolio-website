@@ -1,16 +1,8 @@
 import { render, screen } from "@/test-utils";
-import { usePathname } from "next/navigation";
 
 import Header from "./Header";
 
-jest.mock("next/navigation", () => ({
-  usePathname: jest.fn(),
-}));
-
 describe("Header", () => {
-  beforeEach(() => {
-    (usePathname as jest.Mock).mockReturnValue("/");
-  });
   it("renders logo", () => {
     render(<Header />);
     expect(

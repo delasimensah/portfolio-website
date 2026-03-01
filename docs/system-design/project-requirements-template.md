@@ -28,7 +28,7 @@ Numbered list of the main user journeys in scope for the Minimum Viable Product 
 
 1.
 2.
-3.  …
+3. …
 
 **Out of scope for MVP (Minimum Viable Product):** (Explicit list so scope doesn’t creep.)
 

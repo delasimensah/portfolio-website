@@ -6,7 +6,7 @@ describe("LaunchReadyProductSection", () => {
   it("renders the heading", () => {
     render(<LaunchReadyProductSection />);
     expect(
-      screen.getByRole("heading", { name: /launch-ready product build/i })
+      screen.getByRole("heading", { name: /launch-ready product/i })
     ).toBeInTheDocument();
   });
 

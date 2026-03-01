@@ -6,7 +6,7 @@ describe("CaseStudiesHero", () => {
   it("renders the heading", () => {
     render(<CaseStudiesHero />);
     expect(
-      screen.getByRole("heading", { name: /selected projects/i })
+      screen.getByRole("heading", { name: /my work/i })
     ).toBeInTheDocument();
   });
 });

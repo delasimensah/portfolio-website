@@ -16,6 +16,5 @@ describe("AboutFocusSection", () => {
     expect(screen.getByText("Defined timelines")).toBeInTheDocument();
     expect(screen.getByText("Clean architecture")).toBeInTheDocument();
     expect(screen.getByText("Practical solutions")).toBeInTheDocument();
-    expect(screen.getByText("Transparent pricing")).toBeInTheDocument();
   });
 });

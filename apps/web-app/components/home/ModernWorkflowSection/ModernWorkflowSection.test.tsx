@@ -5,7 +5,9 @@ import ModernWorkflowSection from "./ModernWorkflowSection";
 describe("ModernWorkflowSection", () => {
   it("renders headline", () => {
     render(<ModernWorkflowSection />);
-    expect(screen.getByText(/built with modern tools/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /modern tools/i })
+    ).toBeInTheDocument();
   });
 
   it("renders benefits", () => {

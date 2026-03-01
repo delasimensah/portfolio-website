@@ -7,7 +7,7 @@ describe("WhatMakesSuccessSection", () => {
     render(<WhatMakesSuccessSection />);
     expect(
       screen.getByRole("heading", {
-        name: /what makes these projects successful/i,
+        name: /what goes into every project/i,
       })
     ).toBeInTheDocument();
   });

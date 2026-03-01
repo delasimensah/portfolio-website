@@ -5,9 +5,8 @@ import HeroSection from "./HeroSection";
 describe("HeroSection", () => {
   it("renders headline", () => {
     render(<HeroSection />);
-    expect(
-      screen.getByText(/web and mobile products delivered in 4–8 weeks/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/web and mobile products/i)).toBeInTheDocument();
+    expect(screen.getByText(/delivered in 4–8 weeks/i)).toBeInTheDocument();
   });
 
   it("renders CTA buttons", () => {

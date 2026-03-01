@@ -13,7 +13,7 @@ describe("AboutPrinciplesSection", () => {
   it("renders all principles", () => {
     render(<AboutPrinciplesSection />);
     expect(screen.getByText(/no feature creep/i)).toBeInTheDocument();
-    expect(screen.getByText(/no surprises/i)).toBeInTheDocument();
+    expect(screen.getByText(/no subcontracting/i)).toBeInTheDocument();
     expect(screen.getByText(/no hype/i)).toBeInTheDocument();
     expect(screen.getByText(/no hand-holding/i)).toBeInTheDocument();
   });

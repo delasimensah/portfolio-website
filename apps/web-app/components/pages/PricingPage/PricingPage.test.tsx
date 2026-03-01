@@ -6,7 +6,7 @@ describe("PricingPage", () => {
   it("renders without crashing", () => {
     render(<PricingPage />);
     expect(
-      screen.getByRole("heading", { name: /pricing/i })
+      screen.getByRole("heading", { level: 1, name: /^pricing$/i })
     ).toBeInTheDocument();
   });
 });

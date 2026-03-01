@@ -6,14 +6,16 @@ describe("CaseStudyCTA", () => {
   it("renders the CTA heading", () => {
     render(<CaseStudyCTA />);
     expect(
-      screen.getByRole("heading", { name: /ready to build/i })
+      screen.getByRole("heading", {
+        name: /want to build something like this/i,
+      })
     ).toBeInTheDocument();
   });
 
   it("renders both CTA links", () => {
     render(<CaseStudyCTA />);
     expect(
-      screen.getByRole("link", { name: /start your project/i })
+      screen.getByRole("link", { name: /build your product/i })
     ).toBeInTheDocument();
     expect(
       screen.getByRole("link", { name: /view my work/i })
