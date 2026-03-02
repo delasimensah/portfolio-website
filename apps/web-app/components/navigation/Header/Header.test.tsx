@@ -6,7 +6,7 @@ describe("Header", () => {
   it("renders logo", () => {
     render(<Header />);
     expect(
-      screen.getByRole("link", { name: /delasi mensah/i })
+      screen.getByRole("link", { name: /the digital nomad/i })
     ).toBeInTheDocument();
   });
 

@@ -19,7 +19,7 @@ describe("PricingExamplesSection", () => {
     render(<PricingExamplesSection />);
     expect(screen.getByText("~$1,500")).toBeInTheDocument();
     expect(screen.getByText("~$2,000")).toBeInTheDocument();
-    expect(screen.getByText("$3,500+")).toBeInTheDocument();
+    expect(screen.getByText("~$4,000")).toBeInTheDocument();
   });
 
   it("renders the complexity note", () => {

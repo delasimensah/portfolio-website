@@ -12,7 +12,7 @@ import { appfont } from "@/constants";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Delasi Mensah | Web and mobile products delivered in 4–8 weeks.",
+  title: "The Digital Nomad | Web and mobile products delivered in 4–8 weeks.",
   description: "I build web and mobile products for startups and businesses.",
 };
 

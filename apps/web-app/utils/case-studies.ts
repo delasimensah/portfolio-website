@@ -70,7 +70,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Artists earn directly from their fans through subscriptions, tips, and creative funding goals.",
     websiteUrl: "https://landing.ariamusic.com/",
     timeline: "8 Weeks",
-    value: "$5,500+",
+    value: "$6,000+",
     platforms: "Web + Mobile",
     additionalStats: [
       { label: "Users", value: "5000+" },
@@ -292,7 +292,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "A booking and management system that cut out the phone calls and gave the team proper visibility over their properties.",
     websiteUrl: "https://www.crownlusso.com/",
     timeline: "6 Weeks",
-    value: "$3,500",
+    value: "$4,000",
     platforms: "Web + Mobile",
     additionalStats: [],
     techList: [

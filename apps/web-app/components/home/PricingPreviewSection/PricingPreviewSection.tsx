@@ -1,6 +1,7 @@
 "use client";
 
 import { Box } from "@mantine/core";
+import Link from "next/link";
 import React from "react";
 
 import { Button } from "@/components";
@@ -17,6 +18,18 @@ const PricingPreviewSection: React.FC = () => {
               <Box>
                 <p className="mb-2 text-text-secondary">Starting From:</p>
                 <p className="text-5xl font-bold text-text-primary">$1,500</p>
+                <p className="mt-3 text-sm font-bold text-text-secondary">
+                  Your final price depends on your project (scope, web only,
+                  mobile only, or both). It may be higher depending on what you
+                  need. See{" "}
+                  <Link
+                    href="/pricing"
+                    className="font-medium text-accent-primary underline underline-offset-2 hover:text-accent-hover"
+                  >
+                    Pricing
+                  </Link>{" "}
+                  for details.
+                </p>
               </Box>
               <p className="text-text-secondary">Delivered in 4–8 weeks.</p>
               <Button href="/services" size="md">

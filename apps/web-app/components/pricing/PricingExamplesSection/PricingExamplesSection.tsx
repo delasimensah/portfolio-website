@@ -30,7 +30,7 @@ const EXAMPLES: PricingExample[] = [
     platform: "Web + Mobile",
     description:
       "Full web and mobile product sharing the same backend, deployed to all platforms.",
-    price: "$3,500+",
+    price: "~$4,000",
   },
 ];
 

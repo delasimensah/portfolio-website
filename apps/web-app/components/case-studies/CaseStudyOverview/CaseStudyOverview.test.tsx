@@ -8,7 +8,7 @@ describe("CaseStudyOverview", () => {
       <CaseStudyOverview
         study={{
           timeline: "8 Weeks",
-          value: "$5,500+",
+          value: "$6,000+",
           platforms: "Web + Mobile",
           additionalStats: [],
         }}
@@ -24,13 +24,13 @@ describe("CaseStudyOverview", () => {
       <CaseStudyOverview
         study={{
           timeline: "8 Weeks",
-          value: "$5,500+",
+          value: "$6,000+",
           platforms: "Web + Mobile",
           additionalStats: [],
         }}
       />
     );
     expect(screen.getByText("8 Weeks")).toBeInTheDocument();
-    expect(screen.getByText("$5,500+")).toBeInTheDocument();
+    expect(screen.getByText("$6,000+")).toBeInTheDocument();
   });
 });

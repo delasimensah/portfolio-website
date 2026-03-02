@@ -5,7 +5,7 @@ import Footer from "./Footer";
 describe("Footer", () => {
   it("renders brand name", () => {
     render(<Footer />);
-    expect(screen.getByRole("contentinfo")).toHaveTextContent(/delasi mensah/i);
+    expect(screen.getByRole("contentinfo")).toHaveTextContent(/the digital nomad/i);
   });
 
   it("renders Company section with links", () => {

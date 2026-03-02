@@ -8,7 +8,7 @@ const mockStudy = {
   description: "Direct-to-fan music monetization",
   tagline: "Empowering artists to earn directly from their fans.",
   timeline: "8 Weeks",
-  value: "$5,500+",
+  value: "$6,000+",
   platforms: "Web + Mobile",
   additionalStats: [],
   techList: ["React Native mobile app"],
@@ -36,6 +36,6 @@ describe("CaseStudyListCard", () => {
   it("renders timeline and value", () => {
     render(<CaseStudyListCard study={mockStudy} />);
     expect(screen.getByText("8 Weeks")).toBeInTheDocument();
-    expect(screen.getByText("$5,500+")).toBeInTheDocument();
+    expect(screen.getByText("$6,000+")).toBeInTheDocument();
   });
 });

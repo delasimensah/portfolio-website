@@ -36,12 +36,10 @@ const ScreenshotCarouselModal: React.FC<ScreenshotCarouselModalProps> = ({
   const isWeb = variant === "web";
   const [activeIndex, setActiveIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [displayIndex, setDisplayIndex] = useState(0);
 
   useEffect(() => {
     if (opened) {
       setActiveIndex(0);
-      setDisplayIndex(0);
       setImageLoaded(false);
     }
   }, [opened]);
@@ -71,8 +69,7 @@ const ScreenshotCarouselModal: React.FC<ScreenshotCarouselModalProps> = ({
 
   const handleImageLoad = useCallback(() => {
     setImageLoaded(true);
-    setDisplayIndex(activeIndex);
-  }, [activeIndex]);
+  }, []);
 
   const handleDotClick = useCallback(
     (i: number) => {
@@ -84,10 +81,7 @@ const ScreenshotCarouselModal: React.FC<ScreenshotCarouselModalProps> = ({
   );
 
   const current = screenshots[activeIndex];
-  const display = screenshots[displayIndex];
-  const isInitialLoad = !imageLoaded && displayIndex === activeIndex;
-  const showSkeleton = isInitialLoad;
-  const showPreviousWhileLoading = displayIndex !== activeIndex && display;
+  const showSkeleton = !imageLoaded;
 
   if (!current) return null;
 
@@ -121,17 +115,6 @@ const ScreenshotCarouselModal: React.FC<ScreenshotCarouselModalProps> = ({
           <Skeleton
             className={`absolute inset-0 z-0 rounded-xl ${isWeb ? "max-h-[65vh]" : "max-h-[60vh]"}`}
             radius="xl"
-          />
-        )}
-        {showPreviousWhileLoading && (
-          <Image
-            key={`display-${displayIndex}`}
-            src={display.src}
-            alt={display.alt}
-            width={1200}
-            height={800}
-            className={`${IMAGE_CLASS_BASE} ${isWeb ? "max-h-[65vh]" : "max-h-[60vh]"} absolute inset-0 z-0 opacity-100`}
-            unoptimized
           />
         )}
         <Image

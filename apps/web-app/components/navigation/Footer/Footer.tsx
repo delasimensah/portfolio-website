@@ -31,9 +31,12 @@ const Footer: React.FC = () => {
       <Box className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Box className="grid gap-8 md:grid-cols-3">
           <Box>
-            <div className="mb-4 text-xl font-bold text-text-primary">
-              delasi mensah
-            </div>
+            <Box className="mb-4 flex items-center text-xl font-bold text-text-primary">
+              The Digital{" "}
+              <span className="bg-gradient-to-r from-accent-primary to-accent-hover bg-clip-text text-transparent">
+                Nomad
+              </span>
+            </Box>
             <p className="text-text-secondary">
               Web and mobile products delivered in 4–8 weeks.
             </p>
@@ -73,7 +76,7 @@ const Footer: React.FC = () => {
         </Box>
         <Box className="mt-8 border-t border-gray-800 pt-8 text-center text-text-secondary">
           <p>
-            &copy; {new Date().getFullYear()} delasi mensah. All rights
+            &copy; {new Date().getFullYear()} The Digital Nomad. All rights
             reserved.
           </p>
         </Box>

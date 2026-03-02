@@ -8,7 +8,7 @@ const mockStudy = {
   description: "Direct-to-fan music monetization",
   tagline: "Empowering artists to earn directly from their fans.",
   timeline: "8 Weeks",
-  value: "$5,500+",
+  value: "$6,000+",
   platforms: "Web + Mobile",
   additionalStats: [],
   techList: ["React Native mobile app"],
